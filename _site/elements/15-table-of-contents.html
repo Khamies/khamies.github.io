@@ -1,0 +1,15 @@
+
+<h2 id="table-of-contents"> Table Of Contents</h2><div class="list-group my-3"><a class="list-group-item active disabled text-white">Table of Contents</a><a class="list-group-item list-group-item-action" href="#headers">Headers</a><a class="list-group-item list-group-item-action" href="#emphasis">
+Emphasis</a><a class="list-group-item list-group-item-action" href="#list">
+List</a>
+
+</div>
+
+<details>
+
+    <summary class="text-monospace">View Code...</summary><figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{%</span><span class="w"> </span><span class="nt">capture</span><span class="w"> </span><span class="nv">list_items</span><span class="w"> </span><span class="p">%}</span>
+Headers
+Emphasis
+List
+<span class="p">{%</span><span class="w"> </span><span class="nt">endcapture</span><span class="w"> </span><span class="p">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span>elements/list.html<span class="w"> </span><span class="na">title</span><span class="o">=</span><span class="s2">"Table of Contents"</span><span class="w"> </span><span class="na">type</span><span class="o">=</span><span class="s2">"toc"</span><span class="w"> </span><span class="p">%}</span></code></pre></figure></details>
