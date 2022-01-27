@@ -1,11 +1,11 @@
 ---
 name: TLT : Transformer-Lightning Language Model
 tools: [pytorch, transformer, language-mode, cross-entropy, pytorch-lightning]
-image: https://github.com/Khamies/khamies.github.io/tree/master/media/projects/transformer.jpg
+image: https://github.com/Khamies/khamies.github.io/media/projects/transformer.jpg
 description: This is an implementation of a transformer based language model using [Pytorch-Lightning framework](https://www.pytorchlightning.ai/). The model consists of two transformer layers with 2 heads each combined with embedding and linear layers. The code uses pytorch-lightning framework that is built for fast research prototyping! 
 ---
 
-# TLT : Transformer-Lightning Language Model
+# TLT : Transformer-Lightning Language Model 
 
 <img src="../media/projects/transformer.jpg" align="center" height="750" width="800" >
 
