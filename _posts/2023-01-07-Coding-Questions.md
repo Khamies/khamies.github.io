@@ -14,7 +14,7 @@ description: Some Coding Questions You Will Need For Applied Scientist Role.
 
   The problem is about finding the maximum area that a water container can hold if you are given a list of heights,  where these heights represent all possible heights of the sides of that container.
 
-  ![question_11](/home/waleed/Téléchargements/question_11.jpg)
+  ![code](../media/posts/code6.jpg)
 
 - Solution Intuition
 
