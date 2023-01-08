@@ -1,0 +1,74 @@
+<h4 id="6--container-with-most-water">6.  Container With Most Water</h4>
+
+<ul>
+  <li>
+    <p>Description</p>
+
+    <p>The problem is about finding the maximum area that a water container can hold if you are given a list of heights,  where these heights represent all possible heights of the sides of that container.</p>
+
+    <p><img src="../media/posts/code6.jpg" alt="code" /></p>
+  </li>
+  <li>
+    <p>Solution Intuition</p>
+
+    <ol>
+      <li>
+        <p>Brute Force Solution</p>
+
+        <p>we will make two for-loops, an outer loop which is represented by variable <strong>i</strong> and an inner loop which is represented by variable <strong>j</strong>. at each iteration of the outer loop, we will try to find the maximum area between height[i] and height [j].</p>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>Code</p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">max_water_area</span><span class="p">(</span><span class="n">height</span><span class="p">):</span>
+  
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">height</span><span class="p">)</span>
+    <span class="n">area</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+  
+            <span class="n">h</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">height</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">height</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+            <span class="n">w</span> <span class="o">=</span> <span class="n">j</span> <span class="o">-</span> <span class="n">i</span>
+            <span class="n">area</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">area</span><span class="p">,</span> <span class="n">h</span> <span class="o">*</span> <span class="n">w</span><span class="p">)</span>
+  
+    <span class="k">return</span> <span class="n">area</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>Problem with solution:  Time Complexity: O(n^2)</p>
+
+<p><strong>How we can optimize this solution?</strong></p>
+
+<p>Two pointers!.</p>
+
+<p>What if we we two pointers, left pointer that points at the beginning of the list of heights and right pointer that points at the end of the list. Then, we will move one of the two pointer depending if the value that corresponding to that pointer is less than the other one. why? imagine if one of the container sides has height 10 and the other is 5 and the distance between the two sides is 7, then:</p>
+
+<p>area = min(5, 10) x 7 = 35</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">max_water_area</span><span class="p">(</span><span class="n">height</span><span class="p">):</span>
+
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">height</span><span class="p">)</span>
+    <span class="n">left</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">right</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="n">area</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">while</span> <span class="n">left</span> <span class="o">&lt;</span> <span class="n">right</span><span class="p">:</span>
+        <span class="n">w</span> <span class="o">=</span> <span class="n">right</span> <span class="o">-</span> <span class="n">left</span>	<span class="c1"># container width
+</span>
+        <span class="k">if</span> <span class="n">height</span><span class="p">[</span><span class="n">left</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">height</span><span class="p">[</span><span class="n">right</span><span class="p">]:</span> 
+            <span class="n">h</span> <span class="o">=</span> <span class="n">height</span><span class="p">[</span><span class="n">left</span><span class="p">]</span>	<span class="c1"># Take the short left side as container height
+</span>            <span class="n">area</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">area</span><span class="p">,</span> <span class="n">h</span> <span class="o">*</span> <span class="n">w</span><span class="p">)</span>	<span class="c1"># Calculate the area and take the maximum between current area and the previous one.
+</span>
+            <span class="n">left</span> <span class="o">+=</span> <span class="mi">1</span>	<span class="c1"># move the left pointer by 1
+</span>        <span class="k">else</span><span class="p">:</span>
+            <span class="n">h</span> <span class="o">=</span> <span class="n">height</span><span class="p">[</span><span class="n">right</span><span class="p">]</span>	<span class="c1"># Take the short right side as container height
+</span>            <span class="n">area</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">area</span><span class="p">,</span> <span class="n">h</span> <span class="o">*</span> <span class="n">w</span><span class="p">)</span>
+
+            <span class="n">right</span> <span class="o">-=</span> <span class="mi">1</span>	<span class="c1"># move the right pointer by 1, but in the opposite direction.
+</span>
+    <span class="k">return</span> <span class="n">area</span>
+</code></pre></div></div>
+
