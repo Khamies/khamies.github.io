@@ -1,9 +1,9 @@
 ---
-title: Some Coding Questions You Will Need For Applied Scientist Role
+title: Some Coding Questions You Will Need For Applied ML Scientist Role - Part I
 tags: [Algorithms]
 style: fill
 color: primary
-description: Some Coding Questions You Will Need For Applied Scientist Role.
+description: A series of most important data structure and algorithms questions that I personally encountered during applying to applied machine learning scientist role.
 ---
 
 ​																							**This post is under construction! ***
