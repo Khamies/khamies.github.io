@@ -1,3 +1,11 @@
+---
+title: Some Coding Questions You Will Need For Applied Scientist Role
+tags: [Algorithms]
+style: fill
+color: dark
+description: Some Coding Questions You Will Need For Applied Scientist Role.
+---
+
 ##             Some Coding Questions You Will Need For Applied Scientist Role
 
 
