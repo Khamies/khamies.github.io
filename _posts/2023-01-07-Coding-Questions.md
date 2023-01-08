@@ -2,7 +2,7 @@
 title: Some Coding Questions You Will Need For Applied Scientist Role
 tags: [Algorithms]
 style: fill
-color: dark
+color: white
 description: Some Coding Questions You Will Need For Applied Scientist Role.
 ---
 
