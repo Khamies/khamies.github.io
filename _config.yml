@@ -99,3 +99,4 @@ exclude:
   - "*.log"
   - draft
   - documentation
+  - docs
