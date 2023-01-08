@@ -6,8 +6,6 @@ color: dark
 description: Some Coding Questions You Will Need For Applied Scientist Role.
 ---
 
-##             Some Coding Questions You Will Need For Applied Scientist Role
-
 
 
 #### 1.
