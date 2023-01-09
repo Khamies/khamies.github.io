@@ -8,6 +8,40 @@ description: A series of most important data structure and algorithms questions 
 
 ​																							**This post is under construction! ***
 
+#### 2. 3Sum
+
+- Description
+- Solution Intuition
+- Code
+
+```python
+def threeSum(self, nums):
+
+    n = len(nums)
+    target = 0
+    result = []
+    for i in range(n):
+        for j in range(i + 1, n):
+            for k in range(j + 1, n):
+
+                sum_num = nums[i] + nums[j] + nums[k]
+                sum_comb = [nums[i], nums[j], nums[k]]
+
+                if (
+                    sum_num == target
+                    and i != j
+                    and j != k
+                    and i != k
+                    and sorted(sum_comb) not in result
+                ):
+                    result.append(sorted(sum_comb))
+
+    return result
+
+```
+
+
+
 #### 6.  Container With Most Water
 
 - Description
