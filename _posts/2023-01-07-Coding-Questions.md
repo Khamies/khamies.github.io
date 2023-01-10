@@ -16,9 +16,9 @@ description: A series of most important data structure and algorithms questions 
 
 - Solution Intuition
 
-  ##### 1. Brute force solution
+  ##### **1. Brute Force Solution**
 
-  The intuitive approach to solve the problem is by making three for-loops (i, j, k), then iteratively, we look for a combination of a three numbers that add up to zero.
+  The intuitive approach to solve the problem is by making three for-loops (i, j, k), then iteratively, we look for a combination of three numbers that add up to zero.
 
 ```python
 def threeSum(nums):
@@ -47,6 +47,8 @@ def threeSum(nums):
 ```
 
 Problem with this solution is the time Complexity is O(n^3) and Space Complexity is O(n), which is not practical in real-world applications. So the question here: **Can we do better and optimize this time complexity?**
+
+**2. Optimized Solution**
 
 The answer is yes!, and by using "Two Pointers" approach. The idea is as following:
 
@@ -90,6 +92,68 @@ def threeSum(nums):
 
 
 
+#### 5. 4Sum
+
+- Problem Description
+
+  This problem is also one of kSum problems family, we have seen several version of kSum problems in this post, 2Sum, 3Sum and now 4Sum. 
+
+  Given a list of integers and a target, we want to find any set of 4 numbers from this list that add up to that target, where those sets are all unique.
+
+- Solution Intuition
+
+  
+
+  **1. Brute Force Solution**
+
+  A brute force solution to this probelm is to make four for-loops (i, j, k, l), then iteratively, we look for a combination of four numbers that add up to that target value.
+
+  **2. Optimized Solution**
+
+  2Sum and 3Sum problems have given us a pattern to solve any kSum problem including 4Sum. This pattern could be seen as:
+
+  
+  $$
+  \\
+  \text{Number of Targets} = \text{Number of equation terms - 1}
+  \\
+  \text{Number of Outer-For-Loops} = \text{Number of targets - 1}
+  $$
+  
+
+  wait wait wait, waleed, could you explain more? ok sure, In 2Sum we just needed to 1 for-loop to find all the combinations that form the target. In 3Sum, we needed 2 for-loops to find all the combinations. In 4Sum, we will need 3 for-loops to find all the combinations. Let's jump to the code to see how that works:
+
+  ```python
+  def fourSum(nums, target):
+  
+      nums = sorted(nums)
+      n = len(nums)
+      result = set()
+  
+      for i in range(n): # first loop
+          first_taget = target - nums[i] # target 1
+          for j in range(i + 1, n): # Second loop
+              second_target = first_target - nums[j]  # target 2
+              left = j + 1		
+              right = n - 1
+  
+              while left < right: # Third loop
+                  if nums[left] + nums[right] == second_target:
+                      result.add((nums[i], nums[j], nums[left], nums[right]))
+                      left += 1
+                      right -= 1
+                  elif nums[left] + nums[right] < second_target:
+                      left += 1
+                  else:
+                      right -= 1
+      return result
+  
+  ```
+
+  
+
+
+
 #### 6.  Container With Most Water
 
 - Description
@@ -100,7 +164,7 @@ def threeSum(nums):
 
 - Solution Intuition
 
-  1. Brute Force Solution
+  1. **Brute Force Solution**
 
      we will make two for-loops, an outer loop which is represented by variable **i** and an inner loop which is represented by variable **j**. at each iteration of the outer loop, we will try to find the maximum area between height[i] and height [j].
 
@@ -122,6 +186,8 @@ def threeSum(nums):
 Problem with solution:  Time Complexity: O(n^2)
 
 **How we can optimize this solution?**  
+
+**2. Optimized Solution**
 
 Two pointers!.
 
