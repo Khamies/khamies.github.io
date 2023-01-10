@@ -92,7 +92,7 @@ def threeSum(nums):
 
 
 
-#### 5. 4Sum
+#### 3. 4Sum
 
 - Problem Description
 
