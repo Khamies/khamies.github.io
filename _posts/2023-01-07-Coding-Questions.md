@@ -46,7 +46,7 @@ def threeSum(nums):
 
 ```
 
-Problem with solution is the time Complexity is O(n^3) and Space Complexity is O(n), which is not practical in real-world applications. So the question here: **Can we do better and optimize this time complexity?**
+Problem with this solution is the time Complexity is O(n^3) and Space Complexity is O(n), which is not practical in real-world applications. So the question here: **Can we do better and optimize this time complexity?**
 
 The answer is yes!, and by using "Two Pointers" approach. The idea is as following:
 
