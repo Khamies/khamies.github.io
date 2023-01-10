@@ -113,12 +113,11 @@ def threeSum(nums):
   2Sum and 3Sum problems have given us a pattern to solve any kSum problem including 4Sum. This pattern could be seen as:
 
   
-  $$
-  \\
-  \text{Number of Targets} = \text{Number of equation terms - 1}
-  \\
-  \text{Number of Outer-For-Loops} = \text{Number of targets - 1}
-  $$
+
+  **Number of Targets = number of equation terms - 1**
+
+  **Number of Outer-For-Loops = Number of targets - 1**
+
   
 
   wait wait wait, waleed, could you explain more? ok sure, In 2Sum we just needed to 1 for-loop to find all the combinations that form the target. In 3Sum, we needed 2 for-loops to find all the combinations. In 4Sum, we will need 3 for-loops to find all the combinations. Let's jump to the code to see how that works:
