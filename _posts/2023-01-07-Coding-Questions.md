@@ -11,11 +11,17 @@ description: A series of most important data structure and algorithms questions 
 #### 2. 3Sum
 
 - Description
+
+  The problem is that we are given a list of integers, and we want to find three numbers that add up to zero. In such way, the triplets should be all unique.
+
 - Solution Intuition
-- Code
+
+  ##### 1. Brute force solution
+
+  The intuitive approach to solve the problem is by making three for-loops (i, j, k), then iteratively, we look for a combination of a three numbers that add up to zero.
 
 ```python
-def threeSum(self, nums):
+def threeSum(nums):
 
     n = len(nums)
     target = 0
@@ -40,6 +46,48 @@ def threeSum(self, nums):
 
 ```
 
+Problem with solution is the time Complexity is O(n^3) and Space Complexity is O(n), which is not practical in real-world applications. So the question here: **Can we do better and optimize this time complexity?**
+
+The answer is yes!, and by using "Two Pointers" approach. The idea is as following:
+
+1. Sort the array of integers in increasing order.
+2. Create a result set to hold the combinations of triplets.
+3. While looping over the array using variable (i)
+   1. Initialize two pointers, left pointer and has value i+1, and right pointer which has value equal to n-1, where n = array size.
+   2. Make another loop and traverse the array using the two pointers, if nums[left] + nums[right] + nums[i] equals to zero, we will add this to the set of results. if nums[left] + nums[right] + nums[i] < zero, that means we need to increase the left pointer to increase the value of this summation. And finally, if f nums[left] + nums[right] + nums[i] > 0, that means we need to decrease the right pointer to decrease the value of the summation and push it towards being zero.
+4. Finally, we return the set of result.
+
+**Note**: I use set data structure to hold the combination of the triplets, to work around the duplication requirement.
+
+```python
+def threeSum(nums):
+
+    nums = sorted(nums)
+    n = len(nums)
+    result = set()
+
+    for i in range(n):
+
+        left = i + 1
+        right = n - 1
+        target = 0 - nums[i]
+
+        while left < right:
+
+            combination_sum = nums[left] + nums[right]
+            if combination_sum == target:
+                result.add((nums[i], nums[left], nums[right]))
+                left += 1
+                right -= 1
+
+            elif combination_sum < target:
+                left += 1
+            else:
+                right -= 1
+
+    return result
+```
+
 
 
 #### 6.  Container With Most Water
@@ -55,8 +103,6 @@ def threeSum(self, nums):
   1. Brute Force Solution
 
      we will make two for-loops, an outer loop which is represented by variable **i** and an inner loop which is represented by variable **j**. at each iteration of the outer loop, we will try to find the maximum area between height[i] and height [j].
-
-- Code
 
   ```python
   def max_water_area(height):
@@ -82,8 +128,6 @@ Two pointers!.
 What if we set two pointers, left pointer that points at the beginning of the list of heights and right pointer that points at the end of the list. Then, we will move one of the two pointer depending if the value that corresponding to that pointer is less than the other one. why? imagine if one of the container sides has height 10 and the other is 5 and the distance between the two sides is 7, then:
 
 area = min(5, 10) x 7 = 35 
-
-
 
 ```python
 def max_water_area(height):
