@@ -8,7 +8,23 @@ description: A series of most important data structure and algorithms questions 
 
 ​																							**This post is under construction! ***
 
-#### 2. 3Sum
+#### 1. [2Sum](https://leetcode.com/problems/two-sum/)
+
+- Description
+
+  This is one of the famous algorithms problems among interviewers, I do not know why they like it, but I know it contains multiple tricks which could be useful when you are coding other problems. 
+
+  In this problem, we are given a list of integers, and we want to find two numbers that add up to a given target. In such way, these tuples should be all unique.
+
+- Solution Intuition
+
+  ##### **1. Brute Force Solution**
+
+  The intuitive approach to solve the problem is by making three for-loops (i, j, k), then iteratively, we look for a combination of three numbers that add up to zero.
+
+  **2. Optimized Solution**
+
+#### 2. [3Sum](https://leetcode.com/problems/3sum/)
 
 - Description
 
@@ -92,7 +108,7 @@ def threeSum(nums):
 
 
 
-#### 3. 4Sum
+#### 3. [4Sum](https://leetcode.com/problems/4sum/)
 
 - Problem Description
 
@@ -153,7 +169,93 @@ def threeSum(nums):
 
 
 
-#### 6.  Container With Most Water
+#### 4. [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)
+
+- Problem Description
+
+- Solution Intuition
+
+  **1. Brute Force Solution**
+
+```python
+def letterCombinations(digits):
+
+    hashmap = {
+        "1": "None",
+        "2": ["a", "b", "c"],
+        "3": ["d", "e", "f"],
+        "4": ["g", "h", "i"],
+        "5": ["j", "k", "l"],
+        "6": ["m", "n", "o"],
+        "7": ["p", "q", "r", "s"],
+        "8": ["t", "u", "v"],
+        "9": ["w", "x", "y", "z"],
+    }
+
+    n = len(digits)
+    if n < 1:
+        return []
+    else:
+        ans = [""]
+
+        for i in range(n):
+            digit = digits[i]
+            string = list(hashmap[digit])
+            bag = []
+
+            for j in range(len(ans)):
+                for k in range(len(string)):
+                    bag.append(ans[j] + string[k])
+            ans = bag
+
+        return ans
+
+```
+
+**2. Optimized Solution**
+
+```python
+def letterCombinations(digits):
+
+    hashmap = {
+        "1": "None",
+        "2": ["a", "b", "c"],
+        "3": ["d", "e", "f"],
+        "4": ["g", "h", "i"],
+        "5": ["j", "k", "l"],
+        "6": ["m", "n", "o"],
+        "7": ["p", "q", "r", "s"],
+        "8": ["t", "u", "v"],
+        "9": ["w", "x", "y", "z"],
+    }
+
+    def dfs(digits, index, dic, path, result):
+
+        if index >= len(digits):
+            result.append(path)
+            return
+
+        string = dic[str(digits[index])]
+
+        for ch in string:
+            dfs(digits, index + 1, dic, path + ch, result)
+
+    if len(digits) <= 0:
+        return []
+
+    result = []
+    index = 0
+    path = ""
+
+    dfs(digits, index, hashmap, path, result)
+
+    return result
+
+```
+
+
+
+#### 6.  [Container With Most Water](https://leetcode.com/problems/container-with-most-water/)
 
 - Description
 
