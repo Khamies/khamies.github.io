@@ -1,5 +1,5 @@
 ---
-title: Some Coding Questions You Will Need For Applied ML Scientist Role - Part I
+title: Some Algorithms Questions You Will Need For Applied ML Scientist Role - Part I
 tags: [Algorithms]
 style: fill
 color: info
