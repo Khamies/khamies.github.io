@@ -224,6 +224,8 @@ def threeSum(nums):
 
   ​																									**Figure 1 : Telephone Keypad**
 
+  <p style="text-align: center;"> Text_content</p>
+
 - Solution Intuition
 
   **1. Brute Force Solution**
