@@ -35,7 +35,7 @@ description: A series of most important data structure and algorithms questions 
   
   ```
 
-  This solution has time complexity $O(n^2)$, and space complexity O(I). Even though, this algorithm is efficient in term of space complexity, it is not practical in terms of time complexity.
+  This solution has time complexity $O(n^2)$, and space complexity O(1). Even though, this algorithm is efficient in term of space complexity, it is not practical in terms of time complexity.
 
   
 
