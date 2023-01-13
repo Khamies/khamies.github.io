@@ -12,9 +12,9 @@ description: A series of most important data structure and algorithms questions 
 
 - Description
 
-  This is one of the famous algorithms problems among interviewers, I do not know why they like it, but I know it contains multiple tricks which could be useful when you are coding other problems. 
+  This is one of the most famous algorithm problems among interviewers, I do not know why they like it, but I know it contains multiple tricks which could be useful when you are solving other problems. 
 
-  In this problem, we are given a list of integers, and we want to find two numbers that add up to a given target. In such way, these tuples should be all unique.
+  In this problem, we are given **a list of integers**, and we want to find **two numbers** that add up to **a given target**.
 
 - Solution Intuition
 
@@ -67,9 +67,9 @@ description: A series of most important data structure and algorithms questions 
 
 #### 2. [3Sum](https://leetcode.com/problems/3sum/)
 
-- Description
+- Problem Description
 
-  The problem is that we are given a list of integers, and we want to find three numbers that add up to zero. In such way, the triplets should be all unique.
+  This problem is similar to the [2Sum](#2Sum) problem that we saw earlier. We are given a list of integers, and we want to find **three numbers** that add up to **zero**. In such way, the triplets should be all unique.
 
 - Solution Intuition
 
