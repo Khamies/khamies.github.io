@@ -214,9 +214,27 @@ def threeSum(nums):
 
 - Problem Description
 
+  In this problem, out goal is to find all the letters combinations that we can make if we are provided with a phone number, given that we have an access to a hashmap that maps each number to a string.
+
+  
+
+  ![Letter](../media/posts/letter_comb.jpg)
+
+  
+
+  ​																									**Figure 1 : Telephone Keypad**
+
 - Solution Intuition
 
   **1. Brute Force Solution**
+
+  The naive way to solve this problem is by using 3 for-loops. First, we will loop over the digits, and for each digit we will map it to its corresponding string using the given hashmap. Second, while we are inside the first loop, we will create another loop over the characters that related to each string. Finally, we will create a loop over the previous results that produced by the last step of the concatenation, i.e result = [ "ad", "ae"] , and add each character to the strings inside the result list.
+
+  This solution has time complexity O(n . m . k) where n = size of the digits array, m = size of the string array, k =size of the result array.
+
+  We can approximate this time complexity to be: O(n.3.k) = O(nk), where m = 3 in this problem.
+
+  
 
 ```python
 def letterCombinations(digits):
@@ -254,6 +272,25 @@ def letterCombinations(digits):
 ```
 
 **2. Optimized Solution**
+
+we can optimize this solution in terms of space complexity by getting rid of the result list, and use Depth First Search (DFS) algorithm to find those combinations:
+
+1. We will create "index" integer variable to keep track of the number inside the digits list.
+2. We will create "path" string variable to keep track of each valid path that the algorithm approach it.
+3. We will create "result" list to hold the combinations.
+4. Then we will call "dfs" function which build a tree and save each path to the result list.
+
+
+
+![Letter](../media/posts/letter_comb2.svg)
+
+
+
+​																	         **Figure 2 : It shows the sequence of the dfs function calls**
+
+
+
+The "dfs" function below is called as the previous digram shows. Each number in the digram represents a call to the "dfs" function. steps 3, 6 and 9 are where the algorithm find all the paths for each digit.
 
 ```python
 def letterCombinations(digits):
@@ -303,6 +340,12 @@ def letterCombinations(digits):
   The problem is about finding the maximum area that a water container can hold if you are given a list of heights,  where these heights represent all possible heights of the sides of that container.
 
   ![code](../media/posts/code6.jpg)
+
+  
+
+  ​									**Figure 3 : X axis represents container's hights categories, and Y axis represents container hights  values.**
+
+  
 
 - Solution Intuition
 
