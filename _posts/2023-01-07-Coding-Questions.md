@@ -222,9 +222,9 @@ def threeSum(nums):
 
   
 
-  ​																									**Figure 1 : Telephone Keypad**
+  ​																									
 
-  <p style="text-align: center;"> Text_content</p>
+  <p style="text-align: center;"> <b> Figure 1 : Telephone Keypad</b></p>
 
 - Solution Intuition
 
@@ -288,7 +288,9 @@ we can optimize this solution in terms of space complexity by getting rid of the
 
 
 
-​																	         **Figure 2 : It shows the sequence of the dfs function calls**
+
+
+<p style="text-align: center;"> <b> Figure 2 : It shows the sequence of the dfs function calls </b></p>
 
 
 
@@ -345,7 +347,7 @@ def letterCombinations(digits):
 
   
 
-  ​									**Figure 3 : X axis represents container's hights categories, and Y axis represents container hights  values.**
+  <p style="text-align: center;"> <b> Figure 3 : X axis represents container's hights categories, and Y axis represents container hights  values. </b></p>
 
   
 
