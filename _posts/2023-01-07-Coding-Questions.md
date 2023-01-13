@@ -20,9 +20,50 @@ description: A series of most important data structure and algorithms questions 
 
   ##### **1. Brute Force Solution**
 
-  The intuitive approach to solve the problem is by making three for-loops (i, j, k), then iteratively, we look for a combination of three numbers that add up to zero.
+  The intuitive approach to solve the problem is by making three for-loops (i, j), then iteratively, we look for a combination of two numbers that add up to the target value.
+
+  ```python
+  def twoSum(nums, target):
+  
+      n = len(nums)
+  
+      for i in range(n):
+          for j in range(i + 1, n):
+  
+              if nums[i] + nums[j] == target:
+                  return [i, j]
+  
+  ```
+
+  This solution has time complexity O(n^2), and space complexity O(I). Even though, this algorithm is efficient in term of space complexity, it is not practical in terms of time complexity.
+
+  
 
   **2. Optimized Solution**
+
+  We can work around the brute force solution by relying on the space complexity. One of the most useful data structure that programmers like to use is hashmap. Hashmap has the property of O(1) time complexity for the access operation of any element, **therefore what we can do is to store all elements of a list inside a hashmap. Then we can loop over the list and any time we will query our hashmap using a key that has value : target - nums[i], where i is the loop variable, and nums is the list of integers. ** 
+
+  ```python
+  def twoSum(nums, target):
+  
+      mapper = {}
+      for i, e in enumerate(nums): # Store the numbers inside the hashmap,
+          						 # where the keys are the numbers, and the values are the coressponding indicies.
+              					 #  time complexity = O(n).
+          mapper[e] = i
+  
+      for i in range(len(nums)): # Loop over the list of numbers
+  
+          b = target - nums[i]   # get the key value
+  
+          if b in mapper and mapper[b] != i:  # if the key is existed in the hashmap and the its value 
+              								# does not equal to the index of the second number, we return
+                  							# the indicies.
+              return (i, mapper[b])
+  
+  ```
+
+  This algorithm has time complexity O(n), and space complexity O(n). 
 
 #### 2. [3Sum](https://leetcode.com/problems/3sum/)
 

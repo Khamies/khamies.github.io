@@ -7,3 +7,12 @@ description: A series of most important data structure and algorithms questions 
 
 ---
 
+#### 1. [Permutations](https://leetcode.com/problems/permutations/)
+
+- Description
+- Solution Intuition
+
+#### 2. [Combinations](https://leetcode.com/problems/combinations/)
+
+- Description
+- Solution Intuition
