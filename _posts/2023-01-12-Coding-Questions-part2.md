@@ -3,6 +3,7 @@ title: Some Algorithms Questions You Will Need For Applied ML Scientist Role - P
 tags: [Algorithms]
 style: fill
 color: light
+image_cover: '../media/posts/coding_question_p2_cover.png'
 description: A series of most important data structure and algorithms questions that I personally encountered during applying to applied machine learning scientist role.
 
 ---

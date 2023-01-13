@@ -100,8 +100,9 @@ body { font-family: "Poppins", sans-serif; }
 
 .search-box { box-shadow: none !important; }
 
-.post.card { border-radius: 15px; text-decoration: none !important; padding: 15px; height: 100%; }
-.post.card .card-footer { font-size: 14px; margin: 0 -15px -15px -15px; padding: 15px 35px; }
+.post.card { text-decoration: none !important; height: 100%; }
+.post.card .card-img-top { width: 100%; height: 15vw; object-fit: cover; }
+.post.card .card-footer { font-size: 14px; margin: 0 -15px -15px -15px; }
 
 .post-metadata { font-size: 14px; margin-top: -6px; }
 .post-metadata .tag:hover { background-color: #007bff; color: white !important; }

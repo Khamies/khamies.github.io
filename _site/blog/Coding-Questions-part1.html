@@ -20,10 +20,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Some Coding Questions You Will Need For Applied ML Scientist Role - Part I">
+  <meta property="og:title" content="Some Algorithms Questions You Will Need For Applied ML Scientist Role - Part I">
   <meta property="og:description" content="A series of most important data structure and algorithms questions that I personally encountered during applying to applied machine learning scientist role.">
 
-  <title>Some Coding Questions You Will Need For Applied ML Scientist Role - Part I</title>
+  <title>Some Algorithms Questions You Will Need For Applied ML Scientist Role - Part I</title>
   <meta name="description" content="A series of most important data structure and algorithms questions that I personally encountered during applying to applied machine learning scientist role.">
 
   <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
@@ -73,11 +73,11 @@
 
 </nav>
     <div class="col-lg-10 mx-auto mt-5 markdown-body">
-  <h1><b>Some Coding Questions You Will Need For Applied ML Scientist Role - Part I</b></h1>
+  <h1><b>Some Algorithms Questions You Will Need For Applied ML Scientist Role - Part I</b></h1>
 
 <p class="post-metadata text-muted">
   07 January 2023 -  
-  <b>9 mins read time</b>
+  <b>17 mins read time</b>
 
   <br>Tags: 
     
@@ -88,18 +88,76 @@
 
 <p>​																							<em>*This post is under construction! **</em></p>
 
-<h4 id="2-3sum">2. 3Sum</h4>
+<h4 id="1-2sum">1. <a href="https://leetcode.com/problems/two-sum/">2Sum</a></h4>
 
 <ul>
   <li>
     <p>Description</p>
 
-    <p>The problem is that we are given a list of integers, and we want to find three numbers that add up to zero. In such way, the triplets should be all unique.</p>
+    <p>This is one of the most famous algorithm problems among interviewers, I do not know why they like it, but I know it contains multiple tricks which could be useful when you are solving other problems.</p>
+
+    <p>In this problem, we are given <strong>a list of integers</strong>, and we want to find <strong>two numbers</strong> that add up to <strong>a given target</strong>.</p>
   </li>
   <li>
     <p>Solution Intuition</p>
 
     <h5 id="1-brute-force-solution"><strong>1. Brute Force Solution</strong></h5>
+
+    <p>The intuitive approach to solve the problem is by making three for-loops (i, j), then iteratively, we look for a combination of two numbers that add up to the target value.</p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">twoSum</span><span class="p">(</span><span class="n">nums</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
+  
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+  
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+  
+            <span class="k">if</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">nums</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="n">target</span><span class="p">:</span>
+                <span class="k">return</span> <span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span>
+  
+</code></pre></div>    </div>
+
+    <p>This solution has time complexity $O(n^2)$, and space complexity O(1). Even though, this algorithm is efficient in term of space complexity, it is not practical in terms of time complexity.</p>
+
+    <p><strong>2. Optimized Solution</strong></p>
+
+    <p>We can work around the brute force solution by relying on the space complexity. One of the most useful data structure that programmers like to use is hashmap. Hashmap has the property of O(1) time complexity for the access operation of any element, **therefore what we can do is to store all elements of a list inside a hashmap. Then we can loop over the list and any time we will query our hashmap using a key that has value : target - nums[i], where i is the loop variable, and nums is the list of integers. **</p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">twoSum</span><span class="p">(</span><span class="n">nums</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
+  
+    <span class="n">mapper</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">e</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">nums</span><span class="p">):</span> <span class="c1"># Store the numbers inside the hashmap,
+</span>        						 <span class="c1"># where the keys are the numbers, and the values are the coressponding indicies.
+</span>            					 <span class="c1">#  time complexity = O(n).
+</span>        <span class="n">mapper</span><span class="p">[</span><span class="n">e</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span>
+  
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)):</span> <span class="c1"># Loop over the list of numbers
+</span>  
+        <span class="n">b</span> <span class="o">=</span> <span class="n">target</span> <span class="o">-</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>   <span class="c1"># get the key value
+</span>  
+        <span class="k">if</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">mapper</span> <span class="ow">and</span> <span class="n">mapper</span><span class="p">[</span><span class="n">b</span><span class="p">]</span> <span class="o">!=</span> <span class="n">i</span><span class="p">:</span>  <span class="c1"># if the key is existed in the hashmap and the its value 
+</span>            								<span class="c1"># does not equal to the index of the second number, we return
+</span>                							<span class="c1"># the indicies.
+</span>            <span class="k">return</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">mapper</span><span class="p">[</span><span class="n">b</span><span class="p">])</span>
+  
+</code></pre></div>    </div>
+
+    <p>This algorithm has time complexity O(n), and space complexity O(n).</p>
+  </li>
+</ul>
+
+<h4 id="2-3sum">2. <a href="https://leetcode.com/problems/3sum/">3Sum</a></h4>
+
+<ul>
+  <li>
+    <p>Problem Description</p>
+
+    <p>This problem is similar to the <a href="#2Sum">2Sum</a> problem that we saw earlier. We are given a list of integers, and we want to find <strong>three numbers</strong> that add up to <strong>zero</strong>. In such way, the triplets should be all unique.</p>
+  </li>
+  <li>
+    <p>Solution Intuition</p>
+
+    <h5 id="1-brute-force-solution-1"><strong>1. Brute Force Solution</strong></h5>
 
     <p>The intuitive approach to solve the problem is by making three for-loops (i, j, k), then iteratively, we look for a combination of three numbers that add up to zero.</p>
   </li>
@@ -178,7 +236,7 @@
     <span class="k">return</span> <span class="n">result</span>
 </code></pre></div></div>
 
-<h4 id="3-4sum">3. 4Sum</h4>
+<h4 id="3-4sum">3. <a href="https://leetcode.com/problems/4sum/">4Sum</a></h4>
 
 <ul>
   <li>
@@ -233,7 +291,123 @@
   </li>
 </ul>
 
-<h4 id="6--container-with-most-water">6.  Container With Most Water</h4>
+<h4 id="4-letter-combinations-of-a-phone-number">4. <a href="https://leetcode.com/problems/letter-combinations-of-a-phone-number/">Letter Combinations of a Phone Number</a></h4>
+
+<ul>
+  <li>
+    <p>Problem Description</p>
+
+    <p>In this problem, out goal is to find all the letters combinations that we can make if we are provided with a phone number, given that we have an access to a hashmap that maps each number to a string.</p>
+
+    <p><img src="../media/posts/letter_comb.jpg" alt="Letter" /></p>
+
+    <p>​</p>
+
+    <p style="text-align: center;"> <b> Figure 1 : Telephone Keypad</b></p>
+  </li>
+  <li>
+    <p>Solution Intuition</p>
+
+    <p><strong>1. Brute Force Solution</strong></p>
+
+    <p>The naive way to solve this problem is by using 3 for-loops. First, we will loop over the digits, and for each digit we will map it to its corresponding string using the given hashmap. Second, while we are inside the first loop, we will create another loop over the characters that related to each string. Finally, we will create a loop over the previous results that produced by the last step of the concatenation, i.e result = [ “ad”, “ae”] , and add each character to the strings inside the result list.</p>
+
+    <p>This solution has time complexity O(n . m . k) where n = size of the digits array, m = size of the string array, k =size of the result array.</p>
+
+    <p>We can approximate this time complexity to be: O(n.3.k) = O(nk), where m = 3 in this problem.</p>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">letterCombinations</span><span class="p">(</span><span class="n">digits</span><span class="p">):</span>
+
+    <span class="n">hashmap</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s">"1"</span><span class="p">:</span> <span class="s">"None"</span><span class="p">,</span>
+        <span class="s">"2"</span><span class="p">:</span> <span class="p">[</span><span class="s">"a"</span><span class="p">,</span> <span class="s">"b"</span><span class="p">,</span> <span class="s">"c"</span><span class="p">],</span>
+        <span class="s">"3"</span><span class="p">:</span> <span class="p">[</span><span class="s">"d"</span><span class="p">,</span> <span class="s">"e"</span><span class="p">,</span> <span class="s">"f"</span><span class="p">],</span>
+        <span class="s">"4"</span><span class="p">:</span> <span class="p">[</span><span class="s">"g"</span><span class="p">,</span> <span class="s">"h"</span><span class="p">,</span> <span class="s">"i"</span><span class="p">],</span>
+        <span class="s">"5"</span><span class="p">:</span> <span class="p">[</span><span class="s">"j"</span><span class="p">,</span> <span class="s">"k"</span><span class="p">,</span> <span class="s">"l"</span><span class="p">],</span>
+        <span class="s">"6"</span><span class="p">:</span> <span class="p">[</span><span class="s">"m"</span><span class="p">,</span> <span class="s">"n"</span><span class="p">,</span> <span class="s">"o"</span><span class="p">],</span>
+        <span class="s">"7"</span><span class="p">:</span> <span class="p">[</span><span class="s">"p"</span><span class="p">,</span> <span class="s">"q"</span><span class="p">,</span> <span class="s">"r"</span><span class="p">,</span> <span class="s">"s"</span><span class="p">],</span>
+        <span class="s">"8"</span><span class="p">:</span> <span class="p">[</span><span class="s">"t"</span><span class="p">,</span> <span class="s">"u"</span><span class="p">,</span> <span class="s">"v"</span><span class="p">],</span>
+        <span class="s">"9"</span><span class="p">:</span> <span class="p">[</span><span class="s">"w"</span><span class="p">,</span> <span class="s">"x"</span><span class="p">,</span> <span class="s">"y"</span><span class="p">,</span> <span class="s">"z"</span><span class="p">],</span>
+    <span class="p">}</span>
+
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">digits</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">ans</span> <span class="o">=</span> <span class="p">[</span><span class="s">""</span><span class="p">]</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+            <span class="n">digit</span> <span class="o">=</span> <span class="n">digits</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">string</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">hashmap</span><span class="p">[</span><span class="n">digit</span><span class="p">])</span>
+            <span class="n">bag</span> <span class="o">=</span> <span class="p">[]</span>
+
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ans</span><span class="p">)):</span>
+                <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">string</span><span class="p">)):</span>
+                    <span class="n">bag</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">ans</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">+</span> <span class="n">string</span><span class="p">[</span><span class="n">k</span><span class="p">])</span>
+            <span class="n">ans</span> <span class="o">=</span> <span class="n">bag</span>
+
+        <span class="k">return</span> <span class="n">ans</span>
+
+</code></pre></div></div>
+
+<p><strong>2. Optimized Solution</strong></p>
+
+<p>we can optimize this solution in terms of space complexity by getting rid of the result list, and use Depth First Search (DFS) algorithm to find those combinations:</p>
+
+<ol>
+  <li>We will create “index” integer variable to keep track of the number inside the digits list.</li>
+  <li>We will create “path” string variable to keep track of each valid path that the algorithm approach it.</li>
+  <li>We will create “result” list to hold the combinations.</li>
+  <li>Then we will call “dfs” function which build a tree and save each path to the result list.</li>
+</ol>
+
+<p><img src="../media/posts/letter_comb2.svg" alt="Letter" /></p>
+
+<p style="text-align: center;"> <b> Figure 2 : It shows the sequence of the dfs function calls </b></p>
+
+<p>The “dfs” function below is called as the previous digram shows. Each number in the digram represents a call to the “dfs” function. steps 3, 6 and 9 are where the algorithm find all the paths for each digit.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">letterCombinations</span><span class="p">(</span><span class="n">digits</span><span class="p">):</span>
+
+    <span class="n">hashmap</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s">"1"</span><span class="p">:</span> <span class="s">"None"</span><span class="p">,</span>
+        <span class="s">"2"</span><span class="p">:</span> <span class="p">[</span><span class="s">"a"</span><span class="p">,</span> <span class="s">"b"</span><span class="p">,</span> <span class="s">"c"</span><span class="p">],</span>
+        <span class="s">"3"</span><span class="p">:</span> <span class="p">[</span><span class="s">"d"</span><span class="p">,</span> <span class="s">"e"</span><span class="p">,</span> <span class="s">"f"</span><span class="p">],</span>
+        <span class="s">"4"</span><span class="p">:</span> <span class="p">[</span><span class="s">"g"</span><span class="p">,</span> <span class="s">"h"</span><span class="p">,</span> <span class="s">"i"</span><span class="p">],</span>
+        <span class="s">"5"</span><span class="p">:</span> <span class="p">[</span><span class="s">"j"</span><span class="p">,</span> <span class="s">"k"</span><span class="p">,</span> <span class="s">"l"</span><span class="p">],</span>
+        <span class="s">"6"</span><span class="p">:</span> <span class="p">[</span><span class="s">"m"</span><span class="p">,</span> <span class="s">"n"</span><span class="p">,</span> <span class="s">"o"</span><span class="p">],</span>
+        <span class="s">"7"</span><span class="p">:</span> <span class="p">[</span><span class="s">"p"</span><span class="p">,</span> <span class="s">"q"</span><span class="p">,</span> <span class="s">"r"</span><span class="p">,</span> <span class="s">"s"</span><span class="p">],</span>
+        <span class="s">"8"</span><span class="p">:</span> <span class="p">[</span><span class="s">"t"</span><span class="p">,</span> <span class="s">"u"</span><span class="p">,</span> <span class="s">"v"</span><span class="p">],</span>
+        <span class="s">"9"</span><span class="p">:</span> <span class="p">[</span><span class="s">"w"</span><span class="p">,</span> <span class="s">"x"</span><span class="p">,</span> <span class="s">"y"</span><span class="p">,</span> <span class="s">"z"</span><span class="p">],</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">dfs</span><span class="p">(</span><span class="n">digits</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">dic</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">result</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="n">index</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">digits</span><span class="p">):</span>
+            <span class="n">result</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+            <span class="k">return</span>
+
+        <span class="n">string</span> <span class="o">=</span> <span class="n">dic</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">digits</span><span class="p">[</span><span class="n">index</span><span class="p">])]</span>
+
+        <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">string</span><span class="p">:</span>
+            <span class="n">dfs</span><span class="p">(</span><span class="n">digits</span><span class="p">,</span> <span class="n">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">dic</span><span class="p">,</span> <span class="n">path</span> <span class="o">+</span> <span class="n">ch</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">digits</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[]</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="s">""</span>
+
+    <span class="n">dfs</span><span class="p">(</span><span class="n">digits</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">hashmap</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">result</span>
+
+</code></pre></div></div>
+
+<h4 id="5--container-with-most-water">5.  <a href="https://leetcode.com/problems/container-with-most-water/">Container With Most Water</a></h4>
 
 <ul>
   <li>
@@ -242,6 +416,8 @@
     <p>The problem is about finding the maximum area that a water container can hold if you are given a list of heights,  where these heights represent all possible heights of the sides of that container.</p>
 
     <p><img src="../media/posts/code6.jpg" alt="code" /></p>
+
+    <p style="text-align: center;"> <b> Figure 3 : X axis represents container's heights categories, and Y axis represents container heights  values. </b></p>
   </li>
   <li>
     <p>Solution Intuition</p>
