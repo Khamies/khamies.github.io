@@ -347,7 +347,7 @@ def letterCombinations(digits):
 
   
 
-  <p style="text-align: center;"> <b> Figure 3 : X axis represents container's hights categories, and Y axis represents container hights  values. </b></p>
+  <p style="text-align: center;"> <b> Figure 3 : X axis represents container's heights categories, and Y axis represents container heights  values. </b></p>
 
   
 
