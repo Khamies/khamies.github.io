@@ -19,9 +19,13 @@ description: A series of most important data structure and algorithms questions 
 - **Solution Intuition**
 
   The easiest way to think about this problem is by visualizing these permutations as a tree, and each path in the tree represents a valid permutation. Now, our problem becomes on how to traverse the list of integers in a way that we can visit all the paths in a tree, in other words, we are interested in to do tree traverse in a list of integers so that we can find all the valid paths which represent our sought permutations. Mathmatically this is formalized as:
+  
+  
   $$
   P_k^n = \frac{n!}{(n-k)!}
   $$
+  
+  
   
   
   Let us take an example, suppose that we are given list nums = [1,2,3,4], and our goal is to find all the possible permutations from this list. If we think about this problem as a tree problem and try to list all the permutations as tree, it will results in a tree as follows:
@@ -67,7 +71,7 @@ description: A series of most important data structure and algorithms questions 
 
   The combination problem is similar to the permutation problem that we have seen earlier. We are given a list of integers and  and we want to find all the possible combinations of k numbers, where k represents the number of chosen objects from the list.
 
-  combination(n , k) = n C k = n!/ k! (n-k)!
+  
   $$
   C_k^n = \frac{n!}{k! . (n-k)!}
   $$
