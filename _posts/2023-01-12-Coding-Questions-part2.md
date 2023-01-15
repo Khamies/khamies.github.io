@@ -73,7 +73,7 @@ description: A series of most important data structure and algorithms questions 
 
   
 
-  $$ C_k^n = \frac{n!}{k! . (n-k)!} $$
+  ``` C_k^n = \frac{n!}{k! . (n-k)!}```
 
   
 
