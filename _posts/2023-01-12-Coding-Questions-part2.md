@@ -72,9 +72,9 @@ description: A series of most important data structure and algorithms questions 
   The combination problem is similar to the permutation problem that we have seen earlier. We are given a list of integers and  and we want to find all the possible combinations of k numbers, where k represents the number of chosen objects from the list.
 
   
-  $$ {$$}
-  C_k^n = \frac{n!}{k! . (n-k)!}
-  $$ {$$}
+  $$
+  $$ C_k^n = \frac{n!}{k! . (n-k)!} $$
+  $$
   
 
 - **Solution Intuition**
