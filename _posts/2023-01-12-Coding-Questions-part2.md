@@ -63,7 +63,7 @@ description: A series of most important data structure and algorithms questions 
 
 #### 2. [Combinations](https://leetcode.com/problems/combinations/)
 
-- Description
+- **Description**
 
   The combination problem is similar to the permutation problem that we have seen earlier. We are given a list of integers and  and we want to find all the possible combinations of k numbers, where k represents the number of chosen objects from the list.
 
@@ -73,7 +73,7 @@ description: A series of most important data structure and algorithms questions 
   $$
   
 
-- Solution Intuition
+- **Solution Intuition**
 
   The solution will be as the permutation solution, except that we will do backtracking whenever the length of our path becomes to K. Let us take an example, suppose that we are given list nums = [1,2,3,4], and our goal is to find all the possible combinations from this list. If we think about this problem as a tree problem and try to list all the combinations as tree, it will results in a tree as follows:
 
@@ -83,15 +83,13 @@ description: A series of most important data structure and algorithms questions 
 
 
 
-We can observe that the number of paths has been shrunk, as the combination operation cares about the unique permutations and does not take into the account the repetitive ones. 
-
-
+We can observe that the number of paths has been shrunk, as the combination operation cares about the unique permutations and does not take into the account the repetitive ones. i.e [1,2] as the same as [2,1].
 
 ```python
 def combine(n, k):
     def dfs(nums, path, result):
 
-        if len(path) == k:   # backtracking condition: just return path that has length k.
+        if len(path) == k:   # base condition: just return paths that have length k.
             result.append(path)
             return
 
