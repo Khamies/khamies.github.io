@@ -20,7 +20,7 @@ description: A series of most important data structure and algorithms questions 
 
   The easiest way to think about this problem is by visualizing these permutations as a tree, and each path in the tree represents a valid permutation. Now, our problem becomes on how to traverse the list of integers in a way that we can visit all the paths in a tree, in other words, we are interested in to do tree traverse in a list of integers so that we can find all the valid paths which represent our sought permutations. Mathmatically this is formalized as:
   
-  $$P_k^n = \frac{n!}{(n-k)!}$$
+  <img src="../media/posts/AS_algorithms_part2/eq1.png" style="zoom: 33%;" />
   
   
   
@@ -29,7 +29,7 @@ description: A series of most important data structure and algorithms questions 
   
   
   
-  ![](../media/posts/permute_fig1.png)
+  ![](../media/posts/AS_algorithms_part2/permute_fig1.png)
   
   
   
@@ -70,7 +70,7 @@ description: A series of most important data structure and algorithms questions 
 
   
 
-  $$C_k^n = \frac{n!}{k! . (n-k)!}$$
+  <img src="../media/posts/AS_algorithms_part2/eq2.png" style="zoom: 33%;" />
 
   
 
@@ -80,7 +80,7 @@ description: A series of most important data structure and algorithms questions 
 
   
 
-![](../media/posts/combin-fig1.png)
+![](../media/posts/AS_algorithms_part2/combin-fig1.png)
 
 
 
