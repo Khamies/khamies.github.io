@@ -62,7 +62,7 @@ collections:
 
 ### Disqus ###
 disqus:
-  shortname: your-short-name-disqus                     # Your website Shortname on disqus
+  shortname: waleedkhamies                     # Your website Shortname on disqus
 
 
 ### Analytics ###
