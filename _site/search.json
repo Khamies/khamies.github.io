@@ -1,7 +1,15 @@
 [
   
     {
-      "title"    : "Some Algorithms Questions You Will Need For Applied ML Scientist Role - Part II",
+      "title"    : "Some Algorithms Questions You Will Need For Applied ML Scientist Roles - Part III",
+      "category" : "",
+      "tags"     : "Algorithms",
+      "url"      : "/blog/Coding-Questions-part3.md",
+      "date"     : "2023-01-15 00:00:00 -0700"
+    } ,
+  
+    {
+      "title"    : "Some Algorithms Questions You Will Need For Applied ML Scientist Roles - Part II",
       "category" : "",
       "tags"     : "Algorithms",
       "url"      : "/blog/Coding-Questions-part2",
