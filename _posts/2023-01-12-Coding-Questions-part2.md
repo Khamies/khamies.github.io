@@ -5,7 +5,6 @@ style: fill
 color: light
 image_cover: '../media/posts/AS_algorithms_part2/coding_question_p2_cover.png'
 description: A series of most important data structure and algorithms questions that I personally encountered during applying to applied machine learning scientist role.
-
 ---
 
 #### 1. [Permutations](https://leetcode.com/problems/permutations/)
