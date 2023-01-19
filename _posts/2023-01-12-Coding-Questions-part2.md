@@ -109,3 +109,68 @@ def combine(n, k):
 
 ```
 
+
+
+#### [3. Next Permutation](https://leetcode.com/problems/next-permutation/description/)
+
+**Description**
+
+
+
+**Solution Intuition**
+
+
+
+```python
+def nextPermutation(nums):
+
+    n = len(nums)
+    i = n - 1
+    j = n - 1
+    inflection_point_index = None
+    inflection_point_flag = False
+    swapping_point_index = None
+
+    # finding the inflection point and swapping index
+
+    while i >= 1 and j >= 1:
+
+        if nums[i - 1] < nums[i] and inflection_point_index == None:
+            inflection_point_index = i - 1
+            inflection_point_flag = True
+
+        if inflection_point_index != None and nums[j] > nums[inflection_point_index]:
+            swapping_point_index = j
+
+        if inflection_point_index == None:
+            i -= 1
+
+        if inflection_point_index != None and swapping_point_index == None:
+            j -= 1
+
+        if inflection_point_index != None and swapping_point_index != None:
+            break
+
+    # Swap nums[inflection_point_index] with nums[swapping_point_index]
+    if inflection_point_flag:
+        placeholder = nums[inflection_point_index]
+        nums[inflection_point_index] = nums[swapping_point_index]
+        nums[swapping_point_index] = placeholder
+
+    # Reverse the elements after the inflection point
+
+    left = inflection_point_index + 1 if inflection_point_flag else 0
+    right = n - 1
+
+    while left < right:
+
+        placeholder = nums[left]
+        nums[left] = nums[right]
+        nums[right] = placeholder
+
+        left += 1
+        right -= 1
+
+    return nums
+```
+
