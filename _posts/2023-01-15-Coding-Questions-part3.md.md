@@ -11,12 +11,26 @@ description: A series of most important data structure and algorithms questions 
 
 
 
+​                                                                     **THIS POST IS UNDER CONSTRUCTION, STAY TUNED!**
+
+
+
 #### 1. [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/)
 
-Description
+**Description**
 
-Solution Intuition
+**Solution Intuition**
 
 
 
-#### 2. 
+#### 2. [Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/)
+
+**Description**
+
+**Solution Intuition**
+
+#### 3. [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/)
+
+**Description**
+
+**Solution Intuition**

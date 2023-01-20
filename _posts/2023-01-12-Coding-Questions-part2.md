@@ -131,7 +131,7 @@ def nextPermutation(nums):
     inflection_point_flag = False
     swapping_point_index = None
 
-    # finding the inflection point and swapping index
+    # finding the inflection point index and swapping point index
 
     while i >= 1 and j >= 1:
 
@@ -173,4 +173,3 @@ def nextPermutation(nums):
 
     return nums
 ```
-
