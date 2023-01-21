@@ -47,7 +47,7 @@ description: A series of most important data structure and algorithms questions 
               result.append(path)
               return
   
-          for i in range(len(nums)): # loop over the nodes that belong to a one level
+          for i in range(len(nums)): # loop over the nodes that belong to each level
               dfs(nums[0:i] + nums[i + 1 :], path + [nums[i]], result) # Call dfs function, while saving the nodes of each path in a list 																	 # called path.
   
       result = [] 
@@ -109,15 +109,151 @@ def combine(n, k):
 
 ```
 
+#### 3. [Combinations Sum I](https://leetcode.com/problems/combination-sum/)
 
-
-#### [3. Next Permutation](https://leetcode.com/problems/next-permutation/description/)
-
-**Description**
+- **Description**
 
 
 
-**Solution Intuition**
+- **Solution Intuition**
+
+```python
+def dfs(nums, path, result, target):
+        if target < 0:
+            return
+        if target==0:
+            result.append(path)
+            return
+        for i in range(len(nums)):
+            dfs(nums[i:],  path+[nums[i],], result, target-nums[i])
+    result = []
+    path = []
+    dfs(candidates, path, result, target)
+
+    return result
+```
+
+#### 4. [Combinations Sum II](https://leetcode.com/problems/combination-sum-ii/)
+
+```python
+def combinationSum2(candidates, target):
+    
+    def dfs(nums, path, result, target):
+
+        if target < 0:
+            return
+
+        if target == 0:
+            result.add(tuple(sorted(path)))
+            return
+
+        for i in range(len(nums)):
+            
+            if i > 0 and nums[i] == nums[i - 1]: # we filter the duplicates numbers here, and stop calling the dfs 
+            	  								# function when we see another duplicates of the same number.
+                continue
+
+            dfs(nums[i + 1 :], path + (nums[i],), result, target - nums[i])
+        
+
+    result = set()
+    path = tuple()
+
+    # we are going to sort the list of candidates,
+    # because we want to get rid off the possiblity of having
+    # duplicate combinations.
+    candidates = sorted(candidates)
+
+    dfs(candidates, path, result, target)
+
+    return result
+
+```
+
+#### 5. [Subsets](https://leetcode.com/problems/subsets/)
+
+- **Description**
+
+
+
+- **Solution Intuition**
+
+```python
+def subsets(self, nums: List[int]) -> List[List[int]]:
+    def dfs(nums, k, path, result):
+        if len(path) == k:
+            result.append(path)
+            return
+
+        for i in range(len(nums)):
+
+            if i > 0 and nums[i] == nums[i - 1]:
+                continue
+
+            dfs(nums[i + 1 :], k, path + [nums[i]], result)
+
+    # power set of nums to n is:
+    # combination(nums, n)+ combination(nums, n-1)+ .... + combination(nums, 0)
+    n = len(nums)
+    final_result = []
+    for k in range(0, n + 1):
+        result = []
+        path = []
+        dfs(nums, k, path, result)
+
+        final_result = final_result + result
+
+    return final_result
+
+```
+
+#### 6. [Subsets II](https://leetcode.com/problems/subsets-ii/)
+
+- **Description**
+
+
+
+- **Solution Intuition**
+
+```python
+def subset_with_duplicate(nums):
+    def dfs(nums, k, path, result):
+        if len(path) == k:
+            result.append(path)
+            return
+
+        for i in range(len(nums)):
+
+            if i > 0 and nums[i] == nums[i - 1]:
+                continue
+
+            dfs(nums[i + 1 :], k, path + [nums[i]], result)
+
+    # sort the values of nums to help in removing the duplicates later.
+
+    nums = sorted(nums)
+
+    # power set of nums to n is:
+    # combination(nums, n)+ combination(nums, n-1)+ .... + combination(nums, 0)
+    n = len(nums)
+    final_result = []
+    for k in range(0, n + 1):
+        result = []
+        path = []
+        dfs(nums, k, path, result)
+
+        final_result = final_result + result
+
+    return final_result
+```
+
+#### 5. [Next Permutation](https://leetcode.com/problems/next-permutation/description/)
+
+- **Description**
+
+
+
+- **Solution Intuition**
 
 
 
