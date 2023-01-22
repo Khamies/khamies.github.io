@@ -336,9 +336,41 @@ def letterCombinations(digits):
 
 ```
 
+#### 5.  [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/description/)
 
+- Description
+- Solution Intuition
 
-#### 5.  [Container With Most Water](https://leetcode.com/problems/container-with-most-water/)
+```python
+def generateParenthesis(self, n: int) -> List[str]:
+    def generate(opening_count, closing_count, path, result):
+
+        if opening_count > closing_count:
+            return
+        if opening_count < 0:
+            return
+
+        if closing_count < 0:
+            return
+        if opening_count == 0 and closing_count == 0:
+
+            result.append(path)
+
+        generate(opening_count - 1, closing_count, path + "(", result)
+        generate(opening_count, closing_count - 1, path + ")", result)
+
+    result = []
+    path = ""
+    opening_count = n
+    closing_count = n
+
+    generate(opening_count, closing_count, path, result)
+
+    return result
+
+```
+
+#### 6.  [Container With Most Water](https://leetcode.com/problems/container-with-most-water/)
 
 - Description
 
@@ -409,4 +441,3 @@ def max_water_area(height):
 
     return area
 ```
-

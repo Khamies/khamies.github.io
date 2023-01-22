@@ -247,7 +247,7 @@ def subset_with_duplicate(nums):
     return final_result
 ```
 
-#### 5. [Next Permutation](https://leetcode.com/problems/next-permutation/description/)
+#### 7. [Next Permutation](https://leetcode.com/problems/next-permutation/description/)
 
 - **Description**
 
