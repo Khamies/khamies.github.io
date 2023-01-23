@@ -4,7 +4,7 @@ tags: [Algorithms]
 style: fill
 color: light
 image_cover: '../media/posts/AS_algorithms_part3/cover.png'
-description: A series of most important data structure and algorithms questions that you may encounter during applying to applied machine learning scientist roles.
+description: Part 3 of a series of most important data structure and algorithms questions that you will need if you are applying to applied machine learning scientist role.
 
 
 ---

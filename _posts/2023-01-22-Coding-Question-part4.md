@@ -4,11 +4,11 @@ tags: [Algorithms]
 style: fill
 color: light
 image_cover: '../media/posts/AS_algorithms_part4/coding_question_p4_cover.png'
-description: A series of most important data structure and algorithms questions that you will need if you are applying to applied machine learning scientist role.
+description: Part 4 of a series of most important data structure and algorithms questions that you will need if you are applying to applied machine learning scientist role.
 
 ---
 
-
+​                                                                                          	**This post is under construction! **
 
 
 

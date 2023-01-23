@@ -4,7 +4,7 @@ tags: [Algorithms]
 style: fill
 color: dark
 image_cover: '../media/posts/coding_question_p1_cover.png'
-description: A series of most important data structure and algorithms questions that I personally encountered during applying to applied machine learning scientist role.
+description: Part 1 of a series of most important data structure and algorithms questions that you will need if you are applying to applied machine learning scientist role.
 ---
 
 ​																							**This post is under construction! ***
