@@ -9,10 +9,6 @@ description: Part 1 of a series of most important data structure and algorithms 
 
 ​																							**This post is under construction! ***
 
-
-
-<img src="../media/posts/AS_algorithms_part1/intro.jpeg" alt="Letter" style="zoom: 25%;" />
-
 #### 1. [2Sum](https://leetcode.com/problems/two-sum/)
 
 - Description
