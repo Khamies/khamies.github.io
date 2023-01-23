@@ -20,11 +20,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Some Algorithms Questions You Will Need For Applied ML Scientist Role - Part I">
-  <meta property="og:description" content="A series of most important data structure and algorithms questions that I personally encountered during applying to applied machine learning scientist role.">
+  <meta property="og:title" content="Some Algorithms Questions You Will Need For Applied ML Scientist Role - Part 1">
+  <meta property="og:description" content="Part 1 of a series of most important data structure and algorithms questions that you will need if you are applying to applied machine learning scientist role.">
 
-  <title>Some Algorithms Questions You Will Need For Applied ML Scientist Role - Part I</title>
-  <meta name="description" content="A series of most important data structure and algorithms questions that I personally encountered during applying to applied machine learning scientist role.">
+  <title>Some Algorithms Questions You Will Need For Applied ML Scientist Role - Part 1</title>
+  <meta name="description" content="Part 1 of a series of most important data structure and algorithms questions that you will need if you are applying to applied machine learning scientist role.">
 
   <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
 
@@ -73,11 +73,11 @@
 
 </nav>
     <div class="col-lg-10 mx-auto mt-5 markdown-body">
-  <h1><b>Some Algorithms Questions You Will Need For Applied ML Scientist Role - Part I</b></h1>
+  <h1><b>Some Algorithms Questions You Will Need For Applied ML Scientist Role - Part 1</b></h1>
 
 <p class="post-metadata text-muted">
   07 January 2023 -  
-  <b>17 mins read time</b>
+  <b>18 mins read time</b>
 
   <br>Tags: 
     
@@ -87,6 +87,9 @@
     </p>
 
 <p>​																							<em>*This post is under construction! **</em></p>
+
+<figure class="figure w-100">
+  <img src="/media/posts/AS_algorithms_part1/intro.png" class="figure-img img-fluid rounded" alt="The Ocean" /><figcaption class="figure-caption text-center">The Ocean</figcaption></figure>
 
 <h4 id="1-2sum">1. <a href="https://leetcode.com/problems/two-sum/">2Sum</a></h4>
 
@@ -299,7 +302,7 @@
 
     <p>In this problem, out goal is to find all the letters combinations that we can make if we are provided with a phone number, given that we have an access to a hashmap that maps each number to a string.</p>
 
-    <p><img src="../media/posts/letter_comb.jpg" alt="Letter" /></p>
+    <p><img src="../media/posts/AS_algorithms_part1/letter_comb.jpg" alt="Letter" /></p>
 
     <p>​</p>
 
@@ -363,7 +366,7 @@
   <li>Then we will call “dfs” function which build a tree and save each path to the result list.</li>
 </ol>
 
-<p><img src="../media/posts/letter_comb2.svg" alt="Letter" /></p>
+<p><img src="../media/posts/AS_algorithms_part1/letter_comb2.svg" alt="Letter" /></p>
 
 <p style="text-align: center;"> <b> Figure 2 : It shows the sequence of the dfs function calls </b></p>
 
@@ -407,7 +410,42 @@
 
 </code></pre></div></div>
 
-<h4 id="5--container-with-most-water">5.  <a href="https://leetcode.com/problems/container-with-most-water/">Container With Most Water</a></h4>
+<h4 id="5--generate-parentheses">5.  <a href="https://leetcode.com/problems/generate-parentheses/description/">Generate Parentheses</a></h4>
+
+<ul>
+  <li>Description</li>
+  <li>Solution Intuition</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">generateParenthesis</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+    <span class="k">def</span> <span class="nf">generate</span><span class="p">(</span><span class="n">opening_count</span><span class="p">,</span> <span class="n">closing_count</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">result</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="n">opening_count</span> <span class="o">&gt;</span> <span class="n">closing_count</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="k">if</span> <span class="n">opening_count</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span>
+
+        <span class="k">if</span> <span class="n">closing_count</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="k">if</span> <span class="n">opening_count</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">closing_count</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+
+            <span class="n">result</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+
+        <span class="n">generate</span><span class="p">(</span><span class="n">opening_count</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">closing_count</span><span class="p">,</span> <span class="n">path</span> <span class="o">+</span> <span class="s">"("</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+        <span class="n">generate</span><span class="p">(</span><span class="n">opening_count</span><span class="p">,</span> <span class="n">closing_count</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">path</span> <span class="o">+</span> <span class="s">")"</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="s">""</span>
+    <span class="n">opening_count</span> <span class="o">=</span> <span class="n">n</span>
+    <span class="n">closing_count</span> <span class="o">=</span> <span class="n">n</span>
+
+    <span class="n">generate</span><span class="p">(</span><span class="n">opening_count</span><span class="p">,</span> <span class="n">closing_count</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">result</span>
+
+</code></pre></div></div>
+
+<h4 id="6--container-with-most-water">6.  <a href="https://leetcode.com/problems/container-with-most-water/">Container With Most Water</a></h4>
 
 <ul>
   <li>
@@ -415,7 +453,7 @@
 
     <p>The problem is about finding the maximum area that a water container can hold if you are given a list of heights,  where these heights represent all possible heights of the sides of that container.</p>
 
-    <p><img src="../media/posts/code6.jpg" alt="code" /></p>
+    <p><img src="../media/posts/AS_algorithms_part1/code6.jpg" alt="code" /></p>
 
     <p style="text-align: center;"> <b> Figure 3 : X axis represents container's heights categories, and Y axis represents container heights  values. </b></p>
   </li>
@@ -481,7 +519,6 @@
 </span>
     <span class="k">return</span> <span class="n">area</span>
 </code></pre></div></div>
-
 
 
 

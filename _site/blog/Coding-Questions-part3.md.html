@@ -20,11 +20,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Some Algorithms Questions You Will Need For Applied ML Scientist Roles - Part III">
-  <meta property="og:description" content="A series of most important data structure and algorithms questions that you may encounter during applying to applied machine learning scientist roles.">
+  <meta property="og:title" content="Some Algorithms Questions You Will Need For Applied ML Scientist Roles - Part 3">
+  <meta property="og:description" content="Part 3 of a series of most important data structure and algorithms questions that you will need if you are applying to applied machine learning scientist role.">
 
-  <title>Some Algorithms Questions You Will Need For Applied ML Scientist Roles - Part III</title>
-  <meta name="description" content="A series of most important data structure and algorithms questions that you may encounter during applying to applied machine learning scientist roles.">
+  <title>Some Algorithms Questions You Will Need For Applied ML Scientist Roles - Part 3</title>
+  <meta name="description" content="Part 3 of a series of most important data structure and algorithms questions that you will need if you are applying to applied machine learning scientist role.">
 
   <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
 
@@ -73,11 +73,11 @@
 
 </nav>
     <div class="col-lg-10 mx-auto mt-5 markdown-body">
-  <h1><b>Some Algorithms Questions You Will Need For Applied ML Scientist Roles - Part III</b></h1>
+  <h1><b>Some Algorithms Questions You Will Need For Applied ML Scientist Roles - Part 3</b></h1>
 
 <p class="post-metadata text-muted">
   15 January 2023 -  
-  <b>less than 1 min read time</b>
+  <b>2 mins read time</b>
 
   <br>Tags: 
     
@@ -86,7 +86,77 @@
     </a>
     </p>
 
-<p>####</p>
+<p>​                                                                     <strong>THIS POST IS UNDER CONSTRUCTION, STAY TUNED!</strong></p>
+
+<h4 id="1-remove-nth-node-from-end-of-list">1. <a href="https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/">Remove Nth Node From End of List</a></h4>
+
+<p><strong>Description</strong></p>
+
+<p><strong>Solution Intuition</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">removeNthFromEnd</span><span class="p">(</span><span class="n">head</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    
+    <span class="n">window_size</span> <span class="o">=</span> <span class="n">n</span>  <span class="c1"># window size where the deleted node will be in the middle
+</span>    <span class="n">distance</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="n">i_slow</span> <span class="o">=</span> <span class="n">head</span>
+    <span class="n">j_fast</span> <span class="o">=</span> <span class="n">head</span>
+
+    <span class="c1"># first we will move the fast pointer so that the distance between
+</span>    <span class="c1"># fast - slow = window size
+</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">window_size</span><span class="p">):</span>
+        <span class="n">j_fast</span> <span class="o">=</span> <span class="n">j_fast</span><span class="p">.</span><span class="nb">next</span>
+    <span class="c1"># print(i_slow.val)
+</span>    <span class="c1"># print(j_fast.val)
+</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">j_fast</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">i_slow</span><span class="p">.</span><span class="nb">next</span>
+    <span class="k">while</span> <span class="n">j_fast</span><span class="p">.</span><span class="nb">next</span><span class="p">:</span>
+        <span class="n">j_fast</span> <span class="o">=</span> <span class="n">j_fast</span><span class="p">.</span><span class="nb">next</span>
+        <span class="n">i_slow</span> <span class="o">=</span> <span class="n">i_slow</span><span class="p">.</span><span class="nb">next</span>
+
+    <span class="c1"># print("slow", i_slow.val)
+</span>    <span class="c1"># print("fast", j_fast.val)
+</span>    <span class="n">i_slow</span><span class="p">.</span><span class="nb">next</span> <span class="o">=</span> <span class="n">i_slow</span><span class="p">.</span><span class="nb">next</span><span class="p">.</span><span class="nb">next</span>
+
+    <span class="k">return</span> <span class="n">head</span>
+</code></pre></div></div>
+
+<h4 id="2-swap-nodes-in-pairs">2. <a href="https://leetcode.com/problems/swap-nodes-in-pairs/">Swap Nodes in Pairs</a></h4>
+
+<p><strong>Description</strong></p>
+
+<p><strong>Solution Intuition</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">swapPairs</span><span class="p">(</span><span class="n">head</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">head</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">head</span><span class="p">.</span><span class="nb">next</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">head</span>
+
+    <span class="n">sentinel_node</span> <span class="o">=</span> <span class="n">ListNode</span><span class="p">()</span>
+    <span class="n">sentinel_node</span><span class="p">.</span><span class="nb">next</span> <span class="o">=</span> <span class="n">head</span>
+    <span class="n">prev</span> <span class="o">=</span> <span class="n">sentinel_node</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">head</span>
+    <span class="n">j</span> <span class="o">=</span> <span class="n">head</span><span class="p">.</span><span class="nb">next</span>
+
+    <span class="k">while</span> <span class="n">prev</span><span class="p">.</span><span class="nb">next</span> <span class="ow">and</span> <span class="n">prev</span><span class="p">.</span><span class="nb">next</span><span class="p">.</span><span class="nb">next</span><span class="p">:</span>
+        <span class="c1"># finish here
+</span>        <span class="n">j</span> <span class="o">=</span> <span class="n">i</span><span class="p">.</span><span class="nb">next</span>
+        <span class="c1"># code logically starts from here
+</span>        <span class="n">i</span><span class="p">.</span><span class="nb">next</span> <span class="o">=</span> <span class="n">j</span><span class="p">.</span><span class="nb">next</span>
+        <span class="n">j</span><span class="p">.</span><span class="nb">next</span> <span class="o">=</span> <span class="n">i</span>
+        <span class="n">prev</span><span class="p">.</span><span class="nb">next</span> <span class="o">=</span> <span class="n">j</span>
+
+        <span class="n">prev</span> <span class="o">=</span> <span class="n">j</span><span class="p">.</span><span class="nb">next</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">i</span><span class="p">.</span><span class="nb">next</span>
+
+    <span class="k">return</span> <span class="n">sentinel_node</span><span class="p">.</span><span class="nb">next</span><span class="err">`</span>
+</code></pre></div></div>
+
+<h4 id="3-reverse-nodes-in-k-group">3. <a href="https://leetcode.com/problems/reverse-nodes-in-k-group/">Reverse Nodes in k-Group</a></h4>
+
+<p><strong>Description</strong></p>
+
+<p><strong>Solution Intuition</strong></p>
 
 
 

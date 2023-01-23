@@ -9,6 +9,10 @@ description: Part 1 of a series of most important data structure and algorithms 
 
 ​																							**This post is under construction! ***
 
+
+
+<img src="../media/posts/AS_algorithms_part1/intro.jpeg" alt="Letter" style="zoom: 25%;" />
+
 #### 1. [2Sum](https://leetcode.com/problems/two-sum/)
 
 - Description
@@ -219,7 +223,7 @@ def threeSum(nums):
 
   
 
-  ![Letter](../media/posts/letter_comb.jpg)
+  ![Letter](../media/posts/AS_algorithms_part1/letter_comb.jpg)
 
   
 
@@ -285,7 +289,7 @@ we can optimize this solution in terms of space complexity by getting rid of the
 
 
 
-![Letter](../media/posts/letter_comb2.svg)
+![Letter](../media/posts/AS_algorithms_part1/letter_comb2.svg)
 
 
 
@@ -376,7 +380,7 @@ def generateParenthesis(self, n: int) -> List[str]:
 
   The problem is about finding the maximum area that a water container can hold if you are given a list of heights,  where these heights represent all possible heights of the sides of that container.
 
-  ![code](../media/posts/code6.jpg)
+  ![code](../media/posts/AS_algorithms_part1/code6.jpg)
 
   
 
