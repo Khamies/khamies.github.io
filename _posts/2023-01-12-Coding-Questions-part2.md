@@ -1,5 +1,5 @@
 ---
-title: Some Algorithms Questions You Will Need For Applied ML Scientist Roles - Part II
+title: Some Algorithms Questions You Will Need For Applied ML Scientist Roles - Part 2
 tags: [Algorithms]
 style: fill
 color: light
