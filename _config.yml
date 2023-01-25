@@ -6,7 +6,7 @@ description         : >-
 baseurl             : ""                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 repository          : khamies/khamies.github.io     # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
 remote_theme        : khamies/SaP
-open_new_tab        : false                             # Opens external URLs in new tab (works for posts, projects and navbar only)
+open_new_tab        : true                             # Opens external URLs in new tab (works for posts, projects and navbar only)
 
 
 ### Plugins ###
@@ -50,14 +50,20 @@ author:
 ### Posts ###
 permalink: /blog/:title
 
-
 ### Collections ###
+
 collections:
+  gallery:
+    output: true
+    permalink: /gallery/:name
+    elements:                                             # For Documentation Only
+      output: true                                        # For Documentation Only
   projects:
     output: true
     permalink: /projects/:name
-  elements:                                             # For Documentation Only
-    output: true                                        # For Documentation Only
+    elements:                                             # For Documentation Only
+      output: true                                        # For Documentation Only
+
 
 
 ### Disqus ###
@@ -89,7 +95,11 @@ defaults:
       type: "posts"
     values:
       comments: true                                   # Set to true to enable disqus comments
-
+  - scope:
+      path: ""
+      type: "gallery"
+    values:
+      layout: "page"
 
 ### Exclude from processing ###
 exclude:
