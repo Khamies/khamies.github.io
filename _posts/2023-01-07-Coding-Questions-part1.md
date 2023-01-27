@@ -9,6 +9,19 @@ description: Part 1 of a series of most important data structure and algorithms 
 
 ​																							**This post is under construction! ***
 
+- Intro
+  - General Intro
+  - Agenda section
+    - My experience in solving algorithms problems?
+    - Why do I need algorithms questions?
+    - Topics list
+    - Recap
+    - Resources
+      - Links
+      - Leetcode profiles.
+
+## Introduction
+
 #### 1. [2Sum](https://leetcode.com/problems/two-sum/)
 
 - Description
@@ -36,13 +49,13 @@ description: Part 1 of a series of most important data structure and algorithms 
   
   ```
 
-  This solution has time complexity $O(n^2)$, and space complexity O(1). Even though, this algorithm is efficient in term of space complexity, it is not practical in terms of time complexity.
+  This solution has time complexity $O(n^2)$, and space complexity $O(1)$. Even though, this algorithm is efficient in term of space complexity, it is not practical in terms of time complexity.
 
   
 
   **2. Optimized Solution**
 
-  We can work around the brute force solution by relying on the space complexity. One of the most useful data structure that programmers like to use is hashmap. Hashmap has the property of O(1) time complexity for the access operation of any element, **therefore what we can do is to store all elements of a list inside a hashmap. Then we can loop over the list and any time we will query our hashmap using a key that has value : target - nums[i], where i is the loop variable, and nums is the list of integers. ** 
+  We can work around the brute force solution by relying on the space complexity. One of the most useful data structure that programmers like to use is hashmap. Hashmap has the property of $O(1)$ time complexity for the access operation of any element, **therefore what we can do is to store all elements of a list inside a hashmap. Then we can loop over the list and any time we will query our hashmap using a key that has value : target - nums[i], where i is the loop variable, and nums is the list of integers. ** 
 
   ```python
   def twoSum(nums, target):
