@@ -4,8 +4,8 @@ tags: [Algorithms]
 style: fill
 color: dark
 image_cover: '../media/posts/coding_question_p1_cover.png'
+external_url: https://blog.waleedkhamies.com
 description: Part 1 of a series of most important data structure and algorithms questions that you will need if you are applying to applied machine learning scientist role.
-external_url:'https://blog.waleedkhamies.com/'
 ---
 
 ​																							**This post is under construction! ***
