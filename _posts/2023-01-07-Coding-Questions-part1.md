@@ -10,17 +10,6 @@ external_url:'https://blog.waleedkhamies.com/'
 
 ​																							**This post is under construction! ***
 
-- Intro
-  - General Intro
-  - Agenda section
-    - My experience in solving algorithms problems?
-    - Why do I need algorithms questions?
-    - Topics list
-    - Recap
-    - Resources
-      - Links
-      - Leetcode profiles.
-
 ## Introduction
 
 #### 1. [2Sum](https://leetcode.com/problems/two-sum/)
