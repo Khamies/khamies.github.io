@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+
+<!--
+  portfolYOU Jekyll theme by Youssef Raafat
+  Free for personal and commercial use under the MIT license
+  https://github.com/YoussefRaafatNasry/portfolYOU
+-->
+
+<html lang="en" class="h-100">
+
+<head>
+
+  
+  
+
+  
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Some Algorithms Questions You Will Need For Applied ML Scientist Roles - Part 2">
+  <meta property="og:description" content="Part 2 of a series of most important data structure and algorithms questions that you will need if you are applying to applied machine learning scientist role.">
+
+  <title>Some Algorithms Questions You Will Need For Applied ML Scientist Roles - Part 2</title>
+  <meta name="description" content="Part 2 of a series of most important data structure and algorithms questions that you will need if you are applying to applied machine learning scientist role.">
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
+
+  <!-- Theme style -->
+  <script src="/assets/js/theme.js"></script>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body class="h-100 d-flex flex-column">
+
+  <main class="flex-shrink-0 container mt-5">
+    <nav class="navbar navbar-expand-lg navbar-themed">
+
+  <a class="navbar-brand" href="/"><h5><b>Waleed Khamies's Website</b></h5></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-1x fa-bars text-themed"></i>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto"><a class="nav-item nav-link active" href="/">Home</a>
+
+      <a class="nav-item nav-link active" href="/blog/">Blog</a>
+
+      <a class="nav-item nav-link " href="/projects/">Projects</a>
+
+      <a class="nav-item nav-link " href="/gallery/">Gallery</a>
+
+      <a class="nav-item nav-link " href="/about/">About</a>
+
+      
+
+      <span id="theme-toggler" class="nav-item nav-link" role="button" onclick="toggleTheme()"></span>
+    </div>
+  </div>
+
+</nav>
+    <div class="col-lg-10 mx-auto mt-5 markdown-body">
+  <h1><b>Some Algorithms Questions You Will Need For Applied ML Scientist Roles - Part 2</b></h1>
+
+<p class="post-metadata text-muted">
+  12 January 2023 -  
+  <b>11 mins read time</b>
+
+  <br>Tags: 
+    
+    <a class="text-decoration-none no-underline" href="/blog/tags#algorithms">
+      <span class="tag badge badge-pill text-primary border border-primary">Algorithms</span>
+    </a>
+    </p>
+
+<h4 id="1-permutations">1. <a href="https://leetcode.com/problems/permutations/">Permutations</a></h4>
+
+<ul>
+  <li>
+    <p><strong>Description</strong></p>
+
+    <p>The permutation problem is one standard algorithms questions, and one of the most liked questions among interviewers. This problem shared a pattern that appears in other algorithm problems such as: <a href="https://leetcode.com/problems/combinations/">Combinations</a>, <a href="https://leetcode.com/problems/combination-sum/">Combinations Sum</a>, <a href="https://leetcode.com/problems/combination-sum-ii/"> Combinations Sum II</a>, <a href="https://leetcode.com/problems/letter-combinations-of-a-phone-number/">Letter combination of a phone number</a>, <a href="https://leetcode.com/problems/subsets/">Subsets</a>, <a href="https://leetcode.com/problems/subsets-ii/">Subsets II</a> which we will discuss extensively in the upcoming posts.</p>
+
+    <p>The problem is formalized as following: We are given a list of integers, and we want to find all the possible permutations that can be formed from this list.</p>
+  </li>
+  <li>
+    <p><strong>Solution Intuition</strong></p>
+
+    <p>The easiest way to think about this problem is by visualizing these permutations as a tree, and each path in the tree represents a valid permutation. Now, our problem becomes on how to traverse the list of integers in a way that we can visit all the paths in a tree, in other words, we are interested in to do tree traverse in a list of integers so that we can find all the valid paths which represent our sought permutations. Mathmatically this is formalized as:</p>
+
+    <p><img src="../media/posts/AS_algorithms_part2/eq1.png" style="zoom: 33%;" /></p>
+
+    <p>Let us take an example, suppose that we are given list nums = [1,2,3,4], and our goal is to find all the possible permutations from this list. If we think about this problem as a tree problem and try to list all the permutations as tree, it will results in a tree as follows:</p>
+
+    <p><img src="../media/posts/AS_algorithms_part2/permute_fig1.png" alt="" /></p>
+
+    <p>Each path in the three represents a valid permutation, and each path is visited using depth first algorithm (DFS). In our example, the first path will be: [1,2,3,4], then [1,2,4,3], then [1,3,2,4], then [1,3,4,2], then [2,1,3,4], … etc which are considered our valid permutations.</p>
+
+    <p>Here is the following code of the above algorithm:</p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">permute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]:</span>
+    
+    <span class="k">def</span> <span class="nf">dfs</span><span class="p">(</span><span class="n">nums</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">result</span><span class="p">):</span>
+  
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>		<span class="c1"># A base condition to stop the recursion. When the there are no more items in the list that belong to 									# each node, the recursion will stop.
+</span>            <span class="n">result</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+            <span class="k">return</span>
+  
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)):</span> <span class="c1"># loop over the nodes that belong to each level
+</span>            <span class="n">dfs</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">:],</span> <span class="n">path</span> <span class="o">+</span> <span class="p">[</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]],</span> <span class="n">result</span><span class="p">)</span> <span class="c1"># Call dfs function, while saving the nodes of each path in a list 																	 # called path.
+</span>  
+    <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span> 
+    <span class="n">path</span> <span class="o">=</span> <span class="p">[]</span>
+  
+    <span class="n">dfs</span><span class="p">(</span><span class="n">nums</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+  
+    <span class="k">return</span> <span class="n">result</span>
+  
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h4 id="2-combinations">2. <a href="https://leetcode.com/problems/combinations/">Combinations</a></h4>
+
+<ul>
+  <li>
+    <p><strong>Description</strong></p>
+
+    <p>The combination problem is similar to the permutation problem that we have seen earlier. We are given a list of integers and  and we want to find all the possible combinations of k numbers, where k represents the number of chosen objects from the list.</p>
+
+    <p><img src="../media/posts/AS_algorithms_part2/eq2.png" style="zoom: 33%;" /></p>
+  </li>
+  <li>
+    <p><strong>Solution Intuition</strong></p>
+
+    <p>The solution will be as the permutation solution, except that we will do backtracking whenever the length of our path becomes to K. Let us take an example, suppose that we are given list nums = [1,2,3,4], and our goal is to find all the possible combinations from this list. If we think about this problem as a tree problem and try to list all the combinations as tree, it will results in a tree as follows:</p>
+  </li>
+</ul>
+
+<p><img src="../media/posts/AS_algorithms_part2/combin-fig1.png" alt="" /></p>
+
+<p>We can observe that the number of paths has been shrunk, as the combination operation cares about the unique permutations and does not take into the account the repetitive ones. i.e [1,2] as the same as [2,1].</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">combine</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">dfs</span><span class="p">(</span><span class="n">nums</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">result</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="o">==</span> <span class="n">k</span><span class="p">:</span>   <span class="c1"># base condition: just return paths that have length k.
+</span>            <span class="n">result</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+            <span class="k">return</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)):</span>
+
+            <span class="n">dfs</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">:],</span> <span class="n">path</span> <span class="o">+</span> <span class="p">[</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]],</span> <span class="n">result</span><span class="p">)</span>
+
+    <span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)]</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="n">path</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="n">dfs</span><span class="p">(</span><span class="n">nums</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">result</span>
+
+</code></pre></div></div>
+
+<h4 id="3-combinations-sum-i">3. <a href="https://leetcode.com/problems/combination-sum/">Combinations Sum I</a></h4>
+
+<ul>
+  <li>
+    <p><strong>Description</strong></p>
+  </li>
+  <li>
+    <p><strong>Solution Intuition</strong></p>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">dfs</span><span class="p">(</span><span class="n">nums</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">result</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">target</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="k">if</span> <span class="n">target</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+            <span class="n">result</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+            <span class="k">return</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)):</span>
+            <span class="n">dfs</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">:],</span>  <span class="n">path</span><span class="o">+</span><span class="p">[</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">],],</span> <span class="n">result</span><span class="p">,</span> <span class="n">target</span><span class="o">-</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">dfs</span><span class="p">(</span><span class="n">candidates</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">result</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">result</span>
+</code></pre></div></div>
+
+<h4 id="4-combinations-sum-ii">4. <a href="https://leetcode.com/problems/combination-sum-ii/">Combinations Sum II</a></h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">combinationSum2</span><span class="p">(</span><span class="n">candidates</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
+    
+    <span class="k">def</span> <span class="nf">dfs</span><span class="p">(</span><span class="n">nums</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">result</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="n">target</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span>
+
+        <span class="k">if</span> <span class="n">target</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">result</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="nb">tuple</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">path</span><span class="p">)))</span>
+            <span class="k">return</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)):</span>
+            
+            <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]:</span> <span class="c1"># we filter the duplicates numbers here, and stop calling the dfs 
+</span>            	  								<span class="c1"># function when we see another duplicates of the same number.
+</span>                <span class="k">continue</span>
+
+            <span class="n">dfs</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">:],</span> <span class="n">path</span> <span class="o">+</span> <span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">],),</span> <span class="n">result</span><span class="p">,</span> <span class="n">target</span> <span class="o">-</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        
+
+    <span class="n">result</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">()</span>
+
+    <span class="c1"># we are going to sort the list of candidates,
+</span>    <span class="c1"># because we want to get rid off the possiblity of having
+</span>    <span class="c1"># duplicate combinations.
+</span>    <span class="n">candidates</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">candidates</span><span class="p">)</span>
+
+    <span class="n">dfs</span><span class="p">(</span><span class="n">candidates</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">result</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">result</span>
+
+</code></pre></div></div>
+
+<h4 id="5-subsets">5. <a href="https://leetcode.com/problems/subsets/">Subsets</a></h4>
+
+<ul>
+  <li>
+    <p><strong>Description</strong></p>
+  </li>
+  <li>
+    <p><strong>Solution Intuition</strong></p>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">subsets</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]:</span>
+    <span class="k">def</span> <span class="nf">dfs</span><span class="p">(</span><span class="n">nums</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">result</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="o">==</span> <span class="n">k</span><span class="p">:</span>
+            <span class="n">result</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+            <span class="k">return</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)):</span>
+
+            <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]:</span>
+                <span class="k">continue</span>
+
+            <span class="n">dfs</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">:],</span> <span class="n">k</span><span class="p">,</span> <span class="n">path</span> <span class="o">+</span> <span class="p">[</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]],</span> <span class="n">result</span><span class="p">)</span>
+
+    <span class="c1"># power set of nums to n is:
+</span>    <span class="c1"># combination(nums, n)+ combination(nums, n-1)+ .... + combination(nums, 0)
+</span>    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+    <span class="n">final_result</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">dfs</span><span class="p">(</span><span class="n">nums</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+
+        <span class="n">final_result</span> <span class="o">=</span> <span class="n">final_result</span> <span class="o">+</span> <span class="n">result</span>
+
+    <span class="k">return</span> <span class="n">final_result</span>
+
+</code></pre></div></div>
+
+<h4 id="6-subsets-ii">6. <a href="https://leetcode.com/problems/subsets-ii/">Subsets II</a></h4>
+
+<ul>
+  <li>
+    <p><strong>Description</strong></p>
+  </li>
+  <li>
+    <p><strong>Solution Intuition</strong></p>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">subset_with_duplicate</span><span class="p">(</span><span class="n">nums</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">dfs</span><span class="p">(</span><span class="n">nums</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">result</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="o">==</span> <span class="n">k</span><span class="p">:</span>
+            <span class="n">result</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+            <span class="k">return</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)):</span>
+
+            <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]:</span>
+                <span class="k">continue</span>
+
+            <span class="n">dfs</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">:],</span> <span class="n">k</span><span class="p">,</span> <span class="n">path</span> <span class="o">+</span> <span class="p">[</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]],</span> <span class="n">result</span><span class="p">)</span>
+
+    <span class="c1"># sort the values of nums to help in removing the duplicates later.
+</span>
+    <span class="n">nums</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+
+    <span class="c1"># power set of nums to n is:
+</span>    <span class="c1"># combination(nums, n)+ combination(nums, n-1)+ .... + combination(nums, 0)
+</span>    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+    <span class="n">final_result</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">dfs</span><span class="p">(</span><span class="n">nums</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+
+        <span class="n">final_result</span> <span class="o">=</span> <span class="n">final_result</span> <span class="o">+</span> <span class="n">result</span>
+
+    <span class="k">return</span> <span class="n">final_result</span>
+</code></pre></div></div>
+
+<h4 id="7-next-permutation">7. <a href="https://leetcode.com/problems/next-permutation/description/">Next Permutation</a></h4>
+
+<ul>
+  <li>
+    <p><strong>Description</strong></p>
+  </li>
+  <li>
+    <p><strong>Solution Intuition</strong></p>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">nextPermutation</span><span class="p">(</span><span class="n">nums</span><span class="p">):</span>
+
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="n">j</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="n">inflection_point_index</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">inflection_point_flag</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="n">swapping_point_index</span> <span class="o">=</span> <span class="bp">None</span>
+
+    <span class="c1"># finding the inflection point index and swapping point index
+</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">j</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">:</span>
+
+        <span class="k">if</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">and</span> <span class="n">inflection_point_index</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">inflection_point_index</span> <span class="o">=</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span>
+            <span class="n">inflection_point_flag</span> <span class="o">=</span> <span class="bp">True</span>
+
+        <span class="k">if</span> <span class="n">inflection_point_index</span> <span class="o">!=</span> <span class="bp">None</span> <span class="ow">and</span> <span class="n">nums</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">nums</span><span class="p">[</span><span class="n">inflection_point_index</span><span class="p">]:</span>
+            <span class="n">swapping_point_index</span> <span class="o">=</span> <span class="n">j</span>
+
+        <span class="k">if</span> <span class="n">inflection_point_index</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">i</span> <span class="o">-=</span> <span class="mi">1</span>
+
+        <span class="k">if</span> <span class="n">inflection_point_index</span> <span class="o">!=</span> <span class="bp">None</span> <span class="ow">and</span> <span class="n">swapping_point_index</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">j</span> <span class="o">-=</span> <span class="mi">1</span>
+
+        <span class="k">if</span> <span class="n">inflection_point_index</span> <span class="o">!=</span> <span class="bp">None</span> <span class="ow">and</span> <span class="n">swapping_point_index</span> <span class="o">!=</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">break</span>
+
+    <span class="c1"># Swap nums[inflection_point_index] with nums[swapping_point_index]
+</span>    <span class="k">if</span> <span class="n">inflection_point_flag</span><span class="p">:</span>
+        <span class="n">placeholder</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">inflection_point_index</span><span class="p">]</span>
+        <span class="n">nums</span><span class="p">[</span><span class="n">inflection_point_index</span><span class="p">]</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">swapping_point_index</span><span class="p">]</span>
+        <span class="n">nums</span><span class="p">[</span><span class="n">swapping_point_index</span><span class="p">]</span> <span class="o">=</span> <span class="n">placeholder</span>
+
+    <span class="c1"># Reverse the elements after the inflection point
+</span>
+    <span class="n">left</span> <span class="o">=</span> <span class="n">inflection_point_index</span> <span class="o">+</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">inflection_point_flag</span> <span class="k">else</span> <span class="mi">0</span>
+    <span class="n">right</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span>
+
+    <span class="k">while</span> <span class="n">left</span> <span class="o">&lt;</span> <span class="n">right</span><span class="p">:</span>
+
+        <span class="n">placeholder</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">left</span><span class="p">]</span>
+        <span class="n">nums</span><span class="p">[</span><span class="n">left</span><span class="p">]</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">right</span><span class="p">]</span>
+        <span class="n">nums</span><span class="p">[</span><span class="n">right</span><span class="p">]</span> <span class="o">=</span> <span class="n">placeholder</span>
+
+        <span class="n">left</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">right</span> <span class="o">-=</span> <span class="mi">1</span>
+
+    <span class="k">return</span> <span class="n">nums</span>
+</code></pre></div></div>
+
+
+
+<div class="pt-5">
+  
+</div>
+
+</div>
+  </main>
+
+  <footer class="mt-auto py-3 text-center">
+
+  <small class="text-muted mb-2">
+    <i class="fas fa-code"></i> with <i class="fas fa-heart"></i>
+    by <strong>Waleed Khamies</strong>
+  </small>
+
+  <div class="container-fluid justify-content-center"><a class="social mx-1"  href="mailto:khamiesw@outlook.com"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#db4437'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fas fa-envelope fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.github.com/khamies"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#333333'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-github fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.linkedin.com/in/khamiesw"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#007bb5'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-linkedin-in fa-1x"></i>
+    </a><a class="social mx-1"  href="https://medium.com/@khamiesw"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#00ab6c'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-medium fa-1x"></i>
+    </a>
+
+</div><small class="text-muted mb-2">
+    Original theme by <a href="https://github.com/YoussefRaafatNasry/portfolYOU">portfolYOU</a>
+  </small>
+	<br>
+  
+  <small class="text-muted mb-2">&copy; Copyright 2023, Waleed Khamies, All Rights Reserved.</small> 
+  
+</footer>
+
+
+  
+  <!-- GitHub Buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- wow.js CDN & Activation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script> new WOW().init(); </script>
+
+<!-- Initialize all tooltips -->
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+
+
+</body>
+
+</html>

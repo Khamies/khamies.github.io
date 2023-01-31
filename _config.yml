@@ -48,7 +48,7 @@ author:
 
 
 ### Posts ###
-permalink: https://blog.waleedkhamies.com/
+permalink: /blog/:title
 
 ### Collections ###
 
