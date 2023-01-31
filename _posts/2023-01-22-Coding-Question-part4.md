@@ -4,6 +4,7 @@ tags: [Algorithms]
 style: fill
 color: dark
 image_cover: '../media/posts/AS_algorithms_part4/coding_question_p4_cover.png'
+external_url: https://blog.waleedkhamies.com
 description: Part 4 of a series of most important data structure and algorithms questions that you will need if you are applying to applied machine learning scientist role.
 
 ---
