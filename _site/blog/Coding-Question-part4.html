@@ -112,6 +112,27 @@
 
 </code></pre></div></div>
 
+<h4 id="2-group-anagrams">2. <a href="https://leetcode.com/problems/group-anagrams/description/">Group Anagrams</a></h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
+
+<span class="k">def</span> <span class="nf">groupAnagrams</span><span class="p">(</span><span class="n">strs</span><span class="p">):</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">strs</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[[</span><span class="s">""</span><span class="p">]]</span>
+
+    <span class="k">else</span><span class="p">:</span>
+
+        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">strs</span><span class="p">)</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">string</span> <span class="ow">in</span> <span class="n">strs</span><span class="p">:</span>
+            <span class="n">result</span><span class="p">[</span><span class="nb">tuple</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">string</span><span class="p">))].</span><span class="n">append</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">result</span><span class="p">.</span><span class="n">values</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>`</p>
+
 
 
 <div class="pt-5">

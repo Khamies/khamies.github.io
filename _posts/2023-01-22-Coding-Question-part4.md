@@ -35,3 +35,29 @@ def isValid(self, s: str) -> bool:
     return len(stack) == 1
 
 ```
+
+
+
+
+
+#### 2. [Group Anagrams](https://leetcode.com/problems/group-anagrams/description/)
+
+```python
+from collections import defaultdict
+
+def groupAnagrams(strs):
+
+    if not strs:
+        return [[""]]
+
+    else:
+
+        n = len(strs)
+        result = defaultdict(list)
+        for string in strs:
+            result[tuple(sorted(string))].append(string)
+
+    return result.values()
+```
+
+`

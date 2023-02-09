@@ -87,3 +87,118 @@ def swapPairs(head):
 **Description**
 
 **Solution Intuition**
+
+
+
+#### 4. Linked List Cycle
+
+```python
+def hasCycle(head):
+
+    p = head
+    nodes = []
+
+    while p:
+
+        if p in nodes:
+            return True
+
+        nodes.append(p)
+        p = p.next
+    return False
+
+```
+
+
+
+
+
+```python
+def hasCycle(head):
+
+    slow = head
+    fast = head
+
+    while fast and fast.next:
+
+        slow = slow.next
+        fast = fast.next.next
+
+        if slow == fast:
+            return True
+
+    return False
+```
+
+
+
+#### Linked List Cycle II
+
+**Bruteforce**
+
+```python
+def detectCycle(head):
+    p = head
+    nodes = []
+
+    while p:
+
+        if p in nodes:
+            return p
+
+        nodes.append(p)
+        p = p.next
+    return None
+```
+
+
+
+Floyed's cycle detection algorithm.
+
+![](/home/waleed/Téléchargements/Capture d'écran de 2023-02-02 19-08-24.png)
+
+```python
+def detectCycle(head):
+    
+    def has_cycle(head):
+        slow = head
+        fast = head
+
+        while fast and fast.next:
+
+            slow = slow.next
+            fast = fast.next.next
+
+            if slow == fast:
+                return slow
+            
+        return None
+
+    def cycle_starting_point(head, meeting_point):
+
+        p = head
+        q = meeting_point
+
+        while p != q:
+            p = p.next
+            q = q.next
+
+        return p
+
+    meeting_point = has_cycle(head)
+
+    if not meeting_point:
+        return None
+
+    else:
+
+        return cycle_starting_point(head, meeting_point)
+
+```
+
+
+
+resources:
+
+- https://www.youtube.com/watch?v=zbozWoMgKW0&
+- https://www.youtube.com/watch?v=LUm2ABqAs1w

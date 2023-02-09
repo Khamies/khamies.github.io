@@ -2,7 +2,9 @@
 title               : Waleed Khamies's Website
 
 description         : >-
-                      Welcome to my home :heart:. Check "about" to know me better, or check "projects" to find my small projects that I love doing them during my free time "avec" :tea:, and if you want to collaborate or have any question, don't hesitate to contact me :slightly_smiling_face: see you soon!
+                      Welcome to my home :heart:. I am Waleed, an applied machine learning scientist.
+                      
+                      Check "about" to know me better, or check "projects" to find my small projects that I love doing them during my free time "avec" :tea:. If you are interested in learning more about Algorithms, Machine Learning and Data Science, check "Blog" section. And yes, if you want to collaborate or have any question, don't hesitate to contact me :slightly_smiling_face: see you soon!
 baseurl             : ""                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 repository          : khamies/khamies.github.io     # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
 remote_theme        : khamies/SaP
@@ -28,7 +30,7 @@ author:
   image             : media/me.jpg
 #  behance           : your_username
 # dribbble          : your_username
-  email             : khamiesw@outlook.com
+  email             : waleed@waleedkhamies.com
 #  facebook          : your_username
   github            : khamies
 # gitlab            : your_username

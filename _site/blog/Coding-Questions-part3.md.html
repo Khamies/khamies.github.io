@@ -79,7 +79,7 @@
 
 <p class="post-metadata text-muted">
   15 January 2023 -  
-  <b>2 mins read time</b>
+  <b>4 mins read time</b>
 
   <br>Tags: 
     
@@ -159,6 +159,107 @@
 <p><strong>Description</strong></p>
 
 <p><strong>Solution Intuition</strong></p>
+
+<h4 id="4-linked-list-cycle">4. Linked List Cycle</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">hasCycle</span><span class="p">(</span><span class="n">head</span><span class="p">):</span>
+
+    <span class="n">p</span> <span class="o">=</span> <span class="n">head</span>
+    <span class="n">nodes</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">while</span> <span class="n">p</span><span class="p">:</span>
+
+        <span class="k">if</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">nodes</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">True</span>
+
+        <span class="n">nodes</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">p</span><span class="p">.</span><span class="nb">next</span>
+    <span class="k">return</span> <span class="bp">False</span>
+
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">hasCycle</span><span class="p">(</span><span class="n">head</span><span class="p">):</span>
+
+    <span class="n">slow</span> <span class="o">=</span> <span class="n">head</span>
+    <span class="n">fast</span> <span class="o">=</span> <span class="n">head</span>
+
+    <span class="k">while</span> <span class="n">fast</span> <span class="ow">and</span> <span class="n">fast</span><span class="p">.</span><span class="nb">next</span><span class="p">:</span>
+
+        <span class="n">slow</span> <span class="o">=</span> <span class="n">slow</span><span class="p">.</span><span class="nb">next</span>
+        <span class="n">fast</span> <span class="o">=</span> <span class="n">fast</span><span class="p">.</span><span class="nb">next</span><span class="p">.</span><span class="nb">next</span>
+
+        <span class="k">if</span> <span class="n">slow</span> <span class="o">==</span> <span class="n">fast</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">True</span>
+
+    <span class="k">return</span> <span class="bp">False</span>
+</code></pre></div></div>
+
+<h4 id="linked-list-cycle-ii">Linked List Cycle II</h4>
+
+<p><strong>Bruteforce</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">detectCycle</span><span class="p">(</span><span class="n">head</span><span class="p">):</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">head</span>
+    <span class="n">nodes</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">while</span> <span class="n">p</span><span class="p">:</span>
+
+        <span class="k">if</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">nodes</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">p</span>
+
+        <span class="n">nodes</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">p</span><span class="p">.</span><span class="nb">next</span>
+    <span class="k">return</span> <span class="bp">None</span>
+</code></pre></div></div>
+
+<p>Floyed’s cycle detection algorithm.</p>
+
+<p><img src="/home/waleed/Téléchargements/Capture d'écran de 2023-02-02 19-08-24.png" alt="" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">detectCycle</span><span class="p">(</span><span class="n">head</span><span class="p">):</span>
+    
+    <span class="k">def</span> <span class="nf">has_cycle</span><span class="p">(</span><span class="n">head</span><span class="p">):</span>
+        <span class="n">slow</span> <span class="o">=</span> <span class="n">head</span>
+        <span class="n">fast</span> <span class="o">=</span> <span class="n">head</span>
+
+        <span class="k">while</span> <span class="n">fast</span> <span class="ow">and</span> <span class="n">fast</span><span class="p">.</span><span class="nb">next</span><span class="p">:</span>
+
+            <span class="n">slow</span> <span class="o">=</span> <span class="n">slow</span><span class="p">.</span><span class="nb">next</span>
+            <span class="n">fast</span> <span class="o">=</span> <span class="n">fast</span><span class="p">.</span><span class="nb">next</span><span class="p">.</span><span class="nb">next</span>
+
+            <span class="k">if</span> <span class="n">slow</span> <span class="o">==</span> <span class="n">fast</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">slow</span>
+            
+        <span class="k">return</span> <span class="bp">None</span>
+
+    <span class="k">def</span> <span class="nf">cycle_starting_point</span><span class="p">(</span><span class="n">head</span><span class="p">,</span> <span class="n">meeting_point</span><span class="p">):</span>
+
+        <span class="n">p</span> <span class="o">=</span> <span class="n">head</span>
+        <span class="n">q</span> <span class="o">=</span> <span class="n">meeting_point</span>
+
+        <span class="k">while</span> <span class="n">p</span> <span class="o">!=</span> <span class="n">q</span><span class="p">:</span>
+            <span class="n">p</span> <span class="o">=</span> <span class="n">p</span><span class="p">.</span><span class="nb">next</span>
+            <span class="n">q</span> <span class="o">=</span> <span class="n">q</span><span class="p">.</span><span class="nb">next</span>
+
+        <span class="k">return</span> <span class="n">p</span>
+
+    <span class="n">meeting_point</span> <span class="o">=</span> <span class="n">has_cycle</span><span class="p">(</span><span class="n">head</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">meeting_point</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">None</span>
+
+    <span class="k">else</span><span class="p">:</span>
+
+        <span class="k">return</span> <span class="n">cycle_starting_point</span><span class="p">(</span><span class="n">head</span><span class="p">,</span> <span class="n">meeting_point</span><span class="p">)</span>
+
+</code></pre></div></div>
+
+<p>resources:</p>
+
+<ul>
+  <li>https://www.youtube.com/watch?v=zbozWoMgKW0&amp;</li>
+  <li>https://www.youtube.com/watch?v=LUm2ABqAs1w</li>
+</ul>
 
 
 
