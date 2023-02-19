@@ -33,11 +33,11 @@ weight: 5
 
 # Publications
 
-- ###### Mai, Khamies, Paull ; Batch Inverse-Variance Weighting: Deep Heteroscedastic Regression using Privileged Information; 2021; ICML Workshop on Uncertainty & Robustness in Deep Learning.
+- ##### Mai, Khamies, Paull ; Batch Inverse-Variance Weighting: Deep Heteroscedastic Regression using Privileged Information; 2021; ICML Workshop on Uncertainty & Robustness in Deep Learning.
 
-- ###### Khamies, Konidaris; Interpretable Reinforcement Learning Using Latent Reward Functions; 2019; NeurIPS Workshop: BAI.
+- ##### Khamies, Konidaris; Interpretable Reinforcement Learning Using Latent Reward Functions; 2019; NeurIPS Workshop: BAI.
 
-- ###### Khamies, Mohammedalamen, Rosman; Transfer learning For Prosthetic Using Imitation Learning; 2018; NeurIPS Workshop: BAI.
+- ##### Khamies, Mohammedalamen, Rosman; Transfer learning For Prosthetic Using Imitation Learning; 2018; NeurIPS Workshop: BAI.
 
 <!--<div class="row">
 {% include about/skills.html title="Programming Skills" source=site.data.programming-skills %}
@@ -46,7 +46,7 @@ weight: 5
 
 # Join My Newsletter!
 
-###### JOIN my Newsletter! I write about **Machine Learning,** **Algorithms**, and **Data Science**, where I provide practical advice and some tips for machine learning that actually works! … I am waiting for you on the other side **:)**… so join, join! 
+##### JOIN my Newsletter! I write about **Machine Learning,** **Algorithms**, and **Data Science**, where I provide practical advice and some tips for machine learning that actually works! … I am waiting for you on the other side **:)**… so join, join! 
 
 [![img](../media/newsletter.png)](https://blog.waleedkhamies.com/)
 
