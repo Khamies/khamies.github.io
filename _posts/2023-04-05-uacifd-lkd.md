@@ -4,7 +4,7 @@ tags: [Algorithms, Coding Interviews]
 style: fill
 color: dark
 image_cover: '../media/posts/5.png'
-external_url: https://bit.ly/uacifd-lkd
+external_url: https://bit.ly/uacifds-lkd
 description: "Chapter 1: Linked List Family Problems - Part 1/3"
 ---
 
