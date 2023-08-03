@@ -1,0 +1,43 @@
+{% assign content = site.data.content['discovery'] %}
+
+<section class="discovery gap no-bottom" style="background-color :#f2edf5">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-6">
+        <div class="heading">
+          <h6>{{ content.subtitle | safeHTML }}</h6>
+          <h2>{{ content.title | safeHTML }}</h2>
+          <img alt="line" src="/assets/images/headingline.png">
+          <p>{{ content.description }}</p>
+          <a href="{{ content.link }}" class="themebtu">{{ content.button }}</a>
+        </div>
+      </div>
+      <div class="col-xl-6">
+        <div class="discovery-img hoverstyle">
+          <figure>
+            <img class="w-100" alt="discovery" src="{{ content.featured_image | absolute_url }}">
+          </figure>
+          <div class="discovery-text">
+            <img src="{{ content.featured_icon | absolute_url }}" alt="icon">
+            <h4>{{ content.featured_title | safeHTML }}</h4>
+            <p>{{ content.featured_text | safeHTML }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tp-hero__shapes">
+        <div class="style-shapes-4">
+          <img alt="dots1" src="/assets/images/dots1.png">
+        </div>
+        <div class="style-shapes-5">
+          <img alt="dots1" src="/assets/images/shap-2.png">
+        </div>
+        <div class="style-shapes-6">
+          <img alt="dots1" src="/assets/images/shap-1.png">
+        </div>
+        <div class="style-shapes-7">
+          <img alt="dots1" src="/assets/images/shap-5.png">
+        </div>
+     </div>
+</section>

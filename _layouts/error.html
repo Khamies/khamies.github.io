@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+{% assign ui_text = site.data.ui-text['ui_text'] %}
+
+<section class="error-page" style="background-image: url(/assets/img/background.jpg)">
+	<div class="container">
+	  <div class="page-not">
+		<h2>{{ page.title }}</h2>
+		<div>
+		  <h3>{{ page.subtitle }}</h3>
+		  <h5>{{ page.content }}</h5>
+		</div>
+	  </div>
+	  <a href="{{ site.url }}" class="themebtu mt-5">{{ ui_text.error_button }}</a>
+	</div>
+</section>

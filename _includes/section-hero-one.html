@@ -1,0 +1,11 @@
+{% assign content = site.data.content['hero_one'] %}
+
+<section class="hero-section-one" style="background-image: url('{{ content.image | absolute_url }}')">
+  <div class="container">
+    <div class="heading-boder">
+      <h2>{{ content.title | safeHTML }}</h2>
+      <p>{{ content.description | safeHTML }}</p>
+      <a href="{{ content.link }}" class="themebtu full">{{ content.button }}</a>
+    </div>
+  </div>
+</section>

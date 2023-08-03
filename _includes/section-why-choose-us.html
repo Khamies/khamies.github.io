@@ -1,0 +1,52 @@
+{% assign content = site.data.content['why_choose_us'] %}
+
+<section class="why-choose-us">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-4">
+        <div class="heading-boder">
+          <h2>{{ content.title | safeHTML }}</h2>
+        </div>
+        <div class="why-choose-text">
+          <h6>{{ content.intro | safeHTML }}</h6>
+          {% for item in content.list %}
+          <h5>{{ item.label | safeHTML }}</h5>
+          <p>{{ item.value | safeHTML }}</p>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="col-xl-4 col-sm-6">
+        {% for item in content.items_col1 %}
+        <div class="choose-us-img">
+          <figure class="figure-size-{{ .size }}">
+            <img alt="img" src="{{ item.image | absolute_url }}">
+          </figure>
+          <div class="choose-us-img-text">
+            <i>
+              <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="m502.71875 58.410156-59.996094 30-13.417968-26.832031 60-30zm0 0"/><path d="m489.300781 298.429688-60-30 13.417969-26.832032 59.996094 30zm0 0"/><path d="m451 150h61v30h-61zm0 0"/><path d="m22.707031 31.582031 60 30-13.417969 26.832031-59.996093-30zm0 0"/><path d="m22.699219 298.417969-13.414063-26.832031 59.996094-30 13.417969 26.832031zm0 0"/><path d="m0 150h61v30h-61zm0 0"/><path d="m211 482h90v30h-90zm0 0"/><path d="m421 165c0-90.980469-74.019531-165-165-165s-165 74.019531-165 165c0 62.039062 35.011719 118.609375 90 146.761719v48.238281h-30v30h30v62h150v-62h30v-30h-30v-48.238281c54.988281-28.152344 90-84.722657 90-146.761719zm-120 257h-90v-32h90zm-60-227c0-8.269531 6.730469-15 15-15s15 6.730469 15 15-6.730469 15-15 15-15-6.730469-15-15zm30 165v-122.578125c17.460938-6.195313 30-22.867187 30-42.421875 0-24.8125-20.1875-45-45-45s-45 20.1875-45 45c0 19.554688 12.539062 36.226562 30 42.421875v122.578125h-30v-67.511719l-8.972656-3.9375c-49.222656-21.609375-81.027344-70.105469-81.027344-123.550781 0-74.4375 60.5625-135 135-135s135 60.5625 135 135c0 53.445312-31.804688 101.941406-81.027344 123.550781l-8.972656 3.9375v67.511719zm0 0"/></svg>
+            </i>
+            <h5>{{ item.title | safeHTML }}</h5>
+            <a href="{{ item.link }}">{{ item.button }}</a>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="col-xl-4 col-sm-6">
+        {% for item in content.items_col2 %}
+        <div class="choose-us-img">
+          <figure class="figure-size-{{ item.size }}">
+            <img alt="img" src="{{ item.image | absolute_url }}">
+          </figure>
+          <div class="choose-us-img-text">
+            <i>
+              <svg enable-background="new 0 0 64 64" height="512" viewBox="0 0 64 64" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m33 19v-2h3v-3c0-1.654-1.346-3-3-3h-2c-.552 0-1-.449-1-1v-1h3c.552 0 1 .449 1 1h2c0-1.654-1.346-3-3-3v-2h-2v2h-3v3c0 1.654 1.346 3 3 3h2c.552 0 1 .449 1 1v1h-3c-.552 0-1-.449-1-1h-2c0 1.654 1.346 3 3 3v2z"/><path d="m62.618 47-5-10h-13.974c2.044-1.651 3.356-4.174 3.356-7v-1h-7c-2.826 0-5.349 1.312-7 3.356v-9.406c5.598-.508 10-5.222 10-10.95 0-6.065-4.935-11-11-11s-11 4.935-11 11c0 5.728 4.402 10.442 10 10.949v5.406c-1.651-2.043-4.174-3.355-7-3.355h-7v1c0 4.962 4.037 9 9 9h5v2h-1.382-3.236-20l-5 10h3.618v16h52v-16zm-36.618-14c-3.521 0-6.442-2.612-6.929-6h4.929c3.521 0 6.442 2.612 6.929 6zm14-2h4.929c-.486 3.388-3.408 6-6.929 6h-4.929c.487-3.388 3.408-6 6.929-6zm-17-19c0-4.962 4.037-9 9-9s9 4.038 9 9-4.037 9-9 9-9-4.038-9-9zm8 27h7 18.382l3 6h-26.764l-3-6zm-23.382 0h18.764l-3 6h-18.764zm-.618 8h17.618l2.382-4.764v18.764h-20zm48 14h-26v-18.764l2.382 4.764h23.618z"/><path d="m53 53h-15v6h15zm-2 4h-11v-2h11z"/><path d="m9 53h2v2h-2z"/><path d="m9 57h2v2h-2z"/><path d="m9 49h2v2h-2z"/><path d="m49 33h2v-19h-2.233l4.233-7.056 4.233 7.056h-2.233v9h2v-7h3.767l-7.767-12.944-7.767 12.944h3.767z"/><path d="m55 25h2v2h-2z"/><path d="m55 29h2v2h-2z"/><path d="m6 23h2v-9h-2.233l4.233-7.056 4.233 7.056h-2.233v19h2v-17h3.767l-7.767-12.944-7.767 12.944h3.767z"/><path d="m6 25h2v2h-2z"/><path d="m6 29h2v2h-2z"/><path d="m46 41h2v2h-2z"/><path d="m50 41h2v2h-2z"/><path d="m54 41h2v2h-2z"/><path d="m8 41h2v2h-2z"/><path d="m12 41h2v2h-2z"/><path d="m16 41h2v2h-2z"/></svg>
+            </i>
+            <h5>{{ item.title | safeHTML }}</h5>
+            <a href="{{ item.link }}">{{ item.button }}</a>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

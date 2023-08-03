@@ -1,0 +1,33 @@
+{% assign content = site.data.content['about_two'] %}
+
+<section class="gap no-bottom">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-6">
+        <div class="welcome">
+          <img alt="img" src="{{ content.image1 | absolute_url }}">
+         <!--  <img alt="img" class="img-welcome" src="{{ content.image2 | absolute_url }}"> -->
+          <img alt="dots" class="dots" src="/assets/images/dots.png">
+        </div>
+      </div>
+      <div class="col-xl-6 pl-75">
+        <div class="heading design-enjoy">
+          <h6>{{ content.subtitle | safeHTML }}</h6>
+          <h2>{{ content.title | safeHTML }}</h2>
+          <img alt="line" src="/assets/images/headingline.png">
+        </div>
+        <div class="welcome-text">
+          <h6 class="pt-4 pb-5">
+            {{ content.description | safeHTML }}
+          </h6>
+          {% for item in content.items %}
+          <h5>{{ item.title | safeHTML }}</h5>
+          <p>{{ item.text | safeHTML }}</p>
+          {% endfor %}
+          <a href="{{ content.link }}" class="themebtu">{{ content.button }}</a>
+        </div>
+      </div>
+    </div>
+  </div>  
+  <img class="w-100" alt="line" src="/assets/images/line.jpg">
+</section>

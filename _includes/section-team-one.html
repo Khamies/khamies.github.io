@@ -1,0 +1,45 @@
+{% assign content = site.data.content['team_one'] %}
+
+<section class="gap team-section">
+  <div class="container">
+    <div class="heading-boder two">
+      <h2>{{ content.title | safeHTML }}</h2>
+      <p>{{ content.subtitle | safeHTML }}</p>
+    </div>
+    <div class="row">
+      {% for item in content.items %}
+      <div class="col-xl-3 col-lg-4 col-sm-6">
+        <div class="team-member">
+          <img class="w-100" alt="{{ item.name }}" src="{{ item.image | absolute_url }}">
+          <div class="team-member-text">
+            <h6>{{ item.name }}</h6>
+            <p>{{ item.role }}</p>
+            <ul class="brandicon">
+              {% for link in item.social %}
+              <li><a href="{{ link.link }}" target="_blank" rel="nofollow" title="{{ link.title }}"><i class="{{ link.icon }}"></i></a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="btugap">
+      <a href="{{ content.link }}" class="themebtu">{{ content.button }}</a>
+    </div>
+  </div>
+  <div class="tp-hero__shapes">
+    <div class="style-shapes-4">
+      <img alt="dots1" src="/assets/images/dots1.png">
+    </div>
+    <div class="style-shapes-5">
+      <img alt="dots1" src="/assets/images/shap-2.png">
+    </div>
+    <div class="style-shapes-6">
+      <img alt="dots1" src="/assets/images/shap-2.png">
+    </div>
+    <div class="style-shapes-7">
+      <img alt="dots1" src="/assets/images/shap-5.png">
+    </div>
+  </div>
+</section>

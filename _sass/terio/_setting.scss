@@ -1,0 +1,91 @@
+/*
+*	Terio - Digital Agency Template (HTML)
+*	Version: 1.0
+*	Author: bslthemes
+*	Author URL: http://themeforest.net/user/bslthemes
+*	Copyright © Terio by bslthemes. All Rights Reserved.
+*/
+
+/* SETTINGS VARIABLES FOR UI
+	- Background Colors
+	- Colors
+*/
+
+/* Background Colors */
+$bg_color_one: #f2edf5;
+$bg_color_two: #f3f8fb;
+$bg_color_three: #222;
+
+/* Colors */
+$text_color_one: #666;
+$text_color_two: #222;
+$active_color: #0049ff;
+$white_color: #FFF;
+$dark_color: #000;
+
+/* SETTINGS VARIABLES FOR TYPOGRAPHY
+	- Fonts
+	- Fonts Size
+	- Icons Size
+	- Line Height
+	- Mixins
+*/
+
+/* Fonts */
+$default_font: 'Inter';
+
+/* Fonts Size */
+
+$default_size: 16px;
+
+$section_h1_size: 70px;
+$section_sub_size: 20px;
+$section_h2_size: 40px;
+$section_name_size: 24px;
+
+$btn_size: 16px;
+
+$menu_size: 16px;
+$menu_sub_size: 16px;
+
+$title_h1_size: 65px;
+$title_h2_size: 40px;
+$title_h3_size: 26px;
+$title_h4_size: 24px;
+$title_h5_size: 22px;
+$title_h6_size: 20px;
+
+/* Fonts Weight */
+$font_weight: 400;
+
+/* Line Height */
+$line_height: 28px;
+
+/*Mixins*/
+@mixin border-radius($radius) {
+	border-radius: $radius;
+	-moz-border-radius: $radius;
+	-webkit-border-radius: $radius;
+	-khtml-border-radius: $radius;
+}
+
+@mixin box-shadow($param) {
+	box-shadow: $param;
+	-moz-box-shadow: $param;
+	-webkit-box-shadow: $param;
+	-khtml-box-shadow: $param;
+}
+
+@mixin transition($param) {
+	transition: $param;
+	-moz-transition: $param;
+	-webkit-transition: $param;
+	-o-transition: $param;
+}
+
+@mixin transform($param) {
+	transform: $param;
+	-webkit-transform: $param;
+	-moz-transform: $param;
+	-o-transform: $param;
+}

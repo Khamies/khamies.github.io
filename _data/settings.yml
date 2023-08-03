@@ -1,0 +1,118 @@
+# Theme Settings Configuration File
+##
+### use settings.yml file for configure colors, ui, rtl, sidebar, animation options
+
+### Main Settings
+general:
+  introBackground: "/assets/img/background.png"
+  headerBackground: "/assets/img/header.jpg"
+
+### Header
+header:
+  logo:
+    image: "assets/img/logo.png"
+    alt: "logo"
+    title: "Waleed Khamies"
+  button:
+    text: "Contact"
+    link: "/contact/"
+
+### Social
+social:
+
+  - title: "Twitter"
+    icon: "fa-brands fa-twitter"
+    url: "https://twitter.com/khamiesw"
+
+  - title: "Medium"
+    icon: "fa-solid fa-m"
+    url: "https://www.medium.com/@khamiesw"
+
+  - title: "Linkedin"
+    icon: "fa-brands fa-linkedin-in"
+    url: "https://www.linkedin.com/in/khamiesw/"
+
+### Footer
+footer:
+  description: ""
+  copyright: "Waleed Khamies - All Rights Reserved | Developed by <a href=\"https://bslthemes.com\" target=\"_blank\">bslthemes</a>"
+
+  menu:
+    title: "Additional Links"
+    list:
+      - title: "About"
+        link: "/about/"
+
+#      - title: "Services"
+#        link: "/services/"
+
+      - title: "Books"
+        link: "/books/"
+
+#      - title: "Team"
+#        link: "/team/"
+      - title: "Newsletter"
+        link: "https://khamiesw.substack.com"
+
+      
+#      - title: "News"
+#        link: "/blog/"
+
+      - title: "Contact"
+        link: "/contact/"
+
+  news:
+    title: "Latest News"
+    numOfItems: 2
+
+#  subscribe:
+#    title: "Subscribe"
+#    text: "Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam."
+
+#  mailchimp:
+#    url: "https://bslthemes.us21.list-manage.com/subscribe/post?u=e57127f785a6d278d2535bd53&amp;id=dd56743ee5&amp;f_id=000dfee1f0" #YOUR MAILCHIMP EMBED FORM URL [form action=""]
+#    key: "b_e57127f785a6d278d2535bd53_dd56743ee5" #YOUR MAILCHIMP EMBED FORM KEY VALUE [input hidden name=""]
+
+### Portfolio Filters Settings
+portfolio:
+  homeNumOfItems: 12
+  filters:
+    - name: "Deep Learning"
+      slug: "deeplearning"
+
+    - name: "NLP"
+      slug: "nlp"
+
+    - name: "Music"
+      slug: "music"
+
+    - name: "Generative Modeling"
+      slug: "generative_modeling"
+      
+    - name: "RL"
+      slug: "rl"
+
+books:
+  homeNumOfItems: 12
+  filters:
+    - name: "Algorithms"
+      slug: "algorithms"
+
+    - name: "Machine Learning"
+      slug: "machine_learning"
+
+    - name: "Deep Learning"
+      slug: "deep_learning"
+
+    - name: "MLOps"
+      slug: "MLOps"
+
+    - name: "Generative Modeling"
+      slug: "generative_modeling"
+      
+    - name: "Data Science"
+      slug: "data_science"
+      
+    - name: "Diffusion"
+      slug: "diffusion"
+      

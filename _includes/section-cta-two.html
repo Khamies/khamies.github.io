@@ -1,0 +1,8 @@
+{% assign content = site.data.content['cta_two'] %}
+
+<div class="container">
+  <div class="awesome-project">
+    <h4>{{ content.title | safeHTML }}</h4>
+    <a href="{{ content.link }}" class="themebtu full">{{ content.button }}</a>
+  </div>
+</div>

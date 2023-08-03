@@ -1,0 +1,78 @@
+{% assign content = site.data.content['cta_one'] %}
+{% assign ui_text = site.data.ui-text['ui_text'] %}
+{% assign $action = site.formspree_endpoint %}
+
+<section class="gap no-bottom video-section" style="background-color :#f2edf5 ;">
+  <div class="container">
+    <div class="heading-boder two">
+      <h2>{{ content.title | safeHTML }}</h2>
+      <p>{{ content.subtitle | safeHTML }}</p>
+    </div>
+    <div class="row">
+      <div class="offset-xl-1 col-xl-10">
+        <div class="video-img">
+          <img class="w-100" alt="img" src="{{ content.video_poster | absolute_url }}">
+          <a data-fancybox="" href="https://www.youtube.com/watch?v={{ content.youtube_video_id }}">
+            <i class="fa-solid fa-play"></i>
+          </a>
+        </div>
+      </div>
+      <div class="tp-hero__shapes">
+        <div class="style-shapes-2">
+          <img alt="shap-4" src="/assets/images/shap-1.png">
+        </div>
+        <div class="style-shapes-4">
+          <img alt="dots1" src="/assets/images/shap-2.png">
+        </div>
+        <div class="style-shapes-5">
+          <img alt="dots1" src="/assets/images/shap-3.png">
+        </div>
+        <div class="style-shapes-6">
+          <img alt="dots1" src="/assets/images/shap-3.png">
+        </div>
+        <div class="style-shapes-7">
+          <img alt="dots1" src="/assets/images/shap-5.png">
+        </div>
+     </div>
+    </div>
+  </div>
+  <div class="get-in-touch gap">
+    <div class="container">
+      <div class="row">
+        <div class="offset-xl-1 col-xl-10">
+          <div class="row">
+            <div class="col-xl-6">
+              <div class="heading">
+                <h6>{{ content.form_subtitle | safeHTML }}</h6>
+                <h2>{{ content.form_title | safeHTML }}</h2>
+                <img alt="line" src="/assets/images/headingline.png">
+                <p>{{ content.form_description | safeHTML }}</p>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <form class="touch" id="cform-1" method="post" action="{{ $action }}">
+                <div class="row">
+                  <div class="col-lg-4 col-md-6">
+                    <input type="text" name="name" placeholder="{{ ui_text.your_name" }}">
+                  </div>
+                  <div class="col-lg-4 col-md-6">
+                    <input type="text" name="email" placeholder="{{ ui_text.your_email }}">
+                  </div>
+                  <div class="col-lg-4 col-md-6">
+                    <input type="number" name="phone" placeholder="{{ ui_text.your_phone }}">
+                  </div>
+                  <div class="col-xl-12">
+                    <textarea name="message" placeholder="{{ ui_text.your_message }}"></textarea>
+                  </div>
+                  <div class="btugap">
+                     <a href="#" class="themebtu full" onclick="$('#cform-1').submit(); return false;">{{ ui_text.send_message }}</a>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,33 @@
+{% assign content = site.data.content['blog_carousel_two'] %}
+{% assign ui_text = site.data.ui-text['ui_text'] %}
+
+<section class="blog-posts gap no-top">
+	<div class="container">
+	  <div class="heading-boder two">
+		<h2>{{ content.title | safeHTML }}</h2>
+	  </div>
+	  <div class="swiper-container partnerswiper">
+		<div class="swiper-wrapper">
+		  {% for post in site.posts limit: content.numOfItems %}
+		  	{% if post.author == nil %}
+				{% assign author = site.author %}
+			{% else %}
+				{% assign author = post.author %}
+			{% endif %}
+
+			{% assign cat_size = post.category | size %}
+
+		  <div class="swiper-slide">
+			<div class="blog-posts-text">
+				<a href="{{ post.url }}"><i class="fa-regular fa-clock"></i><span>{{ post.date | date: site.date_format }}</span></a>
+				<h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+				<p>{{ post.content | strip_html | truncatewords: 20 }}</p>
+				<span>{{ ui_text.by }} {{ author }} | {% if cat_size != 0 %}{% for category in post.category %}{{ category }}{% if post.category.last != category and post.category.last != nil %}, {% endif %}{% endfor %}{% endif %}</span>
+			</div>
+		  </div>
+		  {% endfor %}
+		</div>
+		<div class="swiper-pagination"></div>
+	  </div>
+	</div>
+</section>

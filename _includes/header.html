@@ -1,0 +1,75 @@
+{% assign navigation = site.data.navigation['main'] %}
+{% assign ui_text = site.data.ui-text['ui_text'] %}
+{% assign header = site.data.settings['header'] %}
+{% assign page_url = page.url | absolute_url %}
+{% assign general =  site.data.settings['general'] %}
+{% assign headerStyle = page.headerStyle %}
+
+<header class="header{% if headerStyle  == 'two' %} two{% endif %}{% if headerStyle == 'three' or page.layout == 'works-single' or page.layout == 'post' %} three{% endif %}"{% if headerStyle == 'three' or page.layout == 'works-single' or page.layout == 'post' %} style="background-image: url('{{ general.headerBackground | absolute_url }}');"{% endif %}>
+	<div class="container">
+		<div class="nav">
+			<div class="d-flex align-items-center">
+			<div class="logo">
+				<a href="{{ site.url }}" title="{{ header.logo.title }}">
+				<img alt="{{ header.logo.alt }}" src="{{ header.logo.image | relative_url }}">
+				</a>
+			</div>
+			<ul class="menu">
+				{% for nav in navigation %}
+				{% assign nav_url = nav.url | absolute_url %}
+				<li class="menu-item{% if page_url == nav_url %} current-menu-item{% endif %}{% if nav.parent == 1 %} menu-item-has-children has-children{% endif %}">
+					<a class="splitting-text-anim-2" data-splitting="chars" href="{{ nav.url | relative_url }}">{{ nav.title }}</a>
+					{% if nav.parent == 1 %}
+					<ul class="sub-menu">
+						{% for subnav in nav.childs %}
+						{% assign subnav_url = subnav.url | absolute_url %}
+						<li class="menu-item{% if page_url == subnav_url %} menu-current-item{% endif %}">
+							<a class="splitting-text-anim-1" data-splitting="chars" href="{{ subnav.url | relative_url }}">{{ subnav.title }}</a>
+						</li>
+						{% endfor %}
+					</ul>
+					{% endif %}
+				</li>
+				{% endfor %}
+			</ul>
+			</div>
+			<div>
+				<form id="searchForm" class="search-form" method="GET" action="{{ '/search.html' | relative_url }}">
+					<input type="text" class="input search-field" id="search-input" value="" />
+					<button type="reset" class="search" id="search-btn"></button>
+					<ul id="results-container"></ul>
+				</form>
+				<a href="{{ header.button.link }}" class="themebtu">{{ header.button.text }}</a>
+			</div>
+			<div class="bar-menu">
+			<i class="fa-solid fa-bars"></i>
+			</div>
+		</div>
+	</div>
+	<div class="mobile-nav hmburger-menu" id="mobile-nav" style="display:block;">
+		<div class="res-log">
+			<a href="{{ site.url }}" title="{{ header.logo.title }}">
+			<img src="{{ header.logo.image | absolute_url }}" alt="{{ header.logo.alt }}">
+			</a>
+		</div>
+		<ul>
+			{% for nav in navigation %}
+			{% assign nav_url = nav.url | absolute_url %}
+			<li class="menu-item{% if page_url == nav_url %} current-menu-item{% endif %}{% if nav.parent == 1 %} menu-item-has-children has-children{% endif %}">
+				<a class="splitting-text-anim-2" data-splitting="chars" href="{{ nav.url | relative_url }}">{{ nav.title }}</a>
+				{% if nav.parent == 1 %}
+				<ul class="sub-menu">
+					{% for subnav in nav.childs %}
+					{% assign subnav_url = subnav.url | absolute_url %}
+					<li class="menu-item{% if page_url == subnav_url %} menu-current-item{% endif %}">
+						<a class="splitting-text-anim-1" data-splitting="chars" href="{{ subnav.url | relative_url }}">{{ subnav.title }}</a>
+					</li>
+					{% endfor %}
+				</ul>
+				{% endif %}
+			</li>
+			{% endfor %}
+		</ul>
+		<a href="JavaScript:void(0)" id="res-cross"></a>
+	</div>
+</header>

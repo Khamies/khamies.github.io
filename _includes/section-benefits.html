@@ -1,0 +1,41 @@
+{% assign content = site.data.content['benefits'] %}
+
+<section class="makes-us-different" style="background-color: #f2edf5;">
+  <div class="container">
+    <div class="heading">
+      <h6>{{ content.subtitle | safeHTML }}</h6>
+      <h2>{{ content.title | safeHTML }}</h2>
+      <img alt="line" src="/assets/images/headingline.png">
+    </div>
+    <div class="row">
+      {% for item in content.items %}
+      <div class="col-xl-4 col-lg-6 ">
+        <div class="makes-us-different-text">
+            <img src="{{ item.icon | absolute_url }}" alt="icon">
+            <h4>{{ item.title | safeHTML }}</h4>
+            <p>{{ item.description | safeHTML }}</p>
+            <a href="{{ item.link }}">{{ item.button }}</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% if content.numbers_enable == true %}
+    <div class="counter-style gap">
+      <div class="row">
+        {% for item in content.numbers %}
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="counter-text">
+            <div class="d-flex align-items-center justify-content-center">
+              <div class="counter" data-target="{{ item.value }}"></div>
+              {% if item.plus == true %}<h6>+</h6>{% endif %}
+            </div>
+             <div class="boder"></div>
+            <span>{{ item.label }}</span>
+           </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</section>

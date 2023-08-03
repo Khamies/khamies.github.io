@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+{% assign intro = page.intro %}
+{% assign intro_title = page.intro_title %}
+{% assign intro_subtitle = page.intro_subtitle %}
+{% assign general = site.data.settings['general'] %}
+
+{% if intro == true %}
+<section class="splash-area-section" style="background-image: url('{{ general.introBackground | absolute_url }}')">
+	<div class="container">
+	  <div class="splash-area">
+		<h2>{{ intro_title | safeHTML }}</h2>
+		<span>{{ intro_subtitle | safeHTML }}</span>
+	  </div>
+	</div>
+</section>
+{% endif %}
+
+{% assign sections = page.sections | split: "," %}
+
+{% for section in sections %}
+	{% include section-{{ section }}.html %}
+{% endfor %}

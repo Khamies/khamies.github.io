@@ -1,0 +1,42 @@
+{% assign content = site.data.content['contact_form_map'] %}
+{% assign ui_text = site.data.ui-text['ui_text'] %}
+{% assign $action = site.formspree_endpoint %}
+
+<section class="gap map-three">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-6">
+        <div class="heading">
+          <h6>{{ content.subtitle | safeHTML }}</h6>
+          <h2>{{ content.title | safeHTML }}</h2>
+          <img alt="line" src="/assets/images/headingline.png">
+          <p>{{ content.description | safeHTML }}</p>
+        </div>
+          <form method="post" id="cform-2" action="{{ $action }}" class="touch two">
+            <div class="row">
+              <div class="col-lg-4">
+                  <input type="text" name="name" placeholder="{{ ui_text.your_name }}">
+              </div>
+              <div class="col-lg-4">
+                  <input type="text" name="email" placeholder="{{ ui_text.your_email }}">
+              </div>
+              <div class="col-lg-4">
+                  <input type="number" name="phone" placeholder="{{ ui_text.your_phone }}">
+              </div>
+              <div class="col-xl-12">
+                  <textarea name="message" placeholder="{{ ui_text.your_message }}"></textarea>
+              </div>
+              <div class="btugap">
+                <a href="#" class="themebtu full" onclick="$('#cform-2').submit(); return false;">{{ ui_text.send_message }}</a>
+              </div>
+            </div>
+          </form>
+      </div>
+      <div class="offset-xl-1 col-xl-5">
+        <div class="map">
+          {{ content.map_iframe | markdownify }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

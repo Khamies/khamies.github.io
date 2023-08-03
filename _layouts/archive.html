@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+{% assign general = site.data.settings['general'] %}
+{% assign ui_text = site.data.ui-text['ui_text'] %}
+
+<section class="splash-area-section" style="background-image: url('{{ general.introBackground | absolute_url }}')">
+	<div class="container">
+	  <div class="splash-area">
+		<h2>{{ ui_text.archive }}: {{ page.title }}</h2>
+		<span>{{ ui_text.latest_posts }}</span>
+	  </div>
+	</div>
+</section>
+
+<section class="gap no-top">
+  <div class="container">
+    <div class="row">
+      {% for post in page.posts %}
+      <div class="col-xl-4 col-md-6">
+        <div class="latest-blog-post hoverstyle">
+          <figure>
+            <a href="{{ post.url }}"><img alt="{{ post.title }}" class="w-100" src="{{ post.image | absolute_url }}"></a>
+          </figure>
+          <a href="{{ post.url }}"><i class="fa-regular fa-clock"></i><span>{{ post.date | date: site.date_format }}</span></a>
+          <a href="{{ post.url }}">
+            <h4>{{ post.title }}</h4>
+          </a>
+          <span>{{ ui_text.by }} {{ author }} | {% if cat_size != 0 %}{% for category in post.category %}{{ category }}{% if post.category.last != category and post.category.last != nil %}, {% endif %}{% endfor %}{% endif %}</span>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,27 @@
+{% assign content = site.data.content['marketing_one'] %}
+
+<section class="gap">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="graph">
+          <img alt="img" src="{{ content.image | absolute_url }}">
+        </div>
+      </div>
+      <div class="col-lg-6 p-sm-0">
+        <div class="heading">
+          <h6>{{ content.subtitle | safeHTML }}</h6>
+          <h2>{{ content.title | safeHTML }}</h2>
+          <img alt="line" src="/assets/images/headingline.png">
+        </div>
+        <div class="marketing">
+          <h4>
+            {{ content.intro | safeHTML }}
+          </h4>
+          <p>{{ content.description | safeHTML }}</p>
+          <a href="{{ content.link }}" class="themebtu">{{ content.button }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

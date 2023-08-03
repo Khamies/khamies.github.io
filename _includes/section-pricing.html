@@ -1,0 +1,41 @@
+{% assign content = site.data.content['pricing'] %}
+
+<section class="plans-pricing gap" style="background-color :#f3f8fb">
+  <div class="container">
+    <div class="heading">
+      <h6>{{ content.subtitle | safeHTML }}</h6>
+      <h2>{{ content.title | safeHTML }}</h2>
+      <img alt="line" src="/assets/images/headingline.png">
+    </div>
+    <div class="row">
+      {% for item in content.items %}
+      <div class="col-xl-4 col-lg-6">
+        <div class="Pricing-style">
+          <div class="standard">
+            <h5>{{ item.title }}</h5>
+            <span><sup>{{ item.price_before }}</sup>{{ item.price }}<sup>{{ item.price_lower }}</sup></span>
+          </div>
+          <p>{{ item.description | safeHTML }}</p>
+          <ul>
+            {% for value in item.list %}
+            <li><i class="fa-solid fa-check"></i>{{ value }}</li>
+            {% endfor %}
+          </ul>
+          <a href="{{ item.link }}" class="themebtu">{{ item.button }}</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+   <div class="tp-hero__shapes">
+        <div class="style-shapes-5">
+          <img alt="dots1" src="/assets/images/shap-2.png">
+        </div>
+        <div class="style-shapes-4">
+          <img alt="dots1" src="/assets/images/dots1.png">
+        </div>
+        <div class="style-shapes-7">
+          <img alt="dots1" src="/assets/images/shap-5.png">
+        </div>
+     </div>
+</section>

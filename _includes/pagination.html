@@ -1,0 +1,47 @@
+{% assign ui_text = site.data.ui-text['ui_text'] %}
+
+{% if paginator.total_pages > 1 %}
+<div class="next-previous-page">
+  <div class="container">
+    <div class="next-previous">
+      <div class="prev">
+        {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path | relative_url }}">
+        {% else %}
+        <span>
+        {% endif %}
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 476.213 476.213" style="enable-background:new 0 0 476.213 476.213;" xml:space="preserve">
+          <polygon points="405.606,167.5 384.394,188.713 418.787,223.106 0,223.106 0,253.106 418.787,253.106 384.394,287.5 
+            405.606,308.713 476.213,238.106 "/>
+          </svg>
+          {{ ui_text.prev }}
+        {% if paginator.previous_page %}
+        </a>
+        {% else %}
+        </span>
+        {% endif %}
+      </div>
+
+      <div class="next">
+        {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path | relative_url }}">
+        {% else %}
+        <span>
+        {% endif %}
+          {{ ui_text.next }}
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 476.213 476.213" style="enable-background:new 0 0 476.213 476.213;" xml:space="preserve">
+          <polygon points="405.606,167.5 384.394,188.713 418.787,223.106 0,223.106 0,253.106 418.787,253.106 384.394,287.5 
+            405.606,308.713 476.213,238.106 "/>
+          </svg>
+        {% if paginator.next_page %}
+        </a>
+        {% else %}
+        </span>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}

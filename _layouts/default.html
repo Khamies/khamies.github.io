@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  {% assign settings = site.data.settings['settings'] %}
+
+  <body class="page{% if page.layout == 'builder' %} home{% endif %}{% if page.layout == 'blog' or page.layout == 'archive' %} blog{% endif %}{% if page.layout == 'post' or page.layout == 'works-single' or page.layout == 'page' or page.layout == 'error' %} single-page{% endif %}">
+
+    {%- include preloader.html -%}
+
+    {%- include header.html -%}
+
+    <!-- Wrapper -->
+    <div class="wrapper{% if page.layout == 'works-single' or page.layout == 'page' %} portfolio-template{% endif %}{% if page.layout == 'post' %} single-post{% endif %}">
+      {{ content }}
+    </div>
+
+    <!-- Footer -->
+    {%- include footer.html -%}
+
+    <!-- Back to Top -->
+    <a href="#." id="button"></a>
+
+    <!-- Scripts -->
+    {%- include scripts.html -%}
+
+  </body>
+
+</html>

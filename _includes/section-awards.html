@@ -1,0 +1,19 @@
+{% assign content = site.data.content['awards'] %}
+
+<div class="gap brands-we-work awards">
+  <div class="container">
+    <h6 class="p-0">{{ content.title | safeHTML }}</h6>
+    <span class="mt-2">{{ content.subtitle | safeHTML }}</span>
+    <div class="row">
+      {% for item in content.items %}
+      <div class="col-xl-3 col-lg-4 col-md-6 p-0">
+        <div class="awards-text">
+          <img alt="{{ item.label }}" src="{{ item.image | absolute_url }}">
+          <div class="boder"></div>
+          <h6>{{ item.label | safeHTML }}</h6>
+        </div>
+      </div>
+      {% endfor %}
+    </div> 
+  </div>
+</div>

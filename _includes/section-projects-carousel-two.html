@@ -1,0 +1,40 @@
+{% assign content = site.data.content['projects_carousel'] %}
+{% assign ui_text = site.data.ui-text['ui_text'] %}
+
+<section class="case-studies gap">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-4">
+        <div class="heading-boder">
+          <h2>{{ content.title | safeHTML }}</h2>
+          <p>{{ content.subtitle | safeHTML }}</p>
+          <a href="{{ content.link }}" class="themebtu full">{{ content.button }}</a>
+        </div>
+      </div>
+      <div class="col-xl-8">
+        <div class="swiper-container studiesswiper">
+          <div class="swiper-wrapper">
+            {% for project in site.projects limit: content.numOfItems %}
+            <div class="swiper-slide">
+              <div class="case-studies-project">
+                <a href="{{ project.url }}" class="case-studies-project-img"><img alt="{{ project.title }}" src="{{ project.image | absolute_url }}"></a>
+                <h4>{{ project.title }}</h4>
+                <p>{{ project.short }}</p>
+                <a href="{{ project.url }}">{{ ui_text.view_project }}</a>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tp-hero__shapes">
+    <div class="style-shapes-1"></div>
+    <div class="style-shapes-2">
+      <img alt="shap-4" src="/assets/images/shap-b-2.png">
+    </div>
+    <div class="style-shapes-3"></div>
+  </div>
+</section>

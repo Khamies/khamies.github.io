@@ -1,0 +1,36 @@
+{% assign categories = site.data.settings['portfolio'] %}
+{% assign ui_text = site.data.ui-text['ui_text'] %}
+
+<section class="gap">
+  <div class="container">
+    <div class="row">
+      <div class="portfolios">
+      <div class="filters portfolio-controllers-container">
+        <div class=" portfolio-controllers wow fadeLeft button-group js-radio-button-group" data-wow-duration="1s" data-wow-delay=".1s" data-filter-group="color">
+            <button type="button" class="button is-checked filter-btn active-work" data-filter="">{{ ui_text.all }}</button>
+            {% for category in categories.filters %}
+            <button type="button" class="filter-btn" data-filter=".sorting-{{ category.slug }}">{{ category.name }}</button>
+            {% endfor %}
+        </div>
+      </div>
+       
+      <div class="masonry-grid grid row align-items-center">
+        {% for project in site.projects %}
+        <div class="col-lg-4 col-md-6 col-sm-6 portfolio-img sorting-{{ project.category_slug }}"> 
+          <div class="portfolio-detail">
+            <div class="portfolio-img hoverstyle">
+              <figure>
+                <a href="{{ project.url }}"><img class="w-100" alt="{{ project.title }}" src="{{ project.image | absolute_url }}"></a>
+              </figure>
+              <h3><a href="{{ project.url }}">{{ project.title }}</a></h3>
+              <span>{{ project.short }}</span>
+              <a href="{{ project.url }}">{{ ui_text.view_project }}</a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    </div>
+  </div>
+</section>

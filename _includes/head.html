@@ -1,0 +1,36 @@
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="author" content="bslthemes" />
+  {%- seo -%}
+
+  <!-- Fonts -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap" type="text/css" media="all" />
+  
+  <!-- Load CSS -->
+  <link rel="stylesheet" href="{{ 'assets/plugins/bootstrap/bootstrap.css' | relative_url }}" />
+  <link rel="stylesheet" href="{{ 'assets/plugins/swiper/swiper.css' | relative_url }}" />
+  <link rel="stylesheet" href="{{ 'assets/plugins/fancybox/jquery.fancybox.min.css' | relative_url }}" />
+  <link rel="stylesheet" href="{{ 'assets/plugins/font-awesome/css/fontawesome.min.css' | relative_url }}" />
+  <link rel="stylesheet" href="{{ 'assets/css/syntax.css' | relative_url }}" />
+  <link rel="stylesheet" href="{{ 'assets/css/style.css' | relative_url }}">
+
+  <!--[if lt IE 9]>
+  <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="shortcut icon" href="{{ 'assets/images/favicons/favicon.ico' | relative_url }}">
+
+  {%- feed_meta -%}
+  {%- if jekyll.environment == 'production' and site.google_analytics -%}
+    {%- include google-analytics.html -%}
+  {%- endif -%}
+
+  {%- include custom-head.html -%}
+
+</head>

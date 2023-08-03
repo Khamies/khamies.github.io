@@ -1,117 +1,113 @@
-### Site Settings ###
-title               : Waleed Khamies's Website
+# ----------------------------------------------------
+#
+# Terio - Digital Agency Jekyll Theme
+# Version: 1.0
+# Author: bslthemes
+# Author URL: http://themeforest.net/user/bslthemes
+# Copyright © Terio by bslthemes. All Rights Reserved.
+#
+# ----------------------------------------------------
+#
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you:
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
 
-description         : >-
-                      Welcome Home :house_with_garden:
-                      This is Waleed Khamies.
-                      :point_right: Check out the "Blog" section if you are interested in learning more about Machine Learning,
-                      Algorithms, and Data Science.
-                      :point_right: Please JOIN my newsletter If you want to stay updated with future posts and news.
+# basic settings
+title: "Waleed Khamies"
+email: "waleed@waleedkhamies.com"
+description: ""
+author: "Admin"
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+date_format: "%d %B %Y"
 
-baseurl             : ""                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
-repository          : khamies/khamies.github.io     # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
-remote_theme        : khamies/SaP
-open_new_tab        : true                             # Opens external URLs in new tab (works for posts, projects and navbar only)
+# paginations & permalinks
+paginate: 6
+paginate_path: "/blog/page:num/"
+permalink: pretty
 
+# disqus comments
+disqus_comments: "yes" # yes - show disqus comments, no - hide disqus comments
+disqus_shortname: "waleedkhamies" # read more here https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
 
-### Plugins ###
-plugins:
-  - jemoji
+# formsubmit.io
+formspree_endpoint: "https://formspree.io/f/xpzgqkkr" # sign up on https://formspree.io/ and create your form endpoint
 
-
-### Navbar Settings ###
-nav_exclude:                                            # The following paths are excluded from navbar
-  - pages/tags.html
-  - pages/404.html
-  - pages/index.md
-  - documentation/partials/**                           # For Documentation Only
-
-
-### Author Info ###
-author:
-  name              : Waleed Khamies
-  image             : media/me.png
-#  behance           : your_username
-# dribbble          : your_username
-  email             : waleed@waleedkhamies.com
-#  facebook          : your_username
-  github            : khamies
-# gitlab            : your_username
-# instagram         : your_username
-# kaggle            : your_username
-  linkedin          : khamiesw
-  medium            : khamiesw
-# soundcloud        : your_username
-# spotify           : your_username
-# stackoverflow     : your_user_id
-# tumblr            : your_username.tumblr.com
-# twitch            : your_username
-# twitter           : your_username
-# vimeo             : your_username
-# youtube           : your_channel_name
-# keybase           : your_username
-
-
-### Posts ###
-permalink: /blog/:title
-
-### Collections ###
-
+# collections
 collections:
-  gallery:
+  works:
     output: true
-    permalink: /gallery/:name
-    elements:                                             # For Documentation Only
-      output: true                                        # For Documentation Only
+    permalink: /:collection/:name
+
+  books:
+    output: true
+    permalink: /:collection/:name
+
   projects:
     output: true
-    permalink: /projects/:name
-    elements:                                             # For Documentation Only
-      output: true                                        # For Documentation Only
+    permalink: /:collection/:name
 
+  news:
+    output: true
+    permalink: /:collection/:name
 
+  research:
+    output: true
+    permalink: /:collection/:name
 
-### Disqus ###
-disqus:
-  shortname: waleedkhamies                     # Your website Shortname on disqus
+# archives
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: archive
+    tag: archive
+  permalinks:
+    category: /categories/:name/
+    tag: /tags/:name/
 
+# Build settings
+plugins:
+  - jekyll-archives
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-seo-tag
 
-### Analytics ###
-analytics:
-  enabled: true                                        # Set true to enable analytics
-  google:
-    tracking_id: G-PE75LE15YR
-
-
-### Defaults for collections ###
-defaults:
-  - scope:
-      path: ""
-      type: "projects"
-    values:
-      layout: "page"
-  - scope:                                              # For Documentation Only
-      path: ""                                          # For Documentation Only
-      type: "elements"                                  # For Documentation Only
-    values:                                             # For Documentation Only
-      layout: "element"                                 # For Documentation Only
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      comments: true                                   # Set to true to enable disqus comments
-  - scope:
-      path: ""
-      type: "gallery"
-    values:
-      layout: "page"
-
-### Exclude from processing ###
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
 exclude:
-  - README.md
-  - CONTRIBUTING.md
-  - LICENSE
-  - "*.log"
-  - draft
-  - documentation
-  - docs
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+
+sass:
+  style: compressed
+
+markdown:  kramdown

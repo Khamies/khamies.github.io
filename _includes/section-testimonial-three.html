@@ -1,0 +1,35 @@
+{% assign content = site.data.content['testimonial_three'] %}
+
+<section class="satisfied-clients gap">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-xl-4">
+        <div class="heading-boder">
+          <h2>{{ content.title | safeHTML }}</h2>
+          <p class="pb-4">{{ content.subtitle | safeHTML }}</p>
+          <a href="{{ content.link }}" class="themebtu">{{ content.button }}</a>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-6">
+        {% for item in content.items_col1 %}
+        <div class="client-review mb-xl-5">
+          <i class="fa-solid fa-quote-left"></i>
+          <h4>{{ item.title | safeHTML }}</h4>
+          <p>“{{ item.text | safeHTML }}”</p>
+          <span>{{ item.name | safeHTML }}</span>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="col-xl-4 col-lg-6">
+        {% for item in content.items_col2 %}
+        <div class="client-review mb-xl-5">
+          <i class="fa-solid fa-quote-left"></i>
+          <h4>{{ item.title | safeHTML }}</h4>
+          <p>“{{ item.text | safeHTML }}”</p>
+          <span>{{ item.name | safeHTML }}</span>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

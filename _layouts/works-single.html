@@ -1,0 +1,118 @@
+---
+layout: default
+---
+
+{% assign ui_text = site.data.ui-text['ui_text'] %}
+
+{% if page.author == nil %}
+	{% assign author = site.author %}
+{% else %}
+	{% assign author = page.author %}
+{% endif %}
+
+{% assign blog_url = 'blog/' %}
+
+<section class="gap no-top">
+	<div class="container">
+	  <div class="title-blog">
+		<h2>{{ page.title }}</h2>
+		<span>{{ page.category }}</span>
+	  </div>
+	  <div class="row">
+		<div class="col-xl-8">
+		  <div class="blog-item hoverstyle">
+			{% if page.full_image != nil %}
+			<figure>
+			  <img alt="img" class="w-100" src="{{ page.full_image | absolute_url }}">
+			</figure>
+			{% endif %}
+			
+			<div class="post-content">
+				{{ page.content }}
+			</div>
+			
+			<div class="row align-items-center post-gallery">
+				{% for item in page.images %}
+				<div class="col-lg-6">
+				  <div class="portfolimg hoverstyle">
+					<figure>
+					  <img alt="" class="w-100" src="{{ item.image | absolute_url }}">
+					</figure>
+					<span>{{ item.label | safeHTML }}</span>
+				  </div>
+				</div>
+				{% endfor %}
+			</div>
+
+			{% assign description2 = page.description2 %}
+			{% if description2.enable == true %}
+			<div class="post-content">
+				{{ description2.text | safeHTML }}
+			</div>
+			{% endif %}
+
+		  </div>
+		  </div>
+		  <div class="col-xl-4 pl-60">
+		  
+		  <ul class="sidebar">
+			{% for item in page.info %}
+			<li>
+			  <h4>{{ item.label }} : </h4>
+			  <span>{{ item.value }}</span>
+			</li>
+			{% endfor %}
+			<li>
+			  <h4>{{ ui_text.category }} :</h4>
+			  <span>{{ page.category }}</span>
+			</li>
+			<li>
+			  <h4>{{ ui_text.share }} :</h4>
+			  <ul class="brandicon">
+				<li><a href="#" class="share-btn share-btn-facebook share-btn-1" title="{{ ui_text.share_on }} Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+				<li><a href="#" class="share-btn share-btn-twitter share-btn-2" title="{{ ui_text.share_on  }} Twitter"><i class="fa-brands fa-twitter"></i></a></li>
+				<li><a href="#" class="share-btn share-btn-reddit share-btn-3" title="{{ ui_text.share_on  }} Reddit"><i class="fa-brands fa-reddit"></i></a></li>
+				<li><a href="#" class="share-btn share-btn-pinterest share-btn-4" title="{{ ui_text.share_on  }} Pinterest"><i class="fa-brands fa-pinterest"></i></a></li>
+				<li><a href="#" class="share-btn share-btn-linkedin share-btn-5" title="{{ ui_text.share_on  }} Linkedin"><i class="fa-brands fa-linkedin-in"></i></a></li>
+			  </ul>
+			</li>
+			<li>
+			  <a href="{{ page.preview_link }}" class="themebtu">{{ ui_text.launch_site }}</a>
+			</li>
+		  </ul>
+		</div>
+		</div>
+		
+	  </div>
+  </section>
+
+  {% if page.previous.url or page.next.url %}
+  <div class="next-previous-page">
+	<div class="container">
+	  <div class="next-previous">
+		{% if page.previus.url %}
+		<div class="prev">
+		  <a href="{{ page.previous.url | relative_url }}" title="{{ page.previous.title }}">
+		  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			 viewBox="0 0 476.213 476.213" style="enable-background:new 0 0 476.213 476.213;" xml:space="preserve">
+		  <polygon points="405.606,167.5 384.394,188.713 418.787,223.106 0,223.106 0,253.106 418.787,253.106 384.394,287.5 
+			405.606,308.713 476.213,238.106 "/>
+		  </svg>
+		  {{ ui_text.prev_project }}</a>
+		</div>
+		{% endif %}
+		{% if page.next.url %}
+		<div class="next">
+		  <a href="{{ page.next.url | relative_url }}" title="{{ page.next.title }}">{{ ui_text.next_project }}
+		  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			 viewBox="0 0 476.213 476.213" style="enable-background:new 0 0 476.213 476.213;" xml:space="preserve">
+		  <polygon points="405.606,167.5 384.394,188.713 418.787,223.106 0,223.106 0,253.106 418.787,253.106 384.394,287.5 
+			405.606,308.713 476.213,238.106 "/>
+		  </svg>
+		  </a>
+		</div>
+		{% endif %}
+	  </div>
+	</div>
+  </div>
+  {% endif %}

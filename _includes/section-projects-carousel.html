@@ -1,0 +1,57 @@
+{% assign content = site.data.content['projects_carousel'] %}
+{% assign ui_text = site.data.ui-text['ui_text'] %}
+
+<section class="project gap">
+  <div class="container">
+    <div class="heading-boder">
+      <h2>{{ content.title | safeHTML }}</h2>
+      <p>{{ content.subtitle | safeHTML }}</p>
+    </div>
+    <div class="swiper-container projectsswiper">
+      <div class="swiper-wrapper">
+        {% for work in site.works limit: content.numOfItems %}
+        <div class="swiper-slide">
+          <div class="project-data">
+            <a href="{{  work.url }}" class="project-data-img"><img alt="{{ work.title }}" class="w-100" src="{{ work.image | absolute_url }}"></a>
+            <div class="project-text">
+              <h5>{{ work.title }}</h5>
+              <p>{{ work.short }}</p>
+              <a href="{{ work.url }}">{{ ui_text.view_project }}</a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+      <div class="swiper-button-next">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           viewBox="0 0 476.213 476.213" style="enable-background:new 0 0 476.213 476.213;" xml:space="preserve">
+        <polygon points="405.606,167.5 384.394,188.713 418.787,223.106 0,223.106 0,253.106 418.787,253.106 384.394,287.5 
+          405.606,308.713 476.213,238.106 "/>
+        </svg>
+      </div>
+      <div class="swiper-button-prev">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           viewBox="0 0 476.213 476.213" style="enable-background:new 0 0 476.213 476.213;" xml:space="preserve">
+        <polygon points="405.606,167.5 384.394,188.713 418.787,223.106 0,223.106 0,253.106 418.787,253.106 384.394,287.5 
+          405.606,308.713 476.213,238.106 "/>
+        </svg>
+      </div>
+    </div>
+      <div class="btugap">
+        <a href="{{ content.link }}" class="themebtu">{{ content.button }}</a>
+      </div>
+      <div class="tp-hero__shapes">
+        <div class="style-shapes-1">
+        </div>
+        <div class="style-shapes-2">
+          <img alt="shap-4" src="/assets/images/shap-4.png">
+        </div>
+        <div class="style-shapes-3">
+        </div>
+        <div class="style-shapes-4">
+          <img alt="dots1" src="/assets/images/dots1.png">
+        </div>
+      </div>
+  </div>
+</section>

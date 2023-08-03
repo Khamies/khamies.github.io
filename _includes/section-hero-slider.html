@@ -1,0 +1,22 @@
+{% assign content = site.data.content['hero_slider'] %}
+
+<section>
+  <div class="swiper-container herotwoswiper">
+    <div class="swiper-wrapper">
+        {% for item in content.slides %}
+        <div class="swiper-slide">
+          <div class="hero-section-one two" style="background-image: url('{{ item.image | absolute_url }}')">
+              <div class="container">
+                <div class="heading-boder">
+                  <h2>{{ item.title | safeHTML }}</h2>
+                  <p>{{ item.subtitle | safeHTML }}</p>
+                  <a href="{{ item.link }}" class="themebtu full">{{ item.button }}</a>
+                </div>
+              </div>
+          </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>

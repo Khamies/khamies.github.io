@@ -1,0 +1,38 @@
+{% assign content = site.data.content['blog_carousel'] %}
+{% assign ui_text = site.data.ui-text['ui_text'] %}
+
+<section class="latest-blog gap">
+	<div class="container">
+	  <div class="heading">
+		<h6>{{ content.subtitle | safeHTML }}</h6>
+		<h2>{{ content.title | safeHTML }}</h2>
+		<img alt="line" src="/assets/images/headingline.png">
+	  </div>
+	  <div class="swiper-container latestswiper">
+		<div class="swiper-wrapper">
+      {% for post in site.posts limit: content.numOfItems %}
+
+      {% if post.author == nil %}
+        {% assign author = site.author %}
+      {% else %}
+        {% assign author = post.author %}
+      {% endif %}
+
+      {% assign cat_size = post.category | size %}
+
+		  <div class="swiper-slide">
+			<div class="latest-blog-post">
+			  <a href="{{ post.url }}"><img alt="{{ post.title }}" class="w-100" src="{{ post.image | relative_url }}"></a>
+			  <a href="{{ post.url }}"><i class="fa-regular fa-clock"></i><span>{{ post.date | date: site.date_format }}</span></a>
+			  <a href="{{ post.url }}">
+				<h4>{{ post.title }}</h4>
+			  </a>
+			  <span>{{ ui_text.by }} {{ author }} | {% if cat_size != 0 %}{% for category in post.category %}{{ category }}{% if post.category.last != category and post.category.last != nil %}, {% endif %}{% endfor %}{% endif %}</span>
+			</div>
+		  </div>
+		  {% endfor %}
+		</div>
+	  <div class="swiper-pagination"></div>
+	</div>
+  </div>
+</section>

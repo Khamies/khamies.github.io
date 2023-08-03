@@ -1,0 +1,47 @@
+{% assign content = site.data.content['offices'] %}
+
+<section class="offices gap" style="background-color:#f3f8fb;">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-4">
+        <div class="heading">
+          <h2>{{ content.title | safeHTML }}</h2>
+          <p>{{ content.subtitle | safeHTML }}</p>
+        </div>
+      </div>
+      <div class="col-xl-8">
+        <div class="swiper-container studiesswiper">
+          <div class="swiper-wrapper">
+            {% for item in content.items %}
+            <div class="swiper-slide">
+              <div class="view-map hoverstyle">
+                <figure>
+                    <img alt="img" class="w-100" src="{{ item.image | absolute_url }}">
+                </figure>
+                <div class="view-map-data">
+                  <i class="fa-solid fa-user"></i>
+                  <h5>{{ item.title | safeHTML }}</h5>
+                  <p>{{ item.text | safeHTML }}</p>
+                  <a href="{{ item.link }}" target="_blank">{{ item.button }}</a>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tp-hero__shapes">
+    <div class="style-shapes-5">
+      <img alt="dots1" src="/assets/images/shap-2.png">
+    </div>
+    <div class="style-shapes-6">
+      <img alt="dots1" src="/assets/images/shap-2.png">
+    </div>
+    <div class="style-shapes-7">
+      <img alt="dots1" src="/assets/images/shap-5.png">
+    </div>
+  </div>
+</section>

@@ -1,0 +1,43 @@
+{% assign content = site.data.content['projects_featured'] %}
+{% assign ui_text = site.data.ui-text['ui_text'] %}
+
+<section class="section-case-studies gap">
+  <div class="container">
+    <div class="heading-boder two">
+      <h2>{{ content.title | safeHTML }}</h2>
+    </div>
+    <div class="masonry-row">
+      {% for work in site.works limit: content.numOfItems %}
+      <div class="case-studies-two{% if content.first == true and forloop.index == 1 ) %} case-studies-two__b{% endif %}">
+        <figure>
+          <a href="{{ work.url }}"><img alt="{{ work.title }}" class="w-100" src="{{ work.image | absolute_url }}"></a>
+        </figure>
+        <div class="case-studies-text">
+          <h5><a href="{{ work.url }}">{{ work.title }}</a></h5>
+          <ul>
+            <li>{{ work.category }}</li>
+          </ul>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="btugap">
+        <a href="{{ content.link }}" class="themebtu">{{ content.button }}</a>
+    </div>
+    <div class="tp-hero__shapes">
+      <div class="style-shapes-4">
+        <img alt="dots1" src="/assets/images/shap-6.png">
+      </div>
+      <div class="style-shapes-5">
+        <img alt="dots1" src="/assets/images/shap-3.png">
+      </div>
+      <div class="style-shapes-6">
+        <img alt="dots1" src="/assets/images/shap-2.png">
+      </div>
+      <div class="style-shapes-7">
+        <img alt="dots1" src="/assets/images/shap-5.png">
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,24 @@
+{% assign content = site.data.content['testimonial_two'] %}
+
+<section class="gap no-top">
+  <div class="container">
+    <div class="swiper-container testimonialsswiper">
+      <div class="swiper-wrapper">
+        {% for item in content.items %}
+        <div class="swiper-slide">
+          <div class="testimonials">
+              <img alt="img" src="{{ item.image | absolute_url }}">
+              <i class="fa-solid fa-quote-right"></i>
+              <div>
+                  <h6>{{ item.title | safeHTML }}</h6>
+                  <p>“{{ item.text | safeHTML }}”</p>
+                  <span>{{ item.author | safeHTML }}</span>
+              </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>    
+  </div>
+</section> 

@@ -1,0 +1,28 @@
+{% assign content = site.data.content['about_one'] %}
+
+<section class="things-differently gap">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-7">
+        <div class="heading">
+          <h6>{{ content.subtitle | safeHTML }}</h6>
+          <h2>{{ content.title | safeHTML }}</h2>
+          <img alt="line" src="/assets/images/headingline.png">
+          <img alt="dots" class="dots" src="/assets/images/dots.png">
+        </div>
+      </div>
+      <div class="col-xl-5">
+        <div class="signature">
+          {{ content.text | safeHTML }}
+          <div class="ceo">
+            <div>
+              <img alt="img" src="{{ content.signature | absolute_url }}">
+              <span>{{ content.name }}</span>
+            </div>
+            <a href="{{ content.link }}" class="themebtu">{{ content.button }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

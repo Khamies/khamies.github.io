@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+{% assign ui_text = site.data.ui-text['ui_text'] %}
+{% assign general = site.data.settings['general'] %}
+{% assign intro = page.intro %}
+
+{% if intro == true %}
+<section class="splash-area-section" style="background-image: url('{{ general.introBackground | absolute_url }}')">
+	<div class="container">
+	  <div class="splash-area">
+		<h2>{{ page.intro_title | safeHTML }}</h2>
+		<span>{{ page.intro_subtitle | safeHTML }}</span>
+	  </div>
+	</div>
+</section>
+{% endif %}
+
+<section class="gap no-top">
+  <div class="container">
+    <div class="row">
+      {% for post in paginator.posts %}
+      <div class="col-xl-4 col-md-6">
+        <div class="latest-blog-post hoverstyle">
+          <figure>
+            <a href="{{ post.url }}"><img alt="{{ post.title }}" class="w-100" src="{{ post.image | absolute_url }}"></a>
+          </figure>
+          <a href="{{ post.url }}"><i class="fa-regular fa-clock"></i><span>{{ post.date | date: site.date_format }}</span></a>
+          <a href="{{ post.url }}">
+            <h4>{{ post.title }}</h4>
+          </a>
+          <span>{{ ui_text.by }} {{ author }} | {% if cat_size != 0 %}{% for category in post.category %}{{ category }}{% if post.category.last != category and post.category.last != nil %}, {% endif %}{% endfor %}{% endif %}</span>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{%- include pagination.html -%}

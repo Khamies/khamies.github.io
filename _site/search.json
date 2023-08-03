@@ -1,43 +1,131 @@
 [
   
     {
-      "title"    : "Unfold Linked List Family Problems - Part 1/3",
-      "category" : "",
-      "tags"     : "Algorithms, Coding Interviews",
-      "url"      : "https://bit.ly/uacifds-lkd",
-      "date"     : "2023-04-05 00:00:00 -0600"
+      "title"    : "Designer Conference at Florida 2020",
+      "category" : "Documentation",
+      "tags"     : "Website",
+      "url"      : "/documentation/2021/07/13/designer-conference-at-florida-2020/",
+      "date"     : "2021-07-13 01:06:26 -0600"
     } ,
   
     {
-      "title"    : "Unfold Binary Tree Family Problems - Part 1/2",
-      "category" : "",
-      "tags"     : "Algorithms, Coding Interviews",
-      "url"      : "https://bit.ly/uacifds-bt1",
-      "date"     : "2023-03-20 00:00:00 -0600"
+      "title"    : "You must know this before becoming a designer",
+      "category" : "Design",
+      "tags"     : "Web design",
+      "url"      : "/design/2021/07/13/you-must-know-this-before-becoming-a-designer/",
+      "date"     : "2021-07-13 00:49:27 -0600"
     } ,
   
     {
-      "title"    : "Unfold Combinatorics Family Problems",
-      "category" : "",
-      "tags"     : "Algorithms, Coding Interviews",
-      "url"      : "https://bit.ly/uacifd_combtrcs",
-      "date"     : "2023-03-14 00:00:00 -0600"
+      "title"    : "World&#39;s Most Famous App Developers and Designers",
+      "category" : "Development",
+      "tags"     : "App",
+      "url"      : "/development/2021/07/13/world-most-famous-app-developers-and-designers/",
+      "date"     : "2021-07-13 00:49:27 -0600"
     } ,
   
     {
-      "title"    : "Unfold KSum Family Problems",
-      "category" : "",
-      "tags"     : "Algorithms, Coding Interviews",
-      "url"      : "https://bit.ly/uacifds-ksum",
-      "date"     : "2023-03-07 00:00:00 -0700"
+      "title"    : "Things you must know as a designer",
+      "category" : "Mobile",
+      "tags"     : "Mobile",
+      "url"      : "/mobile/2021/07/13/things-you-must-know-as-a-designer/",
+      "date"     : "2021-07-13 00:49:27 -0600"
     } ,
   
     {
-      "title"    : "Time To Unfold Algorithms Coding Interviews",
-      "category" : "",
-      "tags"     : "Algorithms, Coding Interviews",
-      "url"      : "https://bit.ly/uacifd_intro",
-      "date"     : "2023-03-07 00:00:00 -0700"
+      "title"    : "New designers limitations",
+      "category" : "Design",
+      "tags"     : "Web Technology",
+      "url"      : "/design/2021/07/13/new-designers-limitations/",
+      "date"     : "2021-07-13 00:49:27 -0600"
+    } ,
+  
+    {
+      "title"    : "How to become acreative designer",
+      "category" : "Documentation",
+      "tags"     : "Help, Design",
+      "url"      : "/documentation/2021/07/13/how-to-become-acreative-designer/",
+      "date"     : "2021-07-13 00:49:27 -0600"
+    } ,
+  
+    {
+      "title"    : "Designers thoughts about mobile UI",
+      "category" : "Development",
+      "tags"     : "Mobile",
+      "url"      : "/development/2021/07/13/designers-thoughts-about-mobile-UI/",
+      "date"     : "2021-07-13 00:49:27 -0600"
+    } ,
+  
+    {
+      "title"    : "B. Franklins thoughts about designers",
+      "category" : "Development",
+      "tags"     : "Website",
+      "url"      : "/development/2021/07/13/benjamin-franklins-thoughts-about-new-designers/",
+      "date"     : "2021-07-13 00:49:27 -0600"
+    } ,
+  
+    {
+      "title"    : "Designer Conference at Florida 2020",
+      "category" : "Documentation",
+      "tags"     : "Mobile",
+      "url"      : "/documentation/2020/07/13/designer-conference-at-florida-2020-2/",
+      "date"     : "2020-07-13 01:06:26 -0600"
+    } ,
+  
+    {
+      "title"    : "You must know this before becoming a designer",
+      "category" : "Design",
+      "tags"     : "Design",
+      "url"      : "/design/2020/07/13/you-must-know-this-before-becoming-a-designer-2/",
+      "date"     : "2020-07-13 00:49:27 -0600"
+    } ,
+  
+    {
+      "title"    : "World&#39;s Most Famous App Developers and Designers",
+      "category" : "Development",
+      "tags"     : "Mobile",
+      "url"      : "/development/2020/07/13/world-most-famous-app-developers-and-designers-2/",
+      "date"     : "2020-07-13 00:49:27 -0600"
+    } ,
+  
+    {
+      "title"    : "Things you must know as a designer",
+      "category" : "Mobile",
+      "tags"     : "App",
+      "url"      : "/mobile/2020/07/13/things-you-must-know-as-a-designer-2/",
+      "date"     : "2020-07-13 00:49:27 -0600"
+    } ,
+  
+    {
+      "title"    : "New designers limitations",
+      "category" : "Design",
+      "tags"     : "Design",
+      "url"      : "/design/2020/07/13/new-designers-limitations-2/",
+      "date"     : "2020-07-13 00:49:27 -0600"
+    } ,
+  
+    {
+      "title"    : "How to become acreative designer",
+      "category" : "Documentation",
+      "tags"     : "Docs, Mobile",
+      "url"      : "/documentation/2020/07/13/how-to-become-acreative-designer-2/",
+      "date"     : "2020-07-13 00:49:27 -0600"
+    } ,
+  
+    {
+      "title"    : "Designers thoughts about mobile UI",
+      "category" : "Development",
+      "tags"     : "App",
+      "url"      : "/development/2020/07/13/designers-thoughts-about-mobile-UI-2/",
+      "date"     : "2020-07-13 00:49:27 -0600"
+    } ,
+  
+    {
+      "title"    : "B. Franklins thoughts about designers",
+      "category" : "Development",
+      "tags"     : "Mobile",
+      "url"      : "/development/2020/07/13/benjamin-franklins-thoughts-about-new-designers-2/",
+      "date"     : "2020-07-13 00:49:27 -0600"
     } 
   
 ]

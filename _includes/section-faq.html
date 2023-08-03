@@ -1,0 +1,34 @@
+{% assign content = site.data.content['faq'] %}
+
+<section class="gap">
+  <div class="container">
+    <div class="heading">
+      <h6>{{ content.subtitle | safeHTML }}</h6>
+      <h2>{{ content.title | safeHTML }}</h2>
+      <img alt="line" src="/images/headingline.png">
+    </div>
+    <div class="row">
+      {% for column in content.columns %}
+      <div class="col-lg-6">
+        <div class="questions me-lg-4">
+          <h4>{{ column.heading | safeHTML }}</h4>
+          <div class="accordion">
+            {{ range .items }}
+            {% for item in column.items %}
+            <div class="accordion-item">
+                <a href="#" class="heading">
+                    <div class="icon"></div>
+                    <div class="title">{{ item.title | safeHTML }}</div>
+                </a>
+                <div class="content">
+                  {{ item.text | safeHTML }}
+                </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

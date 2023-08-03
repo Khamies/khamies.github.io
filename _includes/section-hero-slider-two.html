@@ -1,0 +1,27 @@
+{% assign content = site.data.content['hero_slider_two'] %}
+
+<section class="hero-section-three">
+  <div class="swiper-container herothreeswiper">
+    <div class="swiper-wrapper">
+      {% for item in content.slides %}
+      <div class="swiper-slide">
+        <div class="row align-items-center">
+          <div class="col-xl-4 offset-xl-1">
+            <div class="heading-boder">
+              <h2>{{ item.title | safeHTML }}</h2>
+              <p>{{ item.subtitle | safeHTML }}</p>
+              <a href="{{ item.link }}" class="themebtu full">{{ item.button }}</a>
+            </div>
+          </div>
+          <div class="col-xl-7">
+            <div class="three-page-img">
+              <img alt="img" class="w-100" src="{{ item.image | absolute_url }}">
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="swiper-pagination two-style"></div>
+  </div>
+</section>

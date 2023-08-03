@@ -1,0 +1,20 @@
+{% assign content = site.data.content['numbers_two'] %}
+
+<div class="counter-style gap">
+  <div class="container">
+    <div class="row">
+      {% for item in content.items %}
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="counter-text">
+          <div class="d-flex align-items-center justify-content-center">
+            <div class="counter" data-target="{{ item.value }}"></div>
+            {% if item.plus == true %}<h6>+</h6>{% endif %}
+          </div>
+          <div class="boder"></div>
+          <span>{{ item.label }}</span>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

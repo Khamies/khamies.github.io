@@ -1,0 +1,18 @@
+{% assign content = site.data.content['brands_two'] %}
+
+<div class="brands-we-work gap">
+  <div class="container">
+    <h6>{{ content.title | safeHTML }}</h6>
+    <div class="swiper-container brandswiper">
+      <div class="swiper-wrapper">
+        {% for item in content.items %}
+        <div class="swiper-slide">
+          <div class="brand-img">
+            <img alt="{{ item.alt }}" src="{{ item.image | absolute_url }}" title="{{ item.title }}">
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>  
+  </div>
+</div>

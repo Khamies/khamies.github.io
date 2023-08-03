@@ -1,0 +1,21 @@
+{% assign content = site.data.content['hero_under'] %}
+
+<div>
+  <div class="container">
+    <div class="small-services-color">
+      <div class="row">
+        {% for item in content.items %}
+        <div class="col-xl-4 col-lg-6">
+          <div class="small-services">
+            <img src="{{ item.image | absolute_url }}" alt="icon">
+            <div>
+              <a href="{{ item.link }}">{{ item.title }}</a>
+              <span>{{ item.subtitle }}</span>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

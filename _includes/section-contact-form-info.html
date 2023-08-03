@@ -1,0 +1,53 @@
+{% assign content = site.data.content['contact_form_info'] %}
+{% assign ui_text = site.data.ui-text['ui_text'] %}
+{% assign $action = site.formspree_endpoint %}
+
+<section class="contact-page gap">
+  <div class="container">
+    <div class="heading">
+      <h6>{{ content.subtitle | safeHTML }}</h6>
+      <h2>{{ content.title | safeHTML }}</h2>
+      <img alt="line" src="/assets/images/headingline.png">
+    </div>
+    <div class="row">
+      <div class="col-xl-6 col-lg-6">
+        <form method="post" id="cform-3" action="{{ $action }}" class="content-form">
+          <div class="row">
+            <div class="col-lg-6">
+              <input type="text" name="name" placeholder="{{ ui_text.your_name }}">
+            </div>
+            <div class="col-lg-6">
+              <input type="text" name="company" placeholder="{{ ui_text.your_company }}">
+            </div>
+          </div>
+          <input type="text" name="email" placeholder="{{ ui_text.your_email }}">
+          <textarea name="message" placeholder="{{ ui_text.your_message }}"></textarea>
+          <button type="submit" class="themebtu">{{ ui_text.submit }}</button>
+        </form>
+      </div>
+      <div class="offset-lg-1 col-xl-5 col-lg-5">
+        <ul class="sidebar">
+          {% for item in content.info %}
+          <li>
+            <h4>{{ item.label | safeHTML }}</h4>
+            {% if item.type == "link" or item.type == "text" %}
+            {% if item.type == "link" %}<a href="{{ item.link }}" target="_blank">{% endif %}
+              <span>
+                {{ item.value | safeHTML }}
+              </span>
+            {% if item.type == "link" %}</a>{% endif %}
+            {% endif %}
+            {% if item.type == "icons" %}
+              <ul class="brandicon">
+                {% for link in item.icons %}
+                <li><a href="{{ link.link }}" target="_blank" title="{{ link.title }}"><i class="{{ link.icon }}"></i></a></li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

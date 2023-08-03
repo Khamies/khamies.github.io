@@ -1,0 +1,42 @@
+{% assign categories = site.data.settings['books'] %}
+{% assign ui_text = site.data.ui-text['ui_text'] %}
+
+
+<!--
+please make all
+buttons orange,
+including this one!
+-->
+
+<section class="gap">
+  <div class="container">
+    <div class="row">
+      <div class="portfolios">
+      <div class="filters portfolio-controllers-container">
+        <div class=" portfolio-controllers wow fadeLeft button-group js-radio-button-group" data-wow-duration="1s" data-wow-delay=".1s" data-filter-group="color">
+            <button type="button" class="button is-checked filter-btn active-work" data-filter="">{{ ui_text.all }}</button>
+            {% for category in categories.filters %}
+            <button type="button" class="filter-btn" data-filter=".sorting-{{ category.slug }}">{{ category.name }}</button>
+            {% endfor %}
+        </div>
+      </div>
+       
+      <div class="metro-grid grid row align-items-center">
+        {% for book in site.books %}
+        <div class="col-lg-4 sorting-{{ book.category_slug }}"> 
+          <div class="portfolios-three hoverstyle">
+            <figure>
+              <a href="{{ book.url }}"><img class="w-100" alt="{{ book.title }}" src="{{ book.image | absolute_url }}"></a>
+            </figure>
+            <div class="portfolios-data">
+              <h3><a href="{{ book.url }}">{{ book.title }}</a></h3>
+              <a href="{{ book.url }}">{{ ui_text.view_book }}</a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,42 @@
+{% assign content = site.data.content['testimonial_four'] %}
+
+<section class="offices gap" style="background-color:#f3f8fb;">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-4">
+        <div class="heading mt-xl-5">
+          <h2>{{ content.title | safeHTML }}</h2>
+          <p>{{ content.subtitle | safeHTML }}</p>
+        </div>
+      </div>
+      <div class="col-xl-8">
+        <div class="swiper-container studiesswiper">
+          <div class="swiper-wrapper">
+            {% for item in content.items %}
+            <div class="swiper-slide">
+              <div class="client-review">
+                <i class="fa-solid fa-quote-left"></i>
+                <h4>{{ item.title | safeHTML }}</h4>
+                <p>“{{ item.text | safeHTML }}”</p>
+                <span>{{ item.name | safeHTML }}</span>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tp-hero__shapes">
+    <div class="style-shapes-5">
+      <img alt="dots1" src="/assets/images/shap-2.png">
+    </div>
+    <div class="style-shapes-6">
+      <img alt="dots1" src="/assets/images/shap-2.png">
+    </div>
+    <div class="style-shapes-7">
+      <img alt="dots1" src="/assets/images/shap-5.png">
+    </div>
+  </div>
+</section>

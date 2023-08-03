@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+{% assign ui_text = site.data.ui-text['ui_text'] %}
+{% assign general = site.data.settings['general'] %}
+
+<section class="splash-area-section" style="background-image: url('{{ general.introBackground | absolute_url }}')">
+	<div class="container">
+	  <div class="splash-area">
+		<h2>{{ page.title }}</h2>
+	  </div>
+	</div>
+</section>
+
+{% if page.content != '' %}
+<section class="gap">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-1">
+
+				<div class="post-content">
+					{{ page.content }}
+				</div>
+
+			</div>
+		</div>
+	</div>
+</section>
+{% endif %}

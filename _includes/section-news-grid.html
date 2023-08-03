@@ -1,0 +1,31 @@
+{% assign content = site.data.content['blog_grid'] %}
+{% assign ui_text = site.data.ui-text['ui_text'] %}
+
+<section class="gap no-top">
+	<div class="container">
+	  <div class="row">
+		{% for news in site.news limit: content.numOfItems %}
+
+		{% if news.author == nil %}
+			{% assign author = site.author %}
+		{% else %}
+			{% assign author = news.author %}
+		{% endif %}
+
+		{% assign cat_size = news.category | size %}
+		<div class="col-xl-3 col-lg-4 col-md-6">
+		  <div class="latest-blog-post hoverstyle">
+			<figure>
+				<a href="{{ news.url }}"><img alt="{{ news.title }}" class="w-100" src="{{ news.image | absolute_url }}"></a>
+			</figure>
+			<a href="{{ news.url }}"><i class="fa-regular fa-clock"></i><span>{{ news.date | date: site.date_format }}</span></a>
+			<a href="{{ news.url }}">
+				<h4>{{ news.title }}</h4>
+			</a>
+			<span>{{ ui_text.by }} {{ author }} | {% if cat_size != 0 %}{% for category in news.category %}{{ category }}{% if news.category.last != category and news.category.last != nil %}, {% endif %}{% endfor %}{% endif %}</span>
+		  </div>
+		</div>
+		{% endfor %}
+	  </div>
+	</div>
+</section>

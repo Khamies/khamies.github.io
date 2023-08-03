@@ -1,0 +1,19 @@
+/* Color */
+
+.heading h6,.project-text a,.latest-blog-post h4:hover,.title-blog a,.title-blog > span,.brandicon li a i:hover,.portfolio-img h3 a:hover,
+.standard span,.Pricing-style i,.splash-area.blog a,.portfolio-controllers button.is-checked,.next-previous a:hover,
+.successful h3,.sercive-style-text a,.strategic-sercives h4:hover,.team-member-text h6:hover,.join-our-team h5,
+.portfolio-img > a,.portfolios-data > a,.search-cross-btn i,.view-map-data a,.discovery-text.two h4:hover,
+.blog-posts-text a h4:hover,.makes-us-different-text a,.case-studies-project a,.client-review span,
+.mobile-nav > ul li > a:hover, .header.two .menu a:hover {
+    color: $active_color;
+}
+
+
+/* Background Color */
+
+.latest-news form button,.sercive-style-text .boder,.choose-us-img figure:before,
+.client-review i,.view-map-data i,.case-studies-two figure:before,#button,.preloader,
+.case-studies .style-shapes-3,.mobile-nav > ul > li.menu-item-has-children.active > ul.sub-menu li:before {
+    background-color: $active_color;
+}

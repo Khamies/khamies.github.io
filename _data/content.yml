@@ -1,0 +1,1107 @@
+# Sections content configuration file
+##
+### use navigation.yml file to re-order, delete or add section of each card
+### here you can find all content in all pre-build sections
+##
+### All Pages:
+### - Index One
+### - Index Two
+### - Index Three
+### - About
+
+#################
+#   Index One   #
+#################
+
+### Hero One [ hero-one ]
+hero_one:
+  title: "<span>Unlock</span> The Full Potential Of Your Business."
+  description: "
+    Creative concepting and visual design
+  "
+  button: "More Services"
+  link: "/services/"
+  image: "assets/img/hero-img.jpg"
+
+### Hero Under [ hero-under ]
+hero_under:
+  items:
+    - title: "Research And Discovery"
+      subtitle: "Morbi interdum mollis sapien."
+      link: "/services/"
+      image: "assets/img/serv-u-1.svg"
+
+    - title: "Planning For The Future"
+      subtitle: "Phasellus lacinia, ullamcorper laoreet."
+      link: "/services/"
+      image: "assets/img/serv-u-2.svg"
+
+    - title: "Building Your Brand"
+      subtitle: "Pulvinar risus, vitae facilisis dolor."
+      link: "/services/"
+      image: "assets/img/serv-u-3.svg"
+
+### About Two [ about-two ]
+about_two:
+  image1: "assets/img/me/me.png"
+#image2: "assets/img/welcome-2.jpg"
+  title: "Waleed Khamies"
+  subtitle: "Hello. Salut. مرحبا."
+  description: "Applied ML Scientist"
+  items:
+    - title: "About Me"
+      text: "I am Waleed Khamies , an applied scientist, and ML grad. I am passionate about learning semantic representations from multimodal data. Also, I am interested in mapping these inferred meanings to autonomous actionable insights. <br>
+Previously, I worked as research engineer intern at Mila under the supervision of Liam Paull, where my research focusing on developing deep learning models that suitable to robotics applications in noisy scenarios. <br>
+
+I received my master at AMMI in Mathematical sciences/Machine learning, where I worked in interpretability of reinforcement learning under the supervision of George konidaris, previously I received my bachelor degree at UofK in Electrical and electronics engineering, where I worked under the supervision of Benjamin Rosman."
+
+#    - title: ""
+#      text: "Sed ac risus. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis."
+
+  button: "Contact"
+  link: "/contact/"
+
+### Ho it works [ how-it-works ]
+how_it_works:
+  subtitle: "How It Works?"
+  title: "We Are Strategic- Creative Digital Agency."
+  items:
+    - num: "01/"
+      title: "Submit Your Design Request"
+      text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna."
+    
+    - num: "02/"
+      title: "We Start Working"
+      text: "Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi."
+    
+    - num: "03/"
+      title: "Get Your Projects Done!"
+      text: "In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra."
+
+### Projects Carousel [ projects-carousel ]
+projects_carousel:
+  numOfItems: 3
+  title: "Projects"
+  subtitle: "Here are some accomplished projects during my free time with a cup of tea!"
+  button: "View More Projects"
+  link: "/projects/"
+
+### Testimonial One [ testimonial-one ]
+testimonial_one:
+  title: "What Our Clients Said"
+  subtitle: "Why Partner With Us?"
+  items:
+    - image: "assets/img/reaview-1.jpg"
+      text: "Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam."
+      name: "Kalem Patel"
+      role: "Manager of Terio"
+
+    - image: "assets/img/reaview-2.jpg"
+      text: "Praesent dapibus, neque id cursus faucibus, tortor neque egestas auguae, eu vulputate magna eros eu erat."
+      name: "Bernard Castro"
+      role: "Owner of Love Digital"
+
+    - image: "assets/img/reaview-3.jpg"
+      text: "Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida."
+      name: "Lori Moses"
+      role: "Manager of Digitalagency"
+
+    - image: "assets/img/reaview-4.jpg"
+      text: "Praesent in sem quis dui consectetuer ornare. Pellentesque odio nisi, euismod in, pharetra."
+      name: "Kalem Patel"
+      role: "Manager of Terio"
+
+### Call to Action One [ cta-one ]
+cta_one:
+  title: "Let’s Start On Your Case <span>Together</span>"
+  subtitle: "Pellentesque aliquet nibh necurna."
+  video_poster: "assets/img/video.jpg"
+  youtube_video_id: "1La4QzGeaaQ"
+  form_title: "Kick Start Your Awesome Project Now!"
+  form_subtitle: "Get In Touch"
+  form_subscription: "Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue."
+
+### Latest Blog Carousel [ blog-carousel ]
+blog_carousel:
+  title: "News and Thoughts"
+  subtitle: "our blog"
+  numOfItems: 6
+
+#################
+#   Index Two   #
+#################
+
+### Hero Slider [ hero-slider ]
+hero_slider:
+  slides:
+    - image: "assets/img/hero-img-1.jpg"
+      title: "Digital Agency With A <span>Passion</span> For Marketing."
+      subtitle: "For Small-To-Medium Sized Businesses"
+      button: "More Services"
+      link: "/services/"
+
+    - image: "assets/img/hero-img-2.jpg"
+      title: "Enabling a Better Future<span>Together</span>"
+      subtitle: "How we build the business models and brands of tomorrow."
+      button: "More Services"
+      link: "/services/"
+
+### Marketing One [ marketing-one ]
+marketing_one:
+  image: "assets/img/graph-1.png"
+  title: "Expert in Leveraging Available Budgets to Find Peak Performance."
+  subtitle: "What We Do"
+  intro: "Need help with your Digital Marketing?<br> Let us do what we do best so you can focus on running your business"
+  description: "Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh."
+  button: "Discover More"
+  link: "/about/"
+
+### Marketing Two [ marketing-two ]
+marketing_two:
+  image: "assets/img/graph-2.png"
+  title: "Sales Strategy and Conversion Optimization"
+  subtitle: "Designed to Grow Your Business"
+  description: "Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh."
+  numbers:
+    - value: "600+"
+      label: "Successful websites launched by our team since 2011"
+      separator: true
+
+    - value: "200%"
+      label: "Most of our SEO campaigns double their traffic within 6 months"
+      separator: false
+
+### Brands [ brands-two ]
+brands_two:
+  title: "Brands We Work With."
+  items:
+    - title: "Brand"
+      alt: "brand"
+      image: "assets/img/brand-1.png"
+
+    - title: "Brand"
+      alt: "brand"
+      image: "assets/img/brand-2.png"
+
+    - title: "Brand"
+      alt: "brand"
+      image: "assets/img/brand-3.png"
+
+    - title: "Brand"
+      alt: "brand"
+      image: "assets/img/brand-4.png"
+
+    - title: "Brand"
+      alt: "brand"
+      image: "assets/img/brand-5.png"
+
+    - title: "Brand"
+      alt: "brand"
+      image: "assets/img/brand-6.png"
+
+### Services [ services ]
+services:
+  title: "We’ll Show You How It’s <span>Done</span>"
+  subtitle: "We are an always curious, strategic-creative digital agency"
+  items:
+    - image: "assets/img/sercive-1.jpg"
+      title: "Search Engine Optimization"
+      description: "Nullam malesuada erat ut turpis. Donec nec justo eget felis facilisis fermentum."
+      button: "Read More"
+      link: "/services/"
+
+    - image: "assets/img/sercive-2.jpg"
+      title: "Awesome<br> Creative Design"
+      description: "Quisque volutpat mattis eros.Nullam malesuada erat ut turpis. Suspendisse urnanibh."
+      button: "Read More"
+      link: "/services/"
+
+    - image: "assets/img/sercive-3.jpg"
+      title: "Digital<br> Production"
+      description: "Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci."
+      button: "Read More"
+      link: "/services/"
+
+    - image: "assets/img/sercive-4.jpg"
+      title: "Social Media<br> Marketing"
+      description: "Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede."
+      button: "Read More"
+      link: "/services/"
+      
+### Numbers [ how-it-works ]
+numbers:
+  items:
+    - num: "01/"
+      title: "Transparent"
+      text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna."
+    
+    - num: "02/"
+      title: "Proactive"
+      text: "Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi."
+    
+    - num: "03/"
+      title: "Affordable"
+      text: "In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra."
+
+### Projects Featured [ projects-featured ]
+projects_featured:
+  title: "Case Studies"
+  numOfItems: 5
+  first: true
+  button: "View More Works"
+  link: "/portfolio/"
+
+### Testimonial Two [ testimonial-two ]
+testimonial_two:
+  items:
+    - image: "assets/img/testimonials-1.jpg"
+      title: "A multi-disciplinary team of creators ..."
+      text: "Suspendisse potenti. Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue."
+      author: "Edward Kim (Marketing Manager)"
+
+    - image: "assets/img/testimonials-2.jpg"
+      title: "A multi-disciplinary team of creators ..."
+      text: "Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl."
+      author: "Edward Kim (Marketing Manager)"
+
+### Team One [ team-one ]
+team_one:
+  title: "Our <span>Team</span> & Digital Heroes"
+  subtitle: "We are an always curious, strategic-creative digital agency"
+  items:
+    - image: "assets/img/team-1.jpg"
+      name: "Klay Carson"
+      role: "Team Lead"
+      social:
+        - icon: "fa-brands fa-facebook-f"
+          link: "https://facebook.com/"
+          title: "Facebook"
+        
+        - icon: "fa-brands fa-twitter"
+          link: "https://twitter.com/"
+          title: "Twitter"
+
+        - icon: "fa-brands fa-instagram"
+          link: "https://instagram.com/"
+          title: "Instagram"
+
+        - icon: "fa-brands fa-linkedin-in"
+          link: "https://linkedin.com/"
+          title: "Linkedin"
+
+    - image: "assets/img/team-2.jpg"
+      name: "Naomi Norman"
+      role: "Product Manager"
+      social:
+        - icon: "fa-brands fa-facebook-f"
+          link: "https://facebook.com/"
+          title: "Facebook"
+        
+        - icon: "fa-brands fa-twitter"
+          link: "https://twitter.com/"
+          title: "Twitter"
+
+        - icon: "fa-brands fa-instagram"
+          link: "https://instagram.com/"
+          title: "Instagram"
+
+        - icon: "fa-brands fa-linkedin-in"
+          link: "https://linkedin.com/"
+          title: "Linkedin"
+
+    - image: "assets/img/team-3.jpg"
+      name: "Bert Graham"
+      role: "Marketing Specialist"
+      social:
+        - icon: "fa-brands fa-facebook-f"
+          link: "https://facebook.com/"
+          title: "Facebook"
+        
+        - icon: "fa-brands fa-twitter"
+          link: "https://twitter.com/"
+          title: "Twitter"
+
+        - icon: "fa-brands fa-instagram"
+          link: "https://instagram.com/"
+          title: "Instagram"
+
+        - icon: "fa-brands fa-linkedin-in"
+          link: "https://linkedin.com/"
+          title: "Linkedin"
+
+    - image: "assets/img/team-4.jpg"
+      name: "Ryan Adlard"
+      role: "IT Specialist"
+      social:
+        - icon: "fa-brands fa-facebook-f"
+          link: "https://facebook.com/"
+          title: "Facebook"
+        
+        - icon: "fa-brands fa-twitter"
+          link: "https://twitter.com/"
+          title: "Twitter"
+
+        - icon: "fa-brands fa-instagram"
+          link: "https://instagram.com/"
+          title: "Instagram"
+
+        - icon: "fa-brands fa-linkedin-in"
+          link: "https://linkedin.com/"
+          title: "Linkedin"
+
+  button: "More About Us"
+  link: "/team/"
+
+### Latest Blog Carousel Two [ blog-carousel-two ]
+blog_carousel_two:
+  title: "Latest Blog Posts"
+  numOfItems: 6
+
+### Call to Action Two [ cta-two ]
+cta_two:
+  title: "Let's Start an Awesome Project Now!"
+  button: "Get Started"
+  link: "/contact/"
+
+###################
+#   Index Three   #
+###################
+
+### Hero Slider Two [ hero-slider-two ]
+hero_slider_two:
+  slides:
+    - image: "assets/img/ads/algo.png"
+      title: "How to Solve Algorithm Problems is now <span>for Free!</span>"
+      subtitle: "Sharpen your problem solving skill"
+      button: "Download for Free"
+      link: "https://shop.waleedkhamies.com/b/hsap"
+
+    - image: "assets/img/ads/gen.png"
+      title: "The Creative Engine is coming <span>SOON! </span>"
+      subtitle: "Explore generative modeling in depth with their tensorflow extended (TFX) pipelines."
+      button: "Be the First to Know"
+      link: "https://books.waleedkhamies.com/the_creative_engine"
+
+### Clients [ clients ]
+clients:
+  title: "Get familiar with my current services & projects"
+  subtitle: "Learn. Apply. Monetize"
+  items:
+    - image: "assets/img/ads/zitoonai.png"
+      title: "Zitoona AI"
+      alt: "Zitoona AI"
+      
+    - image: "assets/img/ads/research.png"
+      title: "AI Research"
+      alt: "AI Research"
+      
+    
+    - image: "assets/img/ads/books.png"
+      title: "Books"
+      alt: "Books"
+
+
+    - image: "assets/img/ads/store.png"
+      title: "Waleed Khamies' Store"
+      alt: "Waleed Khamies' Store"
+      
+
+
+### Why Choose Us [ why-choose-us ]
+why_choose_us:
+  title: "Recent<br> <span>Books</span>"
+  intro: "Check my recent & upcoming books"
+  list:
+    - label: "• Algorithm "
+      value: ""
+
+    - label: "• Machine Learning"
+      value: ""
+
+    - label: "• Data Science"
+      value: ""
+
+    - label: "• MLOps"
+      value: ""
+
+  items_col1:
+    - image: "assets/img/ads/books/1.png"
+      title: "How to Solve Algorithm Problems"
+      button: "View"
+      link: "/books/hsap"
+    
+    - image: "assets/img/ads/books/2.png"
+      title: "The Creative Engine"
+      button: "View"
+      link: "/books/creative-engine"
+
+  items_col2:
+    - image: "assets/img/ads/books/3.png"
+      title: "From Data <br> To Deployment"
+      button: "View"
+      link: "/books/tensorflow"
+
+    - image: "assets/img/ads/books/4.png"
+      title: "The Art Of Translating Data"
+      button: "View"
+      link: "/books/art-of-data-science"
+
+### Benefits [ benefits ]
+benefits:
+  title: "What Makes Us Different?"
+  subtitle: "How It Works?"
+  items:
+    - icon: "assets/img/make-ud-1.svg"
+      title: "Our Transparency Principle"
+      description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit.   Pellentesque aliquet nibh nec urna."
+      button: "Read More"
+      link: "/services/"
+
+    - icon: "assets/img/make-ud-2.svg"
+      title: "Our Flexible Strategies"
+      description: "Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi."
+      button: "Read More"
+      link: "/services/"
+
+    - icon: "assets/img/make-ud-3.svg"
+      title: "Our Talented Team"
+      description: "In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo."
+      button: "Read More"
+      link: "/services/"
+
+  numbers_enable: true
+  numbers:
+    - value: "1200"
+      label: "Finished Projects"
+      plus: true
+    
+    - value: "850"
+      label: "Happy Client"
+      plus: true
+
+    - value: "9"
+      label: "Years in Business"
+      plus: true
+
+    - value: "36"
+      label: "Experts"
+      plus: true
+
+### Projects Carousel Two [ projects-carousel-two ]
+projects_carousel_two:
+  numOfItems: 4
+  title: "Case <span>Studies</span>"
+  subtitle: "Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis."
+  button: "View More Works"
+  link: "/portfolio/"
+
+### Projects Carousel Two [ projects-carousel-two ]
+services_two:
+  title: "ZitoonAI"
+  subtitle: "Newsletter"
+  list:
+    - label: "Welcome to ZitonnAl Newsletter"
+      value: "Hello, and welcome to ZitoonAI Newsletter, where I talk about Algorithms, Machine Learning, and Data Science."
+
+    - label: "What’s the goal of this Newsletter?"
+      value: "The goal of this newsletter is to act as the group of friends whom I feel very excited to share with them what I am learning every day. Think of it as a big group of friends, except that I am the only person who talks, selfish, huh?"
+
+    - label: "What does the word 'Zitoona' mean?"
+      value: "Zitoona is an Arabic word, and it means 'an olive' in English. But here I use it to mean 'the extraction' in the Arabic Sundanese dialect, indicating that this newsletter works in providing high quality extracted information that related to AI and machine learning."
+
+    - label: "Do you feel home?"
+      value: "If you are interested in learning more about AI, machine learning and algorithm, I will be over the moon by joining my newsletter, and becoming one of the family members. Come and Join Me!"
+
+  
+  image1: "assets/img/ads/zitoonai2.png"
+  image2: "assets/img/ads/zitoonai3.png"
+  button: "Join the Family"
+  link: "https://khamiesw.substack.com/"
+
+### Testimonial Three [ testimonial-three ]
+testimonial_three:
+  title: "Satisfied <span>Clients</span>"
+  subtitle: "Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis."
+  button: "More About Us"
+  link: "/about/"
+  items_col1:
+    - title: "A multi-disciplinary team of creators ..."
+      text: "Suspendisse potenti. Sed egestas, ante etvulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue."
+      name: "Milly Carson (Designer)"
+    
+    - title: "Create unique experiences ..."
+      text: "Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittismi neque euismod dui, eu pulvinar nunc sapien ornare nisl."
+      name: "Edward Kim (Marketing Manager)"
+
+  items_col2:
+    - title: "Best marketing ..."
+      text: "Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna."
+      name: "Caspar Galloway (Product Manager)"
+
+    - title: "Best marketing ..."
+      text: "Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci."
+      name: "Quentin (Content Specialist)"
+
+### Contact Form Map [ contact-form-map ]
+contact_form_map:
+  title: "Let’s Work Together"
+  subtitle: "We are here for you."
+  description: "Nullam mollis. Ut justo. Suspendisse potenti. Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue."
+  map_iframe: "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387190.27988214366!2d-74.25986540376853!3d40.69767006922205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1672222515624!5m2!1sen!2s' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>"
+
+
+###################
+#      About      #
+###################
+
+### About One [ about-one ]
+about_one:
+  title: "We do<br>things differently"
+  subtitle: "We Dream Digital"
+  text: "
+    <p>Hello! I am Waleed Khamies , an applied scientist, and ML grad. I am passionate about learning semantic representations from multimodal data. Also, I am interested in mapping these inferred meanings to autonomous actionable insights. <br>
+Previously, I worked as research engineer intern at Mila under the supervision of Liam Paull, where my research focusing on developing deep learning models that suitable to robotics applications in noisy scenarios. I received my master at AMMI in Mathematical sciences/Machine learning, where I worked in interpretability of reinforcement learning under the supervision of George konidaris, previously I received my bachelor degree at UofK in Electrical and electronics engineering, where I worked under the supervision of Benjamin Rosman. </p>
+    "
+  signature: "assets/img/signature.png"
+  name: "CEO, John Doe"
+  button: "Meet The Team"
+  link: "/team/"
+  image: "assets/img/about.jpg"
+
+### Benefits Two [ benefits-two ]
+benefits_two:
+  title: "Skills"
+  items:
+    - icon: "assets/img/deep-learning.png"
+      title: "Generative Modeling"
+      description: "Solid experience with various generative models (Diffusion, GAN, VAE, Transformers, ..etc) for different types of data (text/image/video)."
+
+    - icon: "assets/img/ai.png"
+      title: "Machine Learning"
+      description: "Solid experience with various machine learning and deep learning algorithms for different tasks."
+
+    - icon: "assets/img/mlops.png"
+      title: "MLOps"
+      description: "Good experience with tensorflow extended (TFX) ecosystem for ML pipeline deployment."
+
+    - icon: "assets/img/cloud.png"
+      title: "Cloud Computing"
+      description: "Good experience with Google Cloud Platform."
+
+    - icon: "assets/img/writing.png"
+      title: "Writing"
+      description: "Good experience with book and blog writings."
+
+  button: "Learn More"
+  link: "https://www.linkedin.com/in/khamiesw/"
+
+### Awards [ awards ]
+awards:
+  title: "Awards"
+  subtitle: "Our clients and their customers always come first."
+  items:
+    - image: "assets/img/brand-11.png"
+      label: "Outstanding Website Redesign"
+    
+    - image: "assets/img/brand-10.png"
+      label: "Site of the Day"
+
+    - image: "assets/img/brand-9.png"
+      label: "Best UI Design, UX Design & Innovation"
+
+    - image: "assets/img/brand-10.png"
+      label: "Honorable Mentions"
+
+### Testimonial Four [ testimonial-four ]
+testimonial_four:
+  title: "Awards"
+  subtitle: "Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis."
+  items:
+    - title: "Deep Learning Indaba Conference"
+      text: "Suspendisse potenti. Sed egestas, ante etvulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue."
+      name: "Milly Carson (Designer)"
+    
+    - title: "Create unique UX / UI ..."
+      text: "Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittismi neque euismod dui, eu pulvinar nunc sapien ornare nisl."
+      name: "Edward Kim (Marketing Manager)"
+
+    - title: "Best marketing ..."
+      text: "Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna."
+      name: "Caspar Galloway (Product Manager)"
+
+### Numbers Two [ numbers-two ]
+numbers_two:
+  items:
+    - value: "1200"
+      label: "Finished Projects"
+      plus: true
+    
+    - value: "850"
+      label: "Happy Client"
+      plus: true
+
+    - value: "9"
+      label: "Years in Business"
+      plus: true
+
+    - value: "36"
+      label: "Experts"
+      plus: true
+
+
+###################
+#      Team       #
+###################
+
+### Team Grid [ team-grid ]
+team_grid:
+  enable: true
+  title: "Our team is always ready to work with exciting and ambitious clients. If you're ready to start your creative partnership with us, get in touch."
+  subtitle: "Meet Our Team Members"
+  description: "Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest."
+  button: "Contact Us"
+  link: "/contact/"
+  items:
+    - image: "assets/img/team-1.jpg"
+      name: "Klay Carson"
+      role: "Team Lead"
+      social:
+        - icon: "fa-brands fa-facebook-f"
+          link: "https://facebook.com/"
+          title: "Facebook"
+        
+        - icon: "fa-brands fa-twitter"
+          link: "https://twitter.com/"
+          title: "Twitter"
+
+        - icon: "fa-brands fa-instagram"
+          link: "https://instagram.com/"
+          title: "Instagram"
+
+        - icon: "fa-brands fa-linkedin-in"
+          link: "https://linkedin.com/"
+          title: "Linkedin"
+
+    - image: "assets/img/team-2.jpg"
+      name: "Naomi Norman"
+      role: "Product Manager"
+      social:
+        - icon: "fa-brands fa-facebook-f"
+          link: "https://facebook.com/"
+          title: "Facebook"
+        
+        - icon: "fa-brands fa-twitter"
+          link: "https://twitter.com/"
+          title: "Twitter"
+
+        - icon: "fa-brands fa-instagram"
+          link: "https://instagram.com/"
+          title: "Instagram"
+
+        - icon: "fa-brands fa-linkedin-in"
+          link: "https://linkedin.com/"
+          title: "Linkedin"
+
+    - image: "assets/img/team-3.jpg"
+      name: "Bert Graham"
+      role: "Marketing Specialist"
+      social:
+        - icon: "fa-brands fa-facebook-f"
+          link: "https://facebook.com/"
+          title: "Facebook"
+        
+        - icon: "fa-brands fa-twitter"
+          link: "https://twitter.com/"
+          title: "Twitter"
+
+        - icon: "fa-brands fa-instagram"
+          link: "https://instagram.com/"
+          title: "Instagram"
+
+        - icon: "fa-brands fa-linkedin-in"
+          link: "https://linkedin.com/"
+          title: "Linkedin"
+
+    - image: "assets/img/team-4.jpg"
+      name: "Ryan Adlard"
+      role: "IT Specialist"
+      social:
+        - icon: "fa-brands fa-facebook-f"
+          link: "https://facebook.com/"
+          title: "Facebook"
+        
+        - icon: "fa-brands fa-twitter"
+          link: "https://twitter.com/"
+          title: "Twitter"
+
+        - icon: "fa-brands fa-instagram"
+          link: "https://instagram.com/"
+          title: "Instagram"
+
+        - icon: "fa-brands fa-linkedin-in"
+          link: "https://linkedin.com/"
+          title: "Linkedin"
+
+    - image: "assets/img/team-5.jpg"
+      name: "Hebe Munro"
+      role: "Designer"
+      social:
+        - icon: "fa-brands fa-facebook-f"
+          link: "https://facebook.com/"
+          title: "Facebook"
+        
+        - icon: "fa-brands fa-twitter"
+          link: "https://twitter.com/"
+          title: "Twitter"
+
+        - icon: "fa-brands fa-instagram"
+          link: "https://instagram.com/"
+          title: "Instagram"
+
+        - icon: "fa-brands fa-linkedin-in"
+          link: "https://linkedin.com/"
+          title: "Linkedin"
+
+    - image: "assets/img/team-6.jpg"
+      name: "Angelika Sweet"
+      role: "Illustrator"
+      social:
+        - icon: "fa-brands fa-facebook-f"
+          link: "https://facebook.com/"
+          title: "Facebook"
+        
+        - icon: "fa-brands fa-twitter"
+          link: "https://twitter.com/"
+          title: "Twitter"
+
+        - icon: "fa-brands fa-instagram"
+          link: "https://instagram.com/"
+          title: "Instagram"
+
+        - icon: "fa-brands fa-linkedin-in"
+          link: "https://linkedin.com/"
+          title: "Linkedin"
+
+    - image: "assets/img/team-7.jpg"
+      name: "Alicia York"
+      role: "Product Manager"
+      social:
+        - icon: "fa-brands fa-facebook-f"
+          link: "https://facebook.com/"
+          title: "Facebook"
+        
+        - icon: "fa-brands fa-twitter"
+          link: "https://twitter.com/"
+          title: "Twitter"
+
+        - icon: "fa-brands fa-instagram"
+          link: "https://instagram.com/"
+          title: "Instagram"
+
+        - icon: "fa-brands fa-linkedin-in"
+          link: "https://linkedin.com/"
+          title: "Linkedin"
+
+  join: true
+  join_title: "Join Our Team"
+  join_subtitle: "Careers"
+  join_link: "/contact/"
+
+
+###################
+#    Services     #
+###################
+
+### Discovery [ discover ]
+discovery:
+  enable: true
+  title: "Sales Strategy and Conversion Optimization"
+  subtitle: "Designed to Grow Your Business"
+  description: "Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel dapibusid, mattis velnisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh."
+  button: "View Portfolio"
+  link: "/portfolio/"
+  featured_image: "assets/img/discovery.jpg"
+  featured_icon: "assets/img/icon-discovery.svg"
+  featured_title: "Performance Marketing"
+  featured_text: "Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis velnisi. Sed pretium, ligula sollicitudin.Nullam mollis. Ut justo. Suspendisse potenti."
+
+### Services Grid [ services-grid ]
+services_grid:
+  enable: true
+  title: "We Deliver a<br> Full Agency Experience"
+  subtitle: "Web & Digital Services"
+  items:
+    - image: "assets/img/discovery-1.jpg"
+      title: "Creative Concepts & Ideas"
+      description: "In nisi neque, aliquet vel, dapibus id, mattisvel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti."
+    
+    - image: "assets/img/discovery-2.jpg"
+      title: "Branding"
+      description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi."
+
+    - image: "assets/img/discovery-3.jpg"
+      title: "E-commerce"
+      description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi."
+
+    - image: "assets/img/discovery-4.jpg"
+      title: "UX & UI Design & Analysis"
+      description: "Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis velnisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales tortor eu nibh."
+
+
+###################
+#     Pricing     #
+###################
+
+### Pricing [ pricing ]
+pricing:
+  enable: true
+  title: "Ready to<br> get started"
+  subtitle: "Plans & Pricing"
+  items:
+    - title: "Standard"
+      price: "299"
+      price_before: "$"
+      price_lower: ",99"
+      description: "Inisi neque aliquet vel dapibus id, mattis velnisi. Sed pretiuligula sollicitudin."
+      list: 
+        - "Website builder"
+        - "10 Autosave drafts/page"
+        - "Live chat 24/7"
+        - "Limit 10 pages"
+        - "Support Customize"
+
+      button: "Get Started"
+      link: "/contact/"
+
+    - title: "Popular"
+      price: "599"
+      price_before: "$"
+      price_lower: ",99"
+      description: "Aliquet vel dapibus id, mattis velnisi. Sed pretiuligula sollicitudin."
+      list: 
+        - "Everything in Standard plan"
+        - "20 Autosave drafts/page"
+        - "Live chat 24/7"
+        - "Limit 20 pages"
+        - "Support Customize"
+        - "Server Configuration"
+        - "Seo Optimization"
+        
+      button: "Get Started"
+      link: "/contact/"
+
+    - title: "Enterprise"
+      price: "899"
+      price_before: "$"
+      price_lower: ",99"
+      description: "Sed pretiuligula sollicitudin nullam mollis. Ut justo. Suspendisse potenti."
+      list: 
+        - "Everything in Popular plan"
+        - "30 Autosave drafts/page"
+        - "Live chat 24/7"
+        - "Limit 30 pages"
+        - "Support Customize"
+        - "Server Configuration"
+        - "Seo Optimization"
+        - "Marketing Campaign"
+        - "E-commerce Integration"
+        
+      button: "Get Started"
+      link: "/contact/"
+
+### FAQ [ faq ]
+faq:
+  enable: true
+  title: "Frequently Asked Questions"
+  subtitle: "Have a Question?"
+  columns:
+    - heading: "Popular questions"
+      items:
+        - title: "Aliquam tincidunt mauris eu risus?"
+          text: "
+          <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p>
+          "
+
+        - title: "Vestibulum auctor dapibus neque?"
+          text: "
+          <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p>
+          "
+
+        - title: "Nunc dignissim risus id metus?"
+          text: "
+          <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p>
+          "          
+
+        - title: "Cras ornare tristique elit?"
+          text: "
+          <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p>
+          " 
+
+        - title: "Vivamus vestibulum ntulla nec ante?"
+          text: "
+          <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p>
+          " 
+
+    - heading: "Security and Privacy"
+      items:
+        - title: "Praesent placerat risus quis eros?"
+          text: "
+          <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p>
+          "
+
+        - title: "Fusce pellentesque suscipit nibh?"
+          text: "
+          <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p>
+          "
+
+        - title: "Integer vitae libero ac risus egestas placerat?"
+          text: "
+          <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p>
+          "          
+
+        - title: "Vestibulum commodo felis quis tortor?"
+          text: "
+          <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p>
+          " 
+
+    - heading: "Started questions"
+      items:
+        - title: "Nunc dignissim risus id metus?"
+          text: "
+          <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p>
+          "
+
+        - title: "Cras ornare tristique elit?"
+          text: "
+          <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p>
+          "
+
+        - title: "Vivamus vestibulum ntulla nec ante?"
+          text: "
+          <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p>
+          "          
+
+    - heading: "Other FAQs"
+      items:
+        - title: "Aliquam tincidunt mauris eu risus?"
+          text: "
+          <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p>
+          "
+
+        - title: "Vestibulum auctor dapibus neque?"
+          text: "
+          <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p>
+          "
+
+        - title: "Nunc dignissim risus id metus?"
+          text: "
+          <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p>
+          "  
+
+        - title: "Cras ornare tristique elit?"
+          text: "
+          <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p>
+          " 
+
+        - title: "Vivamus vestibulum ntulla nec ante?"
+          text: "
+          <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p>
+          " 
+
+        - title: "Praesent placerat risus quis eros?"
+          text: "
+          <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p>
+          " 
+
+
+###################
+#     Contact     #
+###################
+
+### Contact Form Info [ contact-form-info ]
+contact_form_info:
+  enable: true
+  title: "Contact"
+  subtitle: ""
+  info:
+#    - label: "Address :"
+#      value: "418 Orange Street<br> Portsmouth, VA 23703"
+#      type: "text"
+
+#    - label: "Phone :"
+#      value: "0987 123 456 678"
+#      type: "link"
+#     link: "tel:0987123456678"
+    
+    - label: "Email :"
+      value: "waleed@waleedkhamies.com"
+      type: "link"
+      link: "mailto:waleed@waleedkhamies.com"
+
+    - label: "Follow Me:"
+      value: ""
+      type: "icons"
+      icons:
+#       - icon: "fa-brands fa-facebook-f"
+#          link: "https://facebook.com/"
+#          title: "Facebook"
+        
+        - icon: "fa-brands fa-twitter"
+          link: "https://twitter.com/khamiesw"
+          title: "Twitter"
+        
+#        - icon: "fa-brands fa-instagram"
+#          link: "https://instagram.com/"
+#          title: "Instagram"
+
+        - icon: "fa-brands fa-linkedin-in"
+          link: "https://linktr.ee/khamiesw"
+          title: "Linkedin"
+
+### Map [ map ]
+map:
+  enable: true
+  map_iframe: "
+  <iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387190.27988214366!2d-74.25986540376853!3d40.69767006922205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1672222515624!5m2!1sen!2s' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>
+  "
+
+### Offices [ offices ]
+offices:
+  enable: true
+  title: "Offices"
+  subtitle: "Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis."
+  items:
+    - image: "assets/img/view-map-1.jpg"
+      title: "New York"
+      text: "92 Greenwich St, New York, NY 10006,<br> United States"
+      button: "view map"
+      link: "https://www.google.com/maps?q=92+Greenwich+St,+New+York,+NY+10006,+United+States&rlz=1C5CHFA_enUA981UA983&um=1&ie=UTF-8&sa=X&ved=2ahUKEwjYxbOsvLP9AhUok_0HHTWvAasQ_AUoAXoECAEQAw"
+    
+    - image: "assets/img/view-map-2.jpg"
+      title: "Roma"
+      text: "Via Carlo Alberto, 26a, 00185 Roma RM,<br> Italy"
+      button: "view map"
+      link: "https://www.google.com/maps?q=Via+Carlo+Alberto,+26a,+00185+Roma+RM,+Italy&rlz=1C5CHFA_enUA981UA983&sxsrf=AJOqlzVW88C7U_cBDO0X_3gcHox7j7_l6Q:1677424266642&uact=5&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIFCAAQogQ6CggAEEcQ1gQQsANKBAhBGABQgARYgARgzwVoA3AAeACAAb0BiAG9AZIBAzAuMZgBAKABAqABAcgBCMABAQ&um=1&ie=UTF-8&sa=X&ved=2ahUKEwjb49HXvLP9AhUC7rsIHfLvDhIQ_AUoAXoECAEQAw"
+
+    - image: "assets/img/view-map-3.jpg"
+      title: "Barcelona"
+      text: "d'Aragó, 284, 08009 Barcelona,<br> Spain"
+      button: "view map"
+      link: "https://www.google.com/maps?q=d%27Arag%C3%B3,+284,+08009+Barcelona,+Spain&rlz=1C5CHFA_enUA981UA983&sxsrf=AJOqlzVafvTEXFDams8MK6ZrRCRoYDnwlg:1677424357317&uact=5&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIICAAQogQQsANKBAhBGAFQ4QNY4QNg1QRoA3AAeACAAQCIAQCSAQCYAQCgAQKgAQHIAQHAAQE&um=1&ie=UTF-8&sa=X&ved=2ahUKEwiw8oiJvbP9AhUqgP0HHVIiCGAQ_AUoAXoECAEQAw"
+
+
+###################
+#  Blog Carousel  #
+###################
+
+### Blog Carousel Three [ blog-carousel-three ]
+blog_carousel_three:
+  enable: true
+  numOfItems: 4
+  title: "Latest News From Our Blog"
+  subtitle: "Blog"
+
+### Blog Grid [ blog-grid ]
+blog_grid:
+  enable: true
+  numOfItems: 12

@@ -1,0 +1,26 @@
+{% assign content = site.data.content['services_grid'] %}
+
+<section class="digital-services gap">
+  <div class="container">
+    <div class="heading">
+      <h6>{{ content.subtitle | safeHTML }}</h6>
+      <h2>{{ content.title | safeHTML }}</h2>
+      <img alt="line" src="/assets/images/headingline.png">
+    </div>
+    <div class="row">
+      {% for item in content.items %}
+      <div class="col-xl-6">
+        <div class="discovery-img hoverstyle">
+          <figure>
+            <img class="w-100" alt="image" src="{{ item.image | absolute_url }}">
+          </figure>
+          <div class="discovery-text two">
+            <h4>{{ item.title | safeHTML }}</h4>
+            <p>{{ item.description | safeHTML }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

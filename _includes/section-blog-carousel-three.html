@@ -1,0 +1,59 @@
+{% assign content = site.data.content['blog_carousel_three'] %}
+{% assign ui_text = site.data.ui-text['ui_text'] %}
+
+<section>
+	<div class="container">
+	  <div class="title-blog">
+		<h2>{{ content.title | safeHTML }}</h2>
+		<span>{{ content.subtitle | safeHTML }}</span>
+	  </div>
+	  <div class="swiper-container blogswiper">
+		<div class="swiper-wrapper">
+		  {% for post in site.posts limit: content.numOfItems %}
+		  
+		  {% if post.author == nil %}
+		  	{% assign author = site.author %}
+	  	  {% else %}
+		  	{% assign author = post.author %}
+	  	  {% endif %}
+
+	  	  {% assign cat_size = post.category | size %}
+
+		  <div class="swiper-slide">
+			<div class="blog-content">
+			  <div class="row">
+				<div class="col-xl-6">
+				  <a href="{{ post.url }}"><img class="w-100" alt="{{ post.title }}" src="{{ post.image | absolute_url }}"></a>
+				</div>
+				<div class="col-xl-6">
+				  <div class="latest-blog-post">
+				  <a href="{{ post.url }}"><i class="fa-regular fa-clock"></i><span>{{ post.date | date: site.date_format }}</span></a>
+				  <a href="{{ post.url }}">
+					<h2>{{ post.title }}</h2>
+				  </a>
+				  <p>{{ post.content | strip_html | truncatewords: 20 }}</p>
+				  <span>{{ ui_text.by }} {{ author }} | {% if cat_size != 0 %}{% for category in post.category %}{{ category }}{% if post.category.last != category and post.category.last != nil %}, {% endif %}{% endfor %}{% endif %}</span>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  {% endfor %}
+		</div>
+		<div class="swiper-button-next">
+		  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			 viewBox="0 0 476.213 476.213" style="enable-background:new 0 0 476.213 476.213;" xml:space="preserve">
+		  <polygon points="405.606,167.5 384.394,188.713 418.787,223.106 0,223.106 0,253.106 418.787,253.106 384.394,287.5 
+			405.606,308.713 476.213,238.106 "/>
+		  </svg>
+		</div>
+		<div class="swiper-button-prev">
+		  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			 viewBox="0 0 476.213 476.213" style="enable-background:new 0 0 476.213 476.213;" xml:space="preserve">
+		  <polygon points="405.606,167.5 384.394,188.713 418.787,223.106 0,223.106 0,253.106 418.787,253.106 384.394,287.5 
+			405.606,308.713 476.213,238.106 "/>
+		  </svg>
+		</div>
+	  </div>
+	</div>
+</section>

@@ -1,0 +1,15 @@
+{% assign content = site.data.content['clients'] %}
+
+<section class="gap">
+  <div class="container">
+    <div class="our-clients">
+      <h4>{{ content.title | safeHTML }}</h4>
+      <span>{{ content.subtitle | safeHTML }}</span>
+      <ul>
+        {% for item in content.items %}
+        <li><img alt="{{ .alt }}" src="{{ item.image | absolute_url }}" title="{{ item.title }}"></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>

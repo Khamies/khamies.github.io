@@ -1,0 +1,19 @@
+{% assign content = site.data.content['numbers'] %}
+
+<section class="gap no-top">
+  <div class="container">
+    <div class="row">
+      {% for item in content.items %}
+      <div class="col-xl-4 col-lg-6 ">
+        <div class="strategic-sercives">
+          <h2>{{ item.num }}</h2>
+          <div>
+            <h4>{{ item.title | safeHTML }}</h4>
+            <p>{{ item.text | safeHTML }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

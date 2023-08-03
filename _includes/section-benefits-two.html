@@ -1,0 +1,26 @@
+{% assign content = site.data.content['benefits_two'] %}
+
+<section class="we-deliver-results gap" style="background-color: #f2edf5;">
+  <div class="container">
+    <div class="heading two">
+        <h2>{{ content.title | safeHTML }}</h2>
+        <img alt="line" src="/assets/images/headingline.png">
+      </div>
+    <div class="row">
+      {% for item in content.items %}
+      <div class="col-xl-4 col-lg-6">
+        <div class="makes-us-different-text">
+          <img src="{{ item.icon | absolute_url }}" alt="icon">
+          <h4>{{ item.title | safeHTML }}</h4>
+          <p>
+            {{ item.description | safeHTML }}
+          </p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="btugap">
+      <a href="{{ content.link }}" class="themebtu">{{ content.button }}</a>
+    </div>
+  </div>
+</section>
