@@ -370,13 +370,13 @@ cta_two:
 ### Hero Slider Two [ hero-slider-two ]
 hero_slider_two:
   slides:
-    - image: "assets/img/ads/algo.png"
+    - image: "assets/img/show/algo.png"
       title: "How to Solve Algorithm Problems is now <span>for Free!</span>"
       subtitle: "Sharpen your problem solving skill"
       button: "Download for Free"
       link: "https://shop.waleedkhamies.com/b/hsap"
 
-    - image: "assets/img/ads/gen.png"
+    - image: "assets/img/show/gen.png"
       title: "The Creative Engine is coming <span>SOON! </span>"
       subtitle: "Explore generative modeling in depth with their tensorflow extended (TFX) pipelines."
       button: "Be the First to Know"
@@ -387,21 +387,21 @@ clients:
   title: "Get familiar with my current services & projects"
   subtitle: "Learn. Apply. Monetize"
   items:
-    - image: "assets/img/ads/zitoonai.png"
+    - image: "assets/img/show/zitoonai.png"
       title: "Zitoona AI"
       alt: "Zitoona AI"
       
-    - image: "assets/img/ads/research.png"
+    - image: "assets/img/show/research.png"
       title: "AI Research"
       alt: "AI Research"
       
     
-    - image: "assets/img/ads/books.png"
+    - image: "assets/img/show/books.png"
       title: "Books"
       alt: "Books"
 
 
-    - image: "assets/img/ads/store.png"
+    - image: "assets/img/show/store.png"
       title: "Waleed Khamies' Store"
       alt: "Waleed Khamies' Store"
       
@@ -425,23 +425,23 @@ why_choose_us:
       value: ""
 
   items_col1:
-    - image: "assets/img/ads/books/1.png"
+    - image: "assets/img/show/books/1.png"
       title: "How to Solve Algorithm Problems"
       button: "View"
       link: "/books/hsap"
     
-    - image: "assets/img/ads/books/2.png"
+    - image: "assets/img/show/books/2.png"
       title: "The Creative Engine"
       button: "View"
       link: "/books/creative-engine"
 
   items_col2:
-    - image: "assets/img/ads/books/3.png"
+    - image: "assets/img/show/books/3.png"
       title: "From Data <br> To Deployment"
       button: "View"
       link: "/books/tensorflow"
 
-    - image: "assets/img/ads/books/4.png"
+    - image: "assets/img/show/books/4.png"
       title: "The Art Of Translating Data"
       button: "View"
       link: "/books/art-of-data-science"
@@ -513,8 +513,8 @@ services_two:
       value: "If you are interested in learning more about AI, machine learning and algorithm, I will be over the moon by joining my newsletter, and becoming one of the family members. Come and Join Me!"
 
   
-  image1: "assets/img/ads/zitoonai2.png"
-  image2: "assets/img/ads/zitoonai3.png"
+  image1: "assets/img/show/zitoonai2.png"
+  image2: "assets/img/show/zitoonai3.png"
   button: "Join the Family"
   link: "https://khamiesw.substack.com/"
 
