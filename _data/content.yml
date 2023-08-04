@@ -378,7 +378,7 @@ hero_slider_two:
 
     - image: "assets/img/show/gen.png"
       title: "The Creative Engine is coming <span>SOON! </span>"
-      subtitle: "Explore generative modeling in depth with their tensorflow extended (TFX) pipelines."
+      subtitle: "Explore generative modeling in depth and build end-to-end ML pipelines using tensorflow extended (TFX)"
       button: "Be the First to Know"
       link: "https://books.waleedkhamies.com/the_creative_engine"
 
