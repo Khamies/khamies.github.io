@@ -371,7 +371,7 @@ cta_two:
 hero_slider_two:
   slides:
     - image: "assets/img/show/algo.png"
-      title: "How to Solve Algorithm Problems is now <span>for Free!</span>"
+      title: "How to Solve Algorithm Problems is now <span>for FREE!</span>"
       subtitle: "Sharpen your problem solving skill"
       button: "Download for Free"
       link: "https://shop.waleedkhamies.com/b/hsap"
