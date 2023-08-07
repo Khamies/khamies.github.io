@@ -382,6 +382,12 @@ hero_slider_two:
       button: "Be the First to Know"
       link: "https://books.waleedkhamies.com/the_creative_engine"
 
+    - image: "assets/img/show/ten.png"
+      title: "From Data to Deployment in <span>the QUEUE! </span>"
+      subtitle: "Develop & Orchestrate end-to-end Machine Learning pipelines using tensorflow extended (TFX)"
+      button: "What do you want to learn?"
+      link: "https://forms.gle/y6PqV77oZSuNP1sK8"
+
 ### Clients [ clients ]
 clients:
   title: "Get familiar with my current services & projects"
