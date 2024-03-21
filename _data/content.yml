@@ -1040,9 +1040,9 @@ contact_form_info:
 #     link: "tel:0987123456678"
     
     - label: "Email :"
-      value: "waleed@waleedkhamies.com"
+      value: "waleed@khamies.ca"
       type: "link"
-      link: "mailto:waleed@waleedkhamies.com"
+      link: "mailto:waleed@khamies.ca"
 
     - label: "Follow Me:"
       value: ""
