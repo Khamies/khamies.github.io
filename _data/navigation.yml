@@ -24,7 +24,7 @@ main:
     url: "/books/"
     parent: 0
     
-  - title: "ZitoonAI"
+  - title: "GradML AI"
     url: "https://khamiesw.substack.com"
     parent: 0
     
