@@ -31,7 +31,11 @@
 # basic settings
 title: "Waleed Khamies"
 email: "waleed@khamies.ca"
-description: ""
+description: "Who is Waleed Khamies?
+Waleed Khamies is an applied machine learning scientist and researcher currently based in Edmonton, Canada. He is on a PhD track at the University of Alberta, 
+where he is exploring the intersection of AI and neuroscience, with a particular focus on how AI can help uncover visuo-linguistic patterns in individuals
+with mental health disorders. Currently, he works as an Applied Scientist at NTWIST, helping enterprises leverage machine learning to automate business 
+processes in the manufacturing industry using self-supervised and reinforcement learning."
 author: "Waleed Khamies"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
