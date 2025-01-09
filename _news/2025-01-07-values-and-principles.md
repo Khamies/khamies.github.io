@@ -44,7 +44,7 @@ Standing on solid values and principles protects you from your future self, spec
 
 ### The Pillars: Values
 
-Values are the core beliefs that guide someone behavior and decisions. Values comes and shaped by various factors, the community that you live in, your personal goals that you are seeking, the religion that you are practicing, even when you have a deep conversation with your friend. Also, values could local and subject to the place and time that you're in, and they could be universal and timeless spreading across continents and centuries. Personally, I have picked the most important values that resonates with me and I rely on them in every decision that i make, then I grouped them according to their purpose and impact on my life. These values serve as the foundation for my actions, relationships, and the way I perceive the world. 
+Values are the core beliefs that guide someone behavior and decisions. Values comes and shaped by various factors, the community that you live in, your personal goals that you are seeking, the religion that you are practicing, even when you have a deep conversation with your friend. Also, values could be local and subject to the place and time that you're in, and they could be universal and timeless spreading across continents and centuries. Personally, I have picked the most important values that resonates with me and I rely on them in every decision that i make, then I grouped them according to their purpose and impact on my life. These values serve as the foundation for my actions, relationships, and the way I perceive the world. 
 
 ##### Core Values
 
