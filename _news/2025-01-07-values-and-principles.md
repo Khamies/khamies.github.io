@@ -138,7 +138,7 @@ Here is the rest of my principles:
 
 ### Final Note
 
-I want to leave one final note before ending this essay, what I have shared above are the ideals and I always strive to maintain strong and clear values, but in complex situations, compromise between multiple values is often needed, which is an art that get better over time. Additionally, my principles are not static; they evolve as I gain new insights and experiences, enriching my moral compass. I will leave you with this final quote:
+I want to leave one final note before ending this essay, what I have shared above are the ideals and I always strive to maintain strong and clear values, but in complex situations, compromise between multiple values is often needed, which is an art that gets better over time. Additionally, my principles are not static; they evolve as I gain new insights and experiences, enriching my moral compass. I will leave you with this final quote:
 
 > Wisdom is knowing which values to hold firm and which to bend in the wind.
 >  <cite>-Stoic philosophy-</cite>
