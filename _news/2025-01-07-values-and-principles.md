@@ -38,13 +38,13 @@ I believe that individuals who are able to communicate their values have greater
 
 
 
-Standing on solid values and principles protects you from your future self, specially when things are not going according to your plans. At that time, you may find the solution to your problems is to just give up or take an easy road, which is opposite when you stand on strong value like perseverance which keeps you pushing till the end of the tunnel. In addition, holding on to solid principles protect others from yourself, as you may got into a situation where backstabbing someone could have better short outcomes or bearing false witness would work to your benefits. That's why being clear about your values alway will have positive impacts on you before other people.
+Standing on solid values and principles protects you from your future self, specially when things are not going according to your plans. At that time, you may find the solution to your problems is to just give up or take an easy road, which is opposite when you stand on strong value like perseverance which keeps you pushing till the end of the tunnel. In addition, holding on to solid principles protect others from yourself, as you may got into a situation where backstabbing someone could have better short outcomes or bearing false witness would work to your benefits. That's why being clear about your values always will have positive impacts on you before other people.
 
 ---
 
 ### The Pillars: Values
 
-Values are the core beliefs that guide someone behavior and decisions. Values comes and shaped by various factors, the community that you live in, your personal goals that you are seeking, the religion that you are practicing, even when you have a deep conversation with your friend. Also, values could be local and subject to the place and time that you're in, and they could be universal and timeless spreading across continents and centuries. Personally, I have picked the most important values that resonates with me and I rely on them in every decision that i make, then I grouped them according to their purpose and impact on my life. These values serve as the foundation for my actions, relationships, and the way I perceive the world. 
+Values are the core beliefs that guide someone behavior and decisions. Values comes and shaped by various factors: the community that you live in, your personal goals that you are seeking, the religion that you are practicing, or even during having a deep conversation with your friend. Also, values could be local and subject to the place and time that you're in, and they could be universal and timeless spreading across continents and centuries. Personally, I have picked the most important values that resonates with me and I rely on them in every decision that i make, then I grouped them according to their purpose and impact on my life. These values serve as the foundation for my actions, relationships, and the way I perceive the world. 
 
 ##### Core Values
 
