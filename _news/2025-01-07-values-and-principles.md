@@ -86,7 +86,7 @@ Here is the rest of my principles:
 
 - **Trust**
 
-  > To always be reliable, transparent, and consistent in m words and actions making others depend on me.
+  > To always be reliable, transparent, and consistent in my words and actions making others depend on me.
 
 - **Integrity**
 
@@ -138,7 +138,7 @@ Here is the rest of my principles:
 
 ### Final Note
 
-I want to leave one final note before ending this essay, what I have shared above are the ideals and I always strive to maintain strong and clear values, but in complex situations, compromise between multiple values is often needed, which is an art that gets better over time. Additionally, my principles are not static as they evolve as I gain new insights and experiences and enriching my moral compass. I will leave you with this quote:
+I want to leave a note before leaving you with a final quote, what I have shared above are the ideals and I always strive to maintain strong and clear values, but in complex situations, compromise between multiple values is often needed, which is an art that gets better over time. Additionally, my principles are not static as they evolve as I gain new insights and experiences and enriching my moral compass:
 
 > Wisdom is knowing which values to hold firm and which to bend in the wind.
 >  <cite>-Stoic philosophy-</cite>
