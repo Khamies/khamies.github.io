@@ -122,7 +122,7 @@ Here is the rest of my principles:
 
 - **Creativity**
 
-  > To always think about different ways to doing the same thing.
+  > To always think about different ways to do the same thing.
 
 - **Service**
 
