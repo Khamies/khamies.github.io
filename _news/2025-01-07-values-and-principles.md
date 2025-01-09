@@ -13,8 +13,7 @@ info:
     value: Waleed Khamies
 
   - label: About
-    value: My values are the core of who I am. They shape how I make decisions, build relationships, and pursue my goals. By sharing them, I hope to connect with people who share similar beliefs and are inspired by the same ideals.
-
+    value: In this essay, I reflect on the importance of identifying and articulating one's core values and principles. I then share the core values that guide every decision I make.
   - label: Date
     value: Jan 07, 2025
 ---
