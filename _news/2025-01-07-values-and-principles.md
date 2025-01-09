@@ -4,7 +4,7 @@ title: "What Matters Most: Values and Principles"
 category: foundation, values, principles
 category_slug: foundation, values, principles
 image: assets/img/news/values.jpg
-short: My values are the core of who I am. They shape how I make decisions, build relationships, and pursue my goals. By sharing them, I hope to connect with people who share similar beliefs and are inspired by the same ideals.
+short: In this essay "What Matters Most: Values and Principles," I reflect on the importance of identifying and articulating one's core values and principles, then, I share my core values that I depend on in my every decision that I take.
 
 ### if need replace preview image for single image add field full_image, ex:
 full_image: assets/img/news/values.jpg
