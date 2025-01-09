@@ -94,7 +94,7 @@ Here is the rest of my principles:
 
 - **Compassion**
 
-  > To always try to be empathetic by understanding others’ feelings, kind, generous, forgiver and supportive for other people.
+  > To always try to be empathetic by understanding others’ feelings, kind, generous, forgiving and supportive for other people.
 
 - **Fairness**
 
