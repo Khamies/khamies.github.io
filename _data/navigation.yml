@@ -19,13 +19,17 @@ main:
 
 #        - title: "Home Three"
 #          url: "/index-3/"
-          
-  - title: "Books"
-    url: "/books/"
+
+  - title: "About"
+    url: "/about/"
     parent: 0
     
-  - title: "GradML AI"
-    url: "https://khamiesw.substack.com"
+  - title: "Values & Principles"
+    url: "/news/2025-01-07-values-and-principles/"
+    parent: 0
+    
+  - title: "Books"
+    url: "/books/"
     parent: 0
     
   - title: "Research"
@@ -36,20 +40,12 @@ main:
     url: "/projects/"
     parent: 0
 
-#  - title: "Services"
-#   url: "/services/"
-#    parent: 0
-
   - title: "Store"
     url: "https://shop.waleed.khamies.ca"
     parent: 0
     
   - title: "News"
     url: "/news/"
-    parent: 0
-
-  - title: "About"
-    url: "/about/"
     parent: 0
 
   - title: "Contact"

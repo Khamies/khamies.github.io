@@ -50,33 +50,13 @@ about_two:
   description: "Applied ML Scientist"
   items:
     - title: "Who is Waleed Khamies?"
-      text: "Waleed Khamies is an applied machine learning scientist and researcher currently
-		based in Edmonton, Canada. He is on a PhD track at the University of Alberta, where he
-		is exploring the intersection of AI and neuroscience, with a particular focus on how AI
-		can help uncover visuo-linguistic patterns in individuals with mental health disorders. <br>
+      text: "Waleed Khamies is a machine learning scientist and on the PhD track at the University of Alberta, specializing in AI and healthcare. His research focuses on neural biomarkers in mental health conditions and developing secure AI models to support their care. <br>
 
-		Waleed holds a master's degree in Mathematical Sciences with a specialization in
-		Machine Learning from the African Masters in Machine Intelligence (AMMI) program
-		and a bachelor's degree in Electrical and Electronics Engineering from the University of
-		Khartoum (UofK). His robust academic background is complemented by significant
-		practical experience in the field of machine learning and artificial intelligence. <br>
+He holds a master's in Mathematical Sciences (specializing in Machine Learning) from the African Masters in Machine Intelligence (AMMI) and a bachelor's in Electrical and Electronics Engineering from the University of Khartoum. <br>
 
-His professional journey includes roles such as Applied Scientist at NTWIST, where he helps enterprises leverage machine learning to automate business processes in the manufacturing industry. He focuses on both process manufacturing and discrete manufacturing, utilizing self-supervised learning and reinforcement learning (RL). 
-		Previously, he developed a weld-defect analytics platform using
-		computer vision and an abstractive audio-document summarization system utilizing
-		BERT models. His work involved significant contributions to optimizing model
-		performance and deploying models in production environments. Waleed also worked as
-		an ML Research Engineer at the Quebec Artificial Intelligence Institute (MILA), where he
-		developed deep learning algorithms for noisy label applications and contributed to
-		research published in prestigious conferences like ICML and ICLR. Additionally, he has
-		interned at the Robotics Lab at Brown University, where he focused on reinforcement
-		learning and interpretability, with his work being recognized at NeurIPS. <br>
+Currently, Waleed works as an Applied Scientist at NTWIST, where he helps automate business processes in manufacturing using self-supervised learning and reinforcement learning. Previously, he contributed to deep learning research at MILA and interned at Brown University’s Robotics Lab, where his work was recognized at NeurIPS. <br>
 
-		Outside of his professional and academic pursuits, Waleed enjoys reading, biking,
-		playing tennis, and engaging in photography. He also shares his knowledge and insights
-		through ZitoonAI publication, contributing to the dissemination of AI advancements and
-		applications. <br>
-		"
+In his free time, Waleed enjoys reading, biking, tennis, and photography. He also shares insights through GradCorner AI, promoting AI advancements. <br>"
 
 #    - title: ""
 #      text: "Sed ac risus. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis."
@@ -171,20 +151,20 @@ hero_slider:
 
 ### Marketing One [ marketing-one ]
 marketing_one:
-  image: "assets/img/graph-1.png"
-  title: "Expert in Leveraging Available Budgets to Find Peak Performance."
-  subtitle: "What We Do"
-  intro: "Need help with your Digital Marketing?<br> Let us do what we do best so you can focus on running your business"
-  description: "Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh."
-  button: "Discover More"
+  image: "assets/img/me/me2.png"
+  title: "Waleed Khamies"
+  subtitle: "Welcome. Salut. مرحبا."
+  intro: ""
+  description: "Waleed Khamies is an applied machine learning scientist and on the PhD track at the University of Alberta, specializing in AI and healthcare. His research focuses on neural biomarkers in mental health conditions and developing secure AI models to support their care."
+  button: "Learn More"
   link: "/about/"
 
 ### Marketing Two [ marketing-two ]
 marketing_two:
-  image: "assets/img/graph-2.png"
-  title: "Sales Strategy and Conversion Optimization"
-  subtitle: "Designed to Grow Your Business"
-  description: "Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh."
+  image: "assets/img/show/values.png"
+  title: "My Values and Principles"
+  subtitle: "What I Stand For"
+  description: "My values are the core of who I am. They shape how I make decisions, build relationships, and pursue my goals. By sharing them, I hope to connect with people who share similar beliefs and are inspired by the same ideals."
   numbers:
     - value: "600+"
       label: "Successful websites launched by our team since 2011"
@@ -395,21 +375,21 @@ hero_slider_two:
   slides:
     - image: "assets/img/show/algo.png"
       title: "How to Solve Algorithm Problems is now <span>for FREE!</span>"
-      subtitle: "Sharpen your problem solving skill"
+      subtitle: "Sharpen your problem solving skill."
       button: "Download for Free"
       link: "https://shop.waleed.khamies.ca/b/hsap"
 
     - image: "assets/img/show/gen.png"
       title: "The Creative Engine is coming <span>SOON! </span>"
-      subtitle: "Explore generative modeling in depth and build end-to-end ML pipelines using tensorflow extended (TFX)"
+      subtitle: "Explore generative modeling in depth using TensorFlow."
       button: "Be the First to Know"
-      link: "https://books.waleedkhamies.com/the_creative_engine"
+      link: "https://forms.gle/whnAbvyz4zp5mAKy9"
 
-    - image: "assets/img/show/ten.png"
-      title: "From Data to Deployment in <span>the QUEUE! </span>"
-      subtitle: "Develop & Orchestrate end-to-end Machine Learning pipelines using tensorflow extended (TFX)"
-      button: "What do you want to learn?"
-      link: "https://forms.gle/y6PqV77oZSuNP1sK8"
+#    - image: "assets/img/show/ten.png"
+#      title: "From Data to Deployment in <span>the QUEUE! </span>"
+#      subtitle: "Develop & Orchestrate end-to-end Machine Learning pipelines using tensorflow extended (TFX)"
+#      button: "What do you want to learn?"
+#      link: "https://forms.gle/y6PqV77oZSuNP1sK8"
 
 ### Clients [ clients ]
 clients:
@@ -417,8 +397,8 @@ clients:
   subtitle: "Learn. Apply. Monetize"
   items:
     - image: "assets/img/show/gradml1.png"
-      title: "GradML AI"
-      alt: "GradML AI"
+      title: "GradCorner AI"
+      alt: "GradCorner AI"
       
     - image: "assets/img/show/research.png"
       title: "AI Research"
@@ -526,24 +506,24 @@ projects_carousel_two:
 
 ### Projects Carousel Two [ projects-carousel-two ]
 services_two:
-  title: "GradML AI"
+  title: "GradCorner AI"
   subtitle: "AI Publication"
   list:
-    - label: "Welcome to GradML Publication"
-      value: "GradML publication is a space that focuses on providing simple explanations to advanced AI concepts."
+    - label: "Welcome to GradCorner Publication"
+      value: "GradCorner publication is a space that focuses on providing simple explanations to advanced AI concepts."
     - label: "What’s the goal of this Publication?"
       value: "The goal of the publication is to demystify difficult ML topics and research papers, providing digestible summaries. It is suitable for researchers, grad students, and industry professionals who want to understand how complex ML models work and how to deploy them into production environments."
-    - label: "What does the word 'GradML' mean?"
-      value: "GeadML is a blend of the words 'Graduate' and 'Machine Learning (ML)'. The name was conceived during the PhD studies of some of our founding team members."
+    - label: "What does the word 'GradCorner' mean?"
+      value: "GradCorner is a fusion of the words Graduate and Corner, symbolizing a dedicated space where graduate students explore intriguing topics at the intersection of academia and AI. The name was inspired during the PhD journeys of our founding team members, reflecting their vision of creating a go-to hub for intellectual exploration, cutting-edge AI advancements, and meaningful connections."
 
     - label: "Do you feel home?"
-      value: "If you are interested in learning more about AI, machine learning and algorithm, I will be over the moon by joining my publication, and becoming one of the family members. Come and Join Me!"
+      value: "If you are interested in learning more about AI, machine learning and algorithm, I will be over the moon by joining the publication, and becoming one of our family members. Come and Join us!"
 
   
-  image1: "assets/img/show/gradml2.png"
+  image1: "assets/img/show/Gradcorner.png"
   image2: "assets/img/show/zitoonai3.png"
-  button: "Join the Family"
-  link: "https://khamiesw.substack.com/"
+  button: "Join the Family!"
+  link: "https://publication.gradcorner.ca/"
 
 ### Testimonial Three [ testimonial-three ]
 testimonial_three:
@@ -585,35 +565,18 @@ contact_form_map:
 about_one:
   title: "We do<br>things differently"
   subtitle: "We Dream Digital"
-  text: "<p> Waleed Khamies is an applied machine learning scientist and researcher currently
-		based in Edmonton, Canada. He is on a PhD track at the University of Alberta, where he
-		is exploring the intersection of AI and neuroscience, with a particular focus on how AI
-		can help uncover visuo-linguistic patterns in individuals with mental health disorders. <br>
+  text: "<p> Waleed Khamies is a machine learning scientist and PhD candidate at the University of Alberta, specializing in AI and healthcare. 
+             His research focuses on neural biomarkers in mental health conditions and developing secure AI models to support their care. <br>
+  
+             He holds a master's in Mathematical Sciences (specializing in Machine Learning) from the African Masters in Machine Intelligence (AMMI)
+             and a bachelor's in Electrical and Electronics Engineering from the University of Khartoum. <br>
 
-		Waleed holds a master's degree in Mathematical Sciences with a specialization in
-		Machine Learning from the African Masters in Machine Intelligence (AMMI) program
-		and a bachelor's degree in Electrical and Electronics Engineering from the University of
-		Khartoum (UofK). His robust academic background is complemented by significant
-		practical experience in the field of machine learning and artificial intelligence. <br>
+            Currently, Waleed works as an Applied Scientist at NTWIST, where he helps automate business processes in manufacturing
+            using self-supervised learning and reinforcement learning. Previously, he contributed to deep learning research at MILA 
+            and interned at Brown University’s Robotics Lab, where his work was recognized at NeurIPS. <br>
 
-		His professional journey includes roles such as Machine Learning Engineer at NTWIST,
-		where he works full-time helping enterprises leverage machine learning to automate
-		business processes. Previously, he developed a weld-defect analytics platform using
-		computer vision and an abstractive audio-document summarization system utilizing
-		BERT models. His work involved significant contributions to optimizing model
-		performance and deploying models in production environments. Waleed also worked as
-		an ML Research Engineer at the Quebec Artificial Intelligence Institute (MILA), where he
-		developed deep learning algorithms for noisy label applications and contributed to
-		research published in prestigious conferences like ICML and ICLR. Additionally, he has
-		interned at the Robotics Lab at Brown University, where he focused on reinforcement
-		learning and interpretability, with his work being recognized at NeurIPS. <br>
-
-		Outside of his professional and academic pursuits, Waleed enjoys reading, biking,
-		playing tennis, and engaging in photography. He also shares his knowledge and insights
-		through ZitoonAI publication, contributing to the dissemination of AI advancements and
-		applications. <br>
-		</p>
-    "
+            In his free time, Waleed enjoys reading, biking, tennis, and photography. He also shares insights through GradCorner AI, promoting AI advancements. <br>
+		</p>"
   signature: "assets/img/signature.png"
   name: "CEO, John Doe"
   button: "Meet The Team"
@@ -867,15 +830,15 @@ team_grid:
 ### Discovery [ discover ]
 discovery:
   enable: true
-  title: "Sales Strategy and Conversion Optimization"
-  subtitle: "Designed to Grow Your Business"
-  description: "Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel dapibusid, mattis velnisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh."
-  button: "View Portfolio"
-  link: "/portfolio/"
-  featured_image: "assets/img/discovery.jpg"
-  featured_icon: "assets/img/icon-discovery.svg"
-  featured_title: "Performance Marketing"
-  featured_text: "Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis velnisi. Sed pretium, ligula sollicitudin.Nullam mollis. Ut justo. Suspendisse potenti."
+  title: "What Matters Most: Values and Principles"
+  subtitle: "What I Stand For"
+  description: "My values are the core of who I am. They shape how I make decisions, build relationships, and pursue my goals. By sharing them..."
+  button: "Read More"
+  link: "/news/2025-01-07-values-and-principles/"
+  featured_image: "assets/img/show/values.jpg"
+  featured_icon: ""
+  featured_title: ""
+  featured_text: ""
 
 ### Services Grid [ services-grid ]
 services_grid:
