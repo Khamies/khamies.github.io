@@ -34,6 +34,7 @@ As I reflect on the journey that has brought me to this point in life, I realize
 I believe that individuals who are able to communicate their values have greater clarity in their decisions which leads to better outcomes, even when facing challenges. For example, we have seen many people prefer to lose big monetary rewards in exchange for holding on to their core values, or some who choose to speak the truth even when it has negative consequences for their career or life. The common factor between these individuals is that:
 
 > Living up to their values makes them feel good and balanced spiritually, psychologically, and physically.
+> -Author- 
 
 
 
