@@ -385,11 +385,11 @@ hero_slider_two:
       button: "Be the First to Know"
       link: "https://forms.gle/whnAbvyz4zp5mAKy9"
 
-#    - image: "assets/img/show/ten.png"
-#      title: "From Data to Deployment in <span>the QUEUE! </span>"
-#      subtitle: "Develop & Orchestrate end-to-end Machine Learning pipelines using tensorflow extended (TFX)"
-#      button: "What do you want to learn?"
-#      link: "https://forms.gle/y6PqV77oZSuNP1sK8"
+    - image: "assets/img/show/values_showpage.png"
+      title: "Introspection: <span>Values</span> & <span>Principles</span>"
+      subtitle: "What I Stand For."
+      button: "Read More"
+      link: "https://waleed.khamies.ca/news/2025-01-07-values-and-principles"
 
 ### Clients [ clients ]
 clients:
