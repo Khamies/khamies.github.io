@@ -54,9 +54,8 @@ about_two:
 
 He holds a master's in Mathematical Sciences (specializing in Machine Learning) from the African Masters in Machine Intelligence (AMMI) and a bachelor's in Electrical and Electronics Engineering from the University of Khartoum. <br>
 
-Currently, Waleed works as an Applied Scientist at NTWIST, where he helps automate business processes in manufacturing using self-supervised learning and reinforcement learning. Previously, he contributed to deep learning research at MILA and interned at Brown University’s Robotics Lab, where his work was recognized at NeurIPS. <br>
-
-In his free time, Waleed enjoys reading, biking, tennis, and photography. He also shares insights through GradCorner AI, promoting AI advancements. <br>"
+Currently, Waleed works as an Applied Scientist at NTWIST, where he helps automate business processes in manufacturing
+using self-supervised learning, semi-supervised learning and reinforcement learning. Previously, he contributed to deep learning research at MILA and interned at Brown University’s Robotics Lab.<br>"
 
 #    - title: ""
 #      text: "Sed ac risus. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis."
@@ -572,10 +571,8 @@ about_one:
              and a bachelor's in Electrical and Electronics Engineering from the University of Khartoum. <br>
 
             Currently, Waleed works as an Applied Scientist at NTWIST, where he helps automate business processes in manufacturing
-            using self-supervised learning and reinforcement learning. Previously, he contributed to deep learning research at MILA 
-            and interned at Brown University’s Robotics Lab, where his work was recognized at NeurIPS. <br>
-
-            In his free time, Waleed enjoys reading, biking, tennis, and photography. He also shares insights through GradCorner AI, promoting AI advancements. <br>
+            using self-supervised learning, semi-supervised learning and reinforcement learning. Previously, he contributed to deep learning research at MILA 
+            and interned at Brown University’s Robotics Lab.<br>
 		</p>"
   signature: "assets/img/signature.png"
   name: "CEO, John Doe"

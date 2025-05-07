@@ -11,7 +11,7 @@ intro_title: "Waleed Khamies"
 intro_subtitle: "Who Am I?"
 # Intro End
 
-sections: about-two,benefits-two
+sections: about-two
 ---
 
 <!---
