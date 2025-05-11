@@ -1,80 +1,68 @@
 # ----------------------------------------------------
-#
 # Terio - Digital Agency Jekyll Theme
-# Version: 1.0
-# Author: bslthemes
-# Author URL: http://themeforest.net/user/bslthemes
-# Copyright © Terio by bslthemes. All Rights Reserved.
-#
+# Customized by Waleed Khamies for Academic Website
 # ----------------------------------------------------
-#
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
 
-# basic settings
+# Site metadata
 title: "Waleed Khamies"
 email: "waleed@khamies.ca"
-description: " Waleed Khamies is an applied machine learning scientist and on the PhD track at the University of Alberta, 
-                specializing in AI and healthcare. His research focuses on neural biomarkers in mental health conditions 
-                and developing secure AI models to support their care."
+description: >
+  Waleed Khamies is an applied machine learning scientist and on the PhD track at the University of Alberta,
+  specializing in AI and healthcare. His research focuses on neural biomarkers in mental health conditions
+  and developing secure AI models to support their care.
 author: "Waleed Khamies"
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+lang: "en"
+url: "https://waleed.khamies.ca"  # Update to "https://khamies.ca" if you use a custom domain
+baseurl: ""  # Leave blank for root deployment
 date_format: "%d %B %Y"
-image: "assets/img/me/me.png"  # Add the path to your image here (e.g., "https://example.com/images/profile.jpg")
+image: "/assets/img/me/me.png"
+logo: "/assets/img/me/me.png"
 
-# paginations & permalinks
+# Social links (for jekyll-seo-tag rich previews)
+social:
+  name: Waleed Khamies
+  links:
+    - https://github.com/Khamies
+    - https://twitter.com/khamies_ai
+    - https://linkedin.com/in/YOUR-HANDLE
+
+twitter:
+  username: khamies_ai
+
+# Optional: Add this if using Google Search Console
+# google_site_verification: "YOUR-GOOGLE-VERIFICATION-CODE"
+
+# Pagination & permalinks
 paginate: 6
 paginate_path: "/blog/page:num/"
 permalink: pretty
 
-# disqus comments
-disqus_comments: "yes" # yes - show disqus comments, no - hide disqus comments
-disqus_shortname: "waleedkhamies" # read more here https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+# Comments
+disqus_comments: "yes"
+disqus_shortname: "waleedkhamies"
 
-# formsubmit.io
-formspree_endpoint: "https://formspree.io/f/xpzgqkkr" # sign up on https://formspree.io/ and create your form endpoint
+# Contact form (Formspree)
+formspree_endpoint: "https://formspree.io/f/xpzgqkkr"
 
-# collections
+# Collections
 collections:
   works:
     output: true
     permalink: /:collection/:name
-
   books:
     output: true
     permalink: /:collection/:name
-
   projects:
     output: true
     permalink: /:collection/:name
-
   news:
     output: true
     permalink: /:collection/:name
-
   research:
     output: true
     permalink: /:collection/:name
 
-# archives
+# Archive pages
 jekyll-archives:
   enabled:
     - categories
@@ -86,21 +74,22 @@ jekyll-archives:
     category: /categories/:name/
     tag: /tags/:name/
 
-# Build settings
+# Plugins
 plugins:
   - jekyll-archives
   - jekyll-paginate
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
 
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
+# Sass settings
+sass:
+  style: compressed
+
+# Markdown engine
+markdown: kramdown
+
+# Exclude these from the build
 exclude:
   - .sass-cache/
   - .jekyll-cache/
@@ -109,8 +98,3 @@ exclude:
   - Gemfile.lock
   - node_modules/
   - vendor/
-
-sass:
-  style: compressed
-
-markdown:  kramdown
