@@ -6,10 +6,9 @@
 # Site metadata
 title: "Waleed Khamies"
 email: "waleed@khamies.ca"
-description: >
-  Waleed Khamies is an applied machine learning scientist and on the PhD track at the University of Alberta,
+description: "Waleed Khamies is an applied machine learning scientist and on the PhD track at the University of Alberta,
   specializing in AI and healthcare. His research focuses on neural biomarkers in mental health conditions
-  and developing secure AI models to support their care.
+  and developing secure AI models to support their care"
 author: "Waleed Khamies"
 lang: "en"
 url: "https://waleed.khamies.ca"  # Update to "https://khamies.ca" if you use a custom domain
