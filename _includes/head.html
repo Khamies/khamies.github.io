@@ -6,6 +6,35 @@
   <meta name="author" content="bslthemes" />
   <meta name="google-site-verification" content="i66arYQi6Cbim0Iay-AOYPF8PnpuUDhsfJ3Si0UcVsY" />
   {%- seo -%}
+  {% if page.url == "/about/" %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Waleed Khamies",
+    "alternateName": "Waleed Khamies",
+    "url": "https://waleed.khamies.ca/about/",
+    "image": "https://waleed.khamies.ca/assets/img/me/me.png",
+    "jobTitle": "Applied Machine Learning Scientist",
+    "worksFor": [
+      {
+        "@type": "Organization",
+        "name": "NTWIST"
+      },
+      {
+        "@type": "Organization",
+        "name": "University of Alberta"
+      }
+    ],
+    "sameAs": [
+      "https://github.com/Khamies",
+      "https://twitter.com/khamiesw",
+      "https://www.linkedin.com/in/khamiesw/",
+      "https://scholar.google.com/citations?user=YZgQGQ0AAAAJ&hl=en"
+    ]
+  }
+  </script>
+  {% endif %}
 
   <!-- Fonts -->
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
