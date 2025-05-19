@@ -35,12 +35,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://waleed.khamies.ca/books/art-of-data-science</loc>
-    <lastmod>2025-05-10T22:33:22-06:00</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://waleed.khamies.ca/books/creative-engine</loc>
     <lastmod>2025-05-10T22:33:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
@@ -52,12 +46,7 @@
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://waleed.khamies.ca/books/tensorflow</loc>
-    <lastmod>2025-05-10T22:33:22-06:00</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
+
 
   <!-- Research Section -->
   <url>
@@ -157,32 +146,6 @@
   <url>
     <loc>https://waleed.khamies.ca/news/2025-01-07-values-and-principles</loc>
     <lastmod>2025-01-07T00:00:00-07:00</lastmod>
-    <changefreq>never</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <!-- Legacy Blog Posts -->
-  <url>
-    <loc>https://waleed.khamies.ca/development/2021/07/13/benjamin-franklins-thoughts-about-new-designers/</loc>
-    <lastmod>2021-07-13T00:49:27-06:00</lastmod>
-    <changefreq>never</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://waleed.khamies.ca/development/2021/07/13/designers-thoughts-about-mobile-UI/</loc>
-    <lastmod>2021-07-13T00:49:27-06:00</lastmod>
-    <changefreq>never</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://waleed.khamies.ca/documentation/2021/07/13/how-to-become-acreative-designer/</loc>
-    <lastmod>2021-07-13T00:49:27-06:00</lastmod>
-    <changefreq>never</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://waleed.khamies.ca/design/2021/07/13/new-designers-limitations/</loc>
-    <lastmod>2021-07-13T00:49:27-06:00</lastmod>
     <changefreq>never</changefreq>
     <priority>0.5</priority>
   </url>
