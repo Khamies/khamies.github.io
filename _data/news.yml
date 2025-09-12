@@ -1,0 +1,46 @@
+title: "News & Updates"
+subtitle: "Recent milestones and announcements."
+
+items:
+  - title: "Book Release on Amazon"
+    date: "2023-05-21"
+    description: "My book *How to Solve Algorithm Problems: Make Coding Interview Preparation Less Painful* was first published in paperback on Amazon."
+    image: "/assets/img/news/amazon-book.png"
+    link: "https://www.amazon.ca/How-Solve-Algorithm-Problems-Preparation/dp/1739010531"
+    button: "View on Amazon"
+
+  - title: "Book Release on Leanpub"
+    date: "2023-05-22"
+    description: "*How to Solve Algorithm Problems* became available on Leanpub, giving readers access in digital formats."
+    image: "/assets/img/news/leanpub-book.png"
+    link: "https://leanpub.com/how-to-solve-algorithm-problems-book"
+    button: "View on Leanpub"
+
+  - title: "Book Available on My Bookstore"
+    date: "2023-06-01"
+    description: "*How to Solve Algorithm Problems* is now available through my personal online bookstore, offering readers free access to the updated edition with 80 curated problems and a preparation framework."
+    image: "/assets/img/news/book.png"
+    link: "https://shop.waleed.khamies.ca/b/hsap"
+    button: "Visit Bookstore"
+
+  - title: "Joined NTWIST as Applied AI Scientist"
+    date: "2024-05-01"
+    description: "I joined NTWIST to develop AI-powered scheduling and automation solutions for the manufacturing industry, leveraging deep learning, constraint optimization, and reinforcement learning."
+    image: "/assets/img/news/ntwist.png"
+    link: "https://ntwist.com/"
+    button: "Learn more"
+
+  - title: "What Matters Most: Values and Principles"
+    date: "2025-01-07"
+    description: "A personal essay reflecting on the importance of articulating one’s core values and principles, and sharing the values that guide my decisions."
+    image: "/assets/img/news/values.jpg"
+    link: "/news/2025-01-07-values-and-principles"
+    button: "Read essay"
+
+  - title: "GradCorner AI Reaches 3,185 Reads"
+    date: "2025-09-01"
+    description: "GradCorner, my independent publication on advanced AI concepts, has now been read 3,185 times across all articles."
+    image: "/assets/img/news/gradcorner.png"
+    link: "https://publication.gradcorner.ca/"
+    button: "Visit GradCorner"
+

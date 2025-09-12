@@ -1,0 +1,22 @@
+title: "Projects"
+subtitle: "Research, open-source work, and writing."
+numOfItems: 3
+button: "Explore all projects"
+link: "/projects/"
+
+items:
+  - title: "AI Research"
+    short: "Graduate research in reinforcement learning and optimization, with an emphasis on methods that improve reliability and impact in practice."
+    image: "/assets/img/show/fea_c1.png"
+    url: "/research/"
+
+  - title: "Open-Source Projects"
+    short: "Selected experiments and implementations on GitHub, including reinforcement learning environments, scheduling frameworks, and applied ML tools."
+    image: "/assets/img/show/fea_c2.png"
+    url: "/projects/"
+
+  - title: "GradCorner AI"
+    short: "A publication dedicated to explaining advanced machine learning concepts in a way that is clear and practical for students, researchers, and professionals."
+    image: "/assets/img/show/fea_c3.png"
+    url: "https://publication.gradcorner.ca/"
+

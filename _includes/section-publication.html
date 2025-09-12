@@ -1,0 +1,32 @@
+{% assign content = site.data.publication %}
+
+<section class="articles gap">
+  <div class="container">
+    <div class="heading-boder two">
+      <h2>{{ content.title | safeHTML }}</h2>
+      <p>{{ content.subtitle | safeHTML }}</p>
+    </div>
+
+    <div class="row">
+      {% for item in content.items %}
+      <div class="col-xl-3 col-lg-4 col-md-6">
+        <div class="article-card" style="border:1px solid #eaeaea;border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,.05);transition:.2s;">
+          <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">
+            <img alt="{{ item.title }}" class="w-100" src="{{ item.image | absolute_url }}">
+          </a>
+          <div style="padding:16px;">
+            <h6 style="margin-bottom:.5rem;">{{ item.title | safeHTML }}</h6>
+            <p style="font-size:.9rem;line-height:1.5;opacity:.85">{{ item.description | safeHTML }}</p>
+            <a href="{{ item.link }}" class="themebtu" target="_blank" rel="noopener noreferrer" style="margin-top:12px;display:inline-block;">{{ item.button }}</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="btugap" style="text-align:center;margin-top:32px;">
+      <a href="{{ content.link }}" class="themebtu" target="_blank" rel="noopener noreferrer">{{ content.button }}</a>
+    </div>
+  </div>
+</section>
+

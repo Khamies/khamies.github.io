@@ -4,15 +4,19 @@
 # ----------------------------------------------------
 
 # Site metadata
-title: "Waleed Khamies"
+title: "Waleed Khamies | Applied AI Scientist at NTWIST | University of Alberta"
 email: "waleed@khamies.ca"
-description: "Waleed Khamies is an applied machine learning scientist and on the PhD track at the University of Alberta,
-  specializing in AI and healthcare. His research focuses on neural biomarkers in mental health conditions
-  and developing secure AI models to support their care"
+description: >
+  Waleed Khamies is an Applied AI Scientist at NTWIST, where he designs and
+  deploys AI-powered scheduling and automation solutions for the manufacturing
+  industry. His expertise spans reinforcement learning, self-supervised learning,
+  and constraint optimization to improve throughput and efficiency in real-world
+  operations. Alongside his professional role, he pursues graduate research at the
+  University of Alberta, focusing on decision-making systems and applied machine learning.
 author: "Waleed Khamies"
 lang: "en"
-url: "https://waleed.khamies.ca"  # Update to "https://khamies.ca" if you use a custom domain
-baseurl: ""  # Leave blank for root deployment
+url: "https://waleed.khamies.ca"
+baseurl: ""   # Leave blank for root deployment
 date_format: "%d %B %Y"
 image: "/assets/img/me/me.png"
 logo: "/assets/img/me/me.png"
@@ -25,8 +29,8 @@ social:
     - https://twitter.com/khamiesw
     - https://linkedin.com/in/khamiesw
 
-twitter:
-  username: khamies_ai
+#twitter:
+#  username: khamies_ai
 
 # Optional: Add this if using Google Search Console
 # google_site_verification: "YOUR-GOOGLE-VERIFICATION-CODE"
@@ -37,11 +41,11 @@ paginate_path: "/blog/page:num/"
 permalink: pretty
 
 # Comments
-disqus_comments: "yes"
-disqus_shortname: "waleedkhamies"
+#disqus_comments: "no"
+#disqus_shortname: "waleedkhamies"
 
 # Contact form (Formspree)
-formspree_endpoint: "https://formspree.io/f/xpzgqkkr"
+formspree_endpoint: "https://formspree.io/f/xrbadeqn"
 
 # Collections
 collections:

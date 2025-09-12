@@ -1,43 +1,52 @@
-{% assign content = site.data.content['projects_featured'] %}
-{% assign ui_text = site.data.ui-text['ui_text'] %}
+{% assign content = site.data.featured_project %}
+{% assign ui_text  = site.data.ui-text['ui_text'] %}
 
 <section class="section-case-studies gap">
   <div class="container">
     <div class="heading-boder two">
       <h2>{{ content.title | safeHTML }}</h2>
+      {% if content.subtitle %}
+        <p style="margin-top:.5rem;opacity:.85">{{ content.subtitle }}</p>
+      {% endif %}
     </div>
+
     <div class="masonry-row">
-      {% for work in site.works limit: content.numOfItems %}
-      <div class="case-studies-two{% if content.first == true and forloop.index == 1 ) %} case-studies-two__b{% endif %}">
-        <figure>
-          <a href="{{ work.url }}"><img alt="{{ work.title }}" class="w-100" src="{{ work.image | absolute_url }}"></a>
-        </figure>
-        <div class="case-studies-text">
-          <h5><a href="{{ work.url }}">{{ work.title }}</a></h5>
-          <ul>
-            <li>{{ work.category }}</li>
-          </ul>
+      {% for tile in content.gallery limit: content.numOfItems %}
+        {% assign href = tile.url | default: content.url %}
+        {% assign is_external = href | slice: 0, 4 %}
+
+        <div class="case-studies-two{% if content.feature_first and forloop.first %} case-studies-two__b{% endif %}">
+          <figure>
+            <a href="{{ href }}"
+               {% if is_external == 'http' %}target="_blank" rel="noopener noreferrer"{% endif %}>
+              <img alt="{{ tile.alt | default: content.title }}" class="w-100" src="{{ tile.image | absolute_url }}">
+            </a>
+          </figure>
+          <div class="case-studies-text">
+            <h5>
+              <a href="{{ href }}"
+                 {% if is_external == 'http' %}target="_blank" rel="noopener noreferrer"{% endif %}>
+                {{ tile.title | default: content.title }}
+              </a>
+            </h5>
+            <ul>
+              <li>{{ tile.category | default: content.category }}</li>
+            </ul>
+          </div>
         </div>
-      </div>
       {% endfor %}
     </div>
 
     <div class="btugap">
-        <a href="{{ content.link }}" class="themebtu">{{ content.button }}</a>
+      <a href="{{ content.link }}" class="themebtu">{{ content.button }}</a>
     </div>
+
     <div class="tp-hero__shapes">
-      <div class="style-shapes-4">
-        <img alt="dots1" src="/assets/images/shap-6.png">
-      </div>
-      <div class="style-shapes-5">
-        <img alt="dots1" src="/assets/images/shap-3.png">
-      </div>
-      <div class="style-shapes-6">
-        <img alt="dots1" src="/assets/images/shap-2.png">
-      </div>
-      <div class="style-shapes-7">
-        <img alt="dots1" src="/assets/images/shap-5.png">
-      </div>
+      <div class="style-shapes-4"><img alt="shape" src="/assets/images/shap-6.png"></div>
+      <div class="style-shapes-5"><img alt="shape" src="/assets/images/shap-3.png"></div>
+      <div class="style-shapes-6"><img alt="shape" src="/assets/images/shap-2.png"></div>
+      <div class="style-shapes-7"><img alt="shape" src="/assets/images/shap-5.png"></div>
     </div>
   </div>
 </section>
+

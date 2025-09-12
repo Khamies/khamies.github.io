@@ -1,0 +1,71 @@
+{% assign news_all = site.data.news.items | sort: "date" | reverse %}
+
+<section id="news-timeline" style="padding:56px 0;">
+  <style>
+    #news-timeline{--ink:#0f0f10;--muted:#6b6f76;--line:#e8eaee;--accent:#2b6df3;--card:#fff}
+    @media (prefers-color-scheme:dark){
+      #news-timeline{--ink:#f2f4f7;--muted:#98a2b3;--line:#1f242b;--accent:#6aa2ff;--card:#121418}
+    }
+    #news-timeline .wrap{max-width:980px;margin:0 auto;padding:0 18px;}
+    #news-timeline h2{margin:0 0 8px 0;color:var(--ink)}
+    #news-timeline p.sub{margin:0 0 18px 0;color:var(--muted)}
+
+    /* stream holds the axis and items so the line starts below the subtitle */
+    #news-timeline .stream{position:relative}
+
+    /* spacing from the axis to the content */
+    #news-timeline .axis{position:absolute;left:36px;top:0;bottom:0;width:2px;background:var(--line)}
+    #news-timeline .item{position:relative;margin:18px 0;padding-left:72px}
+    #news-timeline .dot{position:absolute;left:30px;top:10px;width:14px;height:14px;border-radius:50%;background:var(--accent)}
+
+    #news-timeline .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+    #news-timeline .meta{font-size:.86rem;color:var(--muted);margin-bottom:4px}
+    #news-timeline .meta .tag{display:inline-block;margin-left:8px;background:var(--ink);color:#fff;border-radius:999px;padding:2px 8px;font-size:.75rem}
+    #news-timeline h3{margin:0 0 6px 0;font-size:1.04rem;color:var(--ink)}
+
+    @media(max-width:560px){
+      #news-timeline .axis{left:22px}
+      #news-timeline .item{padding-left:54px}
+      #news-timeline .dot{left:16px}
+    }
+  </style>
+
+  <div class="wrap">
+    <h2>{{ site.data.news.title }}</h2>
+    <p class="sub">{{ site.data.news.subtitle }}</p>
+
+    <div class="stream">
+      <div class="axis" aria-hidden="true"></div>
+
+      {% for it in news_all limit:6 %}
+      <article class="item">
+        <span class="dot" aria-hidden="true"></span>
+        <div class="card">
+          <div class="meta">
+            {{ it.date }}
+            {% if it.category %}<span class="tag">{{ it.category }}</span>{% endif %}
+          </div>
+          <h3>
+            {% if it.link %}
+              <a href="{{ it.link }}" target="_blank" rel="noopener noreferrer">{{ it.title }}</a>
+            {% else %}
+              {{ it.title }}
+            {% endif %}
+          </h3>
+          <div style="color:var(--muted);line-height:1.6">
+            {{ it.description | truncate: 160 }}
+          </div>
+          {% if it.link %}
+          <a href="{{ it.link }}" style="display:inline-block;margin-top:6px;">{{ it.button }}</a>
+          {% endif %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+
+    <div style="margin-top:24px;text-align:center;">
+      <a href="/news/" class="themebtu full">View all news →</a>
+    </div>
+  </div>
+</section>
+

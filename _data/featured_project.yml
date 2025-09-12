@@ -1,0 +1,35 @@
+title: "How to Solve Algorithm Problems"
+subtitle: "A practical, interview-focused guide with a clear prep framework and 80 curated problems."
+button: "Download free"
+link: "https://shop.waleed.khamies.ca/b/hsap"   # button target
+url:  "https://shop.waleed.khamies.ca/b/hsap"   # default link for each tile
+category: "Book"
+feature_first: true
+numOfItems: 5           # ← show five tiles on the page
+
+gallery:
+  - image: "/assets/img/show/casestudy_book/1.png"
+    alt: "Cover — How to Solve Algorithm Problems"
+    title: "The Guide"
+    category: "EPUB & PDF"
+
+  - image: "/assets/img/show/casestudy_book/2.png"
+    alt: "Preparation Framework overview"
+    title: "Preparation Framework"
+    category: "Method"
+
+  - image: "/assets/img/show/casestudy_book/3.png"
+    alt: "Worked example from the book"
+    title: "Why this guide?"
+    category: "Not what you think!"
+
+  - image: "/assets/img/show/casestudy_book/4.png"
+    alt: "Notion tracker and problem set"
+    title: "Real Interviews Questions"
+    category: "Practice, Practice, Practice!"
+
+  - image: "/assets/img/show/casestudy_book/5.png"   # ← add a 5th image file
+    alt: "Table of contents"
+    title: "Your To-do list"
+    category: "Interview Tomorrow? No Problem!"
+

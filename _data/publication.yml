@@ -1,0 +1,30 @@
+title: "GradCorner AI"
+subtitle: "Recent articles exploring diffusion models and generative AI."
+items:
+  - title: "Demystify Generative Modeling: Introduction to the 2Ws-1H Framework"
+    description: "An accessible introduction to generative modeling using the 2Ws-1H framework: What, Why, and How."
+    image: "/assets/img/show/publication/1.jpg"
+    link: "https://publication.gradcorner.ca/p/demystify-generative-modeling-introduction"
+    button: "Read more"
+
+  - title: "From Noise to Meaning: Unraveling the Reverse Process of Diffusion Models (DDMs)"
+    description: "Explains the reverse diffusion process and how noise is transformed into meaningful data."
+    image: "/assets/img/show/publication/2.jpg"
+    link: "https://publication.gradcorner.ca/p/from-noise-to-meaning-unraveling"
+    button: "Read more"
+
+  - title: "Optimizing Diffusion: Techniques to Speed up Diffusion Models (DDMs)"
+    description: "Covers efficiency techniques for diffusion models, including methods to reduce compute and accelerate sampling."
+    image: "/assets/img/show/publication/3.png"
+    link: "https://publication.gradcorner.ca/t/generative-modeling#:~:text=Optimizing%20Diffusion%3A%20Techniques%20to%20Speed%20up%20Diffusion%20Models%20(DDMs)"
+    button: "Read more"
+
+  - title: "Diffusion KPIs: A Guide to the Quantitative Metrics of Diffusion Models (DDMs) - Part 2/2"
+    description: "A practical overview of the key metrics used to evaluate diffusion models, with insights into model performance."
+    image: "/assets/img/show/publication/4.png"
+    link: "https://publication.gradcorner.ca/p/diffusion-kpis-a-guide-to-the-quantitative"
+    button: "Read more"
+
+button: "View all articles"
+link: "https://publication.gradcorner.ca/"
+

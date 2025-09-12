@@ -1,32 +1,164 @@
-{% assign content = site.data.content['about_two'] %}
+{% comment %} Load from _data/about.yml {% endcomment %}
+{% assign content = site.data.about %}
 
-<section class="gap no-bottom">
-  <div class="container">
-    <div class="row align-items-center">  <!-- vertically align image + text -->
-      <div class="col-xl-6">
-        <div class="welcome text-center">  <!-- optional: center image in column -->
-          <img alt="img" src="{{ content.image1 | absolute_url }}" style="width: 80%; max-width: 280px; height: auto; border-radius: 50%;">
-        </div>
-      </div>
-      <div class="col-xl-6">  <!-- removed pl-75 -->
-        <div class="heading design-enjoy">
-          <h6>{{ content.subtitle | safeHTML }}</h6>
-          <h2>{{ content.title | safeHTML }}</h2>
-          <img alt="line" src="/assets/images/headingline.png">
-        </div>
-        <div class="welcome-text">
-          <h6 class="pt-4 pb-5">
-            {{ content.description | safeHTML }}
-          </h6>
-          {% for item in content.items %}
-          <h5>{{ item.title | safeHTML }}</h5>
-          <p>{{ item.text | safeHTML }}</p>
-          {% endfor %}
-          <a href="{{ content.link }}" class="themebtu">{{ content.button }}</a>
-        </div>
+<section id="about" style="padding:64px 0;">
+  <style>
+    #about .wrap{
+      display:flex; align-items:flex-start; gap:48px;
+      max-width:1180px; margin:0 auto; padding:0 16px;
+    }
+    #about .portrait{flex:0 0 320px; text-align:center;}
+    #about .portrait img{
+      width:320px; height:320px; object-fit:cover; display:block;
+      border-radius:50%;
+      filter: drop-shadow(0 12px 28px rgba(0,0,0,.12));
+      margin:0 auto 18px auto;
+    }
+
+    /* Social icons under portrait */
+    #about .portrait .social-links{
+      display:flex; justify-content:center; gap:16px; flex-wrap:wrap;
+    }
+    #about .portrait .social-links a{
+      color:var(--ink,#0f0f10); font-size:1.35rem; transition:color .2s;
+    }
+    #about .portrait .social-links a:hover{ color:var(--accent,#2b6df3); }
+
+    #about .text{flex:1 1 0; min-width:0;}
+    #about .text p{ line-height:1.7; max-width:900px; margin:0 0 .9rem 0; }
+
+    /* Tablet & below */
+    @media (max-width: 992px){
+      #about{padding:32px 0;}
+      #about .wrap{ flex-direction:column; gap:24px; align-items:center; }
+      #about .portrait img{ width:240px; height:240px; }
+      #about .portrait .social-links{ justify-content:center; }
+      #about .text{ text-align:center; }
+    }
+
+    /* Very small screens */
+    @media (max-width: 520px){
+      #about .portrait img{ width:200px; height:200px; }
+    }
+  </style>
+
+  <div class="wrap">
+    <!-- Portrait -->
+    <div class="portrait">
+      <img alt="Portrait of Waleed Khamies"
+           src="{{ content.image1 | absolute_url }}">
+
+      <!-- Social links -->
+      <div class="social-links" aria-label="Social profiles">
+        <a href="mailto:waleed@khamies.ca" title="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+        <a href="https://scholar.google.com/citations?user=YZgQGQ0AAAAJ&hl=en" target="_blank" rel="noopener" title="Google Scholar"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></a>
+        <a href="https://orcid.org/0000-0002-7112-150X" target="_blank" rel="noopener" title="ORCID"><i class="fa-brands fa-orcid" aria-hidden="true"></i></a>
+        <a href="https://github.com/Khamies/" target="_blank" rel="noopener" title="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/khamiesw/" target="_blank" rel="noopener" title="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
       </div>
     </div>
-  </div>  
-  <img class="w-100" alt="line" src="/assets/images/line.jpg">
+
+    <!-- Text -->
+    <div class="text">
+      <h6 style="letter-spacing:.3px;opacity:.85;margin:0 0 .25rem 0;">
+        {{ content.subtitle | safeHTML }}
+      </h6>
+      <h2 style="margin:0 0 12px 0;">
+        {{ content.title | safeHTML }}
+      </h2>
+      <img alt="decorative line" src="/assets/images/headingline.png" style="margin:0 0 20px 0;">
+
+      {% for item in content.list %}
+        {% if item.label %}
+          <h5 style="margin:.5rem 0 .25rem 0;">{{ item.label | safeHTML }}</h5>
+        {% endif %}
+        <p>{{ item.value | safeHTML }}</p>
+      {% endfor %}
+
+      <a href="{{ content.link }}" class="themebtu">{{ content.button }}</a>
+    </div>
+  </div>
+</section>
+
+{% assign cv = site.data.timeline %}
+{% assign items = cv.items | sort: "start" | reverse %}
+
+<section id="cv-timeline" style="padding:56px 0;">
+  <style>
+    #cv-timeline{--ink:#0f0f10;--muted:#6b6f76;--line:#e8eaee;--accent:#2b6df3;--card:#fff}
+    @media (prefers-color-scheme:dark){
+      #cv-timeline{--ink:#f2f4f7;--muted:#98a2b3;--line:#1f242b;--accent:#6aa2ff;--card:#121418}
+    }
+    #cv-timeline .wrap{max-width:980px;margin:0 auto;padding:0 18px;}
+    #cv-timeline h2{margin:0 0 8px 0;color:var(--ink)}
+    #cv-timeline p.sub{margin:0 0 18px 0;color:var(--muted)}
+
+    /* stream holds the axis and items so the line starts below the subtitle */
+    #cv-timeline .stream{position:relative}
+    #cv-timeline .axis{position:absolute;left:36px;top:0;bottom:0;width:2px;background:var(--line)}
+    #cv-timeline .year{margin:22px 0 6px 0;padding-left:72px;font-weight:600;color:var(--muted);letter-spacing:.3px}
+
+    /* items */
+    #cv-timeline .item{position:relative;margin:16px 0;padding-left:72px}
+    #cv-timeline .dot{position:absolute;left:30px;top:14px;width:14px;height:14px;border-radius:50%;background:var(--accent)}
+    #cv-timeline .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+    #cv-timeline .meta{font-size:.86rem;color:var(--muted);margin-bottom:6px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+    #cv-timeline .tag{display:inline-block;border-radius:999px;padding:2px 8px;font-size:.74rem;color:#fff;background:#0f172a}
+    #cv-timeline .tag.work{background:#2b6df3}
+    #cv-timeline .tag.education{background:#10b981}
+    #cv-timeline h3{margin:0 0 4px 0;font-size:1.05rem;color:var(--ink)}
+    #cv-timeline .org{color:var(--muted)}
+    #cv-timeline .desc{color:var(--muted);line-height:1.6;margin-top:6px}
+    #cv-timeline .meta a{color:inherit;text-decoration:underline}
+
+    @media(max-width:560px){
+      #cv-timeline .axis{left:22px}
+      #cv-timeline .item{padding-left:54px}
+      #cv-timeline .year{padding-left:54px}
+      #cv-timeline .dot{left:16px}
+    }
+  </style>
+
+  <div class="wrap">
+    <h2>{{ cv.title }}</h2>
+    <p class="sub">{{ cv.subtitle }}</p>
+
+    <div class="stream">
+      <div class="axis" aria-hidden="true"></div>
+
+      {%- assign current_year = "" -%}
+      {%- for it in items -%}
+        {%- assign y = it.start | slice: 0, 4 -%}
+        {%- if y != current_year -%}
+          <div class="year">{{ y }}</div>
+          {%- assign current_year = y -%}
+        {%- endif -%}
+
+        <article class="item">
+          <span class="dot" aria-hidden="true"></span>
+          <div class="card">
+            <div class="meta">
+              <span>{{ it.start }}–{{ it.end | default: "present" }}</span>
+              <span class="tag {{ it.type }}">{{ it.type | capitalize }}</span>
+              {% if it.location %}<span aria-hidden="true">•</span><span>{{ it.location }}</span>{% endif %}
+            </div>
+
+            <h3>
+              {{ it.title }}
+              {% if it.org %}<span class="org">— {{ it.org }}</span>{% endif %}
+            </h3>
+
+            {% if it.description %}
+              <div class="desc">{{ it.description }}</div>
+            {% endif %}
+
+            {% if it.link %}
+              <a href="{{ it.link }}" target="_blank" rel="noopener" style="display:inline-block;margin-top:8px;">Learn more →</a>
+            {% endif %}
+          </div>
+        </article>
+      {%- endfor -%}
+    </div>
+  </div>
 </section>
 

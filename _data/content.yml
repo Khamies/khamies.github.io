@@ -524,6 +524,33 @@ services_two:
   button: "Join the Family!"
   link: "https://publication.gradcorner.ca/"
 
+about-mainpage:
+
+  subtitle: "Welcome. Salut. مرحباً."
+  title: "About Waleed Khamies"
+
+  list:
+    - label: "Overview"
+      value: >
+        I am a graduate student at the University of Alberta, specializing in machine learning and artificial intelligence. My academic and professional work centers on reinforcement learning, decision-making systems, and modern representation learning methods. I am interested in developing AI that is both practical and trustworthy, with applications that extend across science, industry, and technology.
+
+    - label: "Research and Applied Focus"
+      value: >
+        My research explores reinforcement learning and self-supervised methods for solving complex decision-making problems. Alongside this, I apply machine learning in industrial contexts, particularly in automating manufacturing processes. I value projects that balance theoretical innovation with applied impact, ensuring that AI systems are not only advanced in design but also effective in deployment.
+
+    - label: "Background and Training"
+      value: >
+        I hold a Master’s degree in Mathematical Sciences with a specialization in Machine Learning from the African Masters in Machine Intelligence program, and a Bachelor’s degree in Electrical and Electronics Engineering from the University of Khartoum. My earlier experiences include research at MILA in Montreal and a robotics internship at Brown University, both of which expanded my perspective on AI as a discipline that combines rigorous foundations with real-world challenges.
+
+    - label: "Professional Experience"
+      value: >
+        At NTWIST, I work as an Applied Research Scientist, designing and implementing machine learning solutions to optimize industrial workflows. My focus includes reinforcement learning, semi-supervised learning, and self-supervised learning, with an emphasis on creating systems that adapt to practical environments. This industry experience complements my academic research, strengthening my ability to connect theory with application.
+
+  image1: "assets/img/me/me.png"
+  button: "Learn More"
+  link: "/about/"
+
+  
 ### Testimonial Three [ testimonial-three ]
 testimonial_three:
   title: "Satisfied <span>Clients</span>"

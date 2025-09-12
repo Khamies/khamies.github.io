@@ -1,31 +1,83 @@
-{% assign content = site.data.content['blog_grid'] %}
-{% assign ui_text = site.data.ui-text['ui_text'] %}
+{% assign news_all = site.data.news.items | sort: "date" | reverse %}
+{% assign current_year = "" %}
 
-<section class="gap no-top">
-	<div class="container">
-	  <div class="row">
-		{% for news in site.news limit: content.numOfItems %}
+<section id="news-timeline" style="padding:56px 0;">
+  <style>
+    #news-timeline{--ink:#0f0f10;--muted:#6b6f76;--line:#e8eaee;--accent:#2b6df3;--card:#fff}
+    @media (prefers-color-scheme:dark){
+      #news-timeline{--ink:#f2f4f7;--muted:#98a2b3;--line:#1f242b;--accent:#6aa2ff;--card:#121418}
+    }
+    #news-timeline .wrap{max-width:980px;margin:0 auto;padding:0 18px;}
+    #news-timeline h2{margin:0 0 8px 0;color:var(--ink)}
+    #news-timeline p.sub{margin:0 0 18px 0;color:var(--muted)}
 
-		{% if news.author == nil %}
-			{% assign author = site.author %}
-		{% else %}
-			{% assign author = news.author %}
-		{% endif %}
+    /* timeline scaffold */
+    #news-timeline .stream{position:relative}
+    #news-timeline .axis{position:absolute;left:36px;top:0;bottom:0;width:2px;background:var(--line)}
 
-		{% assign cat_size = news.category | size %}
-		<div class="col-xl-3 col-lg-4 col-md-6">
-		  <div class="latest-blog-post hoverstyle">
-			<figure>
-				<a href="{{ news.url }}"><img alt="{{ news.title }}" class="w-100" src="{{ news.image | absolute_url }}"></a>
-			</figure>
-			<a href="{{ news.url }}"><i class="fa-regular fa-clock"></i><span>{{ news.date | date: site.date_format }}</span></a>
-			<a href="{{ news.url }}">
-				<h4>{{ news.title }}</h4>
-			</a>
-			<span>{{ ui_text.by }} {{ author }} | {% if cat_size != 0 %}{% for category in news.category %}{{ category }}{% if news.category.last != category and news.category.last != nil %}, {% endif %}{% endfor %}{% endif %}</span>
-		  </div>
-		</div>
-		{% endfor %}
-	  </div>
-	</div>
+    /* year label aligned with cards */
+    #news-timeline .year-label{
+      margin:26px 0 10px 0;
+      padding-left:72px;         /* aligns text with card edge */
+      font-weight:700;color:var(--ink);
+      position:relative;
+    }
+
+    /* items */
+    #news-timeline .item{position:relative;margin:18px 0;padding-left:72px}
+    #news-timeline .dot{position:absolute;left:30px;top:10px;width:14px;height:14px;border-radius:50%;background:var(--accent)}
+
+    #news-timeline .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+    #news-timeline .meta{font-size:.86rem;color:var(--muted);margin-bottom:4px}
+    #news-timeline .meta .tag{display:inline-block;margin-left:8px;background:var(--ink);color:#fff;border-radius:999px;padding:2px 8px;font-size:.75rem}
+    #news-timeline h3{margin:0 0 6px 0;font-size:1.04rem;color:var(--ink)}
+
+    @media(max-width:560px){
+      #news-timeline .axis{left:22px}
+      #news-timeline .year-label{padding-left:54px}
+      #news-timeline .item{padding-left:54px}
+      #news-timeline .dot{left:16px}
+    }
+  </style>
+
+  <div class="wrap">
+    <h2>{{ site.data.news.title }}</h2>
+    <p class="sub">{{ site.data.news.subtitle }}</p>
+
+    <div class="stream">
+      <div class="axis" aria-hidden="true"></div>
+
+      {% for it in news_all %}
+        {% assign y = it.date | date: "%Y" %}
+        {% if y != current_year %}
+          <h3 class="year-label">{{ y }}</h3>
+          {% assign current_year = y %}
+        {% endif %}
+
+        <article class="item">
+          <span class="dot" aria-hidden="true"></span>
+          <div class="card">
+            <div class="meta">
+              {{ it.date }}
+              {% if it.category %}<span class="tag">{{ it.category }}</span>{% endif %}
+            </div>
+            <h3>
+              {% if it.link %}
+                <a href="{{ it.link }}" target="_blank" rel="noopener noreferrer">{{ it.title }}</a>
+              {% else %}
+                {{ it.title }}
+              {% endif %}
+            </h3>
+            <div style="color:var(--muted);line-height:1.6">
+              {{ it.description | truncate: 200 }}
+            </div>
+            {% if it.link %}
+              <a href="{{ it.link }}" style="display:inline-block;margin-top:6px;">{{ it.button }}</a>
+            {% endif %}
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
 </section>
+

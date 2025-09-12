@@ -1,0 +1,82 @@
+{% comment %} Load from _data/about.yml {% endcomment %}
+{% assign content = site.data.about %}
+
+<section id="about" style="padding:64px 0;">
+  <style>
+    #about .wrap{
+      display:flex; align-items:flex-start; gap:48px;
+      max-width:1180px; margin:0 auto; padding:0 16px;
+    }
+    #about .portrait{flex:0 0 320px; text-align:center;}
+    #about .portrait img{
+      width:320px; height:320px; object-fit:cover; display:block;
+      border-radius:50%;
+      filter: drop-shadow(0 12px 28px rgba(0,0,0,.12));
+      margin:0 auto 18px auto;
+    }
+
+    /* Social icons under portrait */
+    #about .portrait .social-links{
+      display:flex; justify-content:center; gap:16px; flex-wrap:wrap;
+    }
+    #about .portrait .social-links a{
+      color:var(--ink,#0f0f10); font-size:1.35rem; transition:color .2s;
+    }
+    #about .portrait .social-links a:hover{ color:var(--accent,#2b6df3); }
+
+    #about .text{flex:1 1 0; min-width:0;}
+    #about .text p{ line-height:1.7; max-width:900px; margin:0 0 .9rem 0; }
+
+    /* Tablet & below */
+    @media (max-width: 992px){
+      #about{padding:32px 0;}
+      #about .wrap{ flex-direction:column; gap:24px; align-items:center; }
+      #about .portrait img{ width:240px; height:240px; }
+      #about .portrait .social-links{ justify-content:center; }
+      #about .text{ text-align:center; }
+    }
+
+    /* Very small screens */
+    @media (max-width: 520px){
+      #about .portrait img{ width:200px; height:200px; }
+    }
+  </style>
+
+  <div class="wrap">
+    <!-- Portrait -->
+    <div class="portrait">
+      <img alt="Portrait of Waleed Khamies"
+           src="{{ content.image1 | absolute_url }}">
+
+      <!-- Social links -->
+      <div class="social-links" aria-label="Social profiles">
+        <a href="mailto:waleed@khamies.ca" title="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+        <a href="https://scholar.google.com/citations?user=YZgQGQ0AAAAJ&hl=en" target="_blank" rel="noopener" title="Google Scholar"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></a>
+        <a href="https://orcid.org/0000-0002-7112-150X" target="_blank" rel="noopener" title="ORCID"><i class="fa-brands fa-orcid" aria-hidden="true"></i></a>
+        <a href="https://github.com/Khamies/" target="_blank" rel="noopener" title="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/khamiesw/" target="_blank" rel="noopener" title="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+      </div>
+    </div>
+
+    <!-- Text -->
+    <div class="text">
+      <h6 style="letter-spacing:.3px;opacity:.85;margin:0 0 .25rem 0;">
+        {{ content.subtitle | safeHTML }}
+      </h6>
+      <h2 style="margin:0 0 12px 0;">
+        {{ content.title | safeHTML }}
+      </h2>
+      <img alt="decorative line" src="/assets/images/headingline.png" style="margin:0 0 20px 0;">
+
+      {% for item in content.list %}
+        {% if item.label %}
+          <h5 style="margin:.5rem 0 .25rem 0;">{{ item.label | safeHTML }}</h5>
+        {% endif %}
+        <p>{{ item.value | safeHTML }}</p>
+      {% endfor %}
+
+      <a href="{{ content.link }}" class="themebtu">{{ content.button }}</a>
+    </div>
+  </div>
+</section>
+

@@ -1,0 +1,35 @@
+subtitle: "Welcome. Salut. مرحباً."
+title: "About Waleed Khamies"
+
+list:
+  - label: "Overview"
+    value: >
+      I am an Applied AI Scientist at NTWIST, where I design AI-powered solutions for scheduling and automation in the manufacturing industry. 
+      Alongside my professional work, I pursue graduate research at the University of Alberta to advance my expertise in reinforcement learning and decision-making systems. 
+      My focus is on creating practical, trustworthy AI that bridges cutting-edge research with real-world applications.
+
+
+  - label: "Focus Areas"
+    value: >
+      I study reinforcement learning and self-supervised methods for complex decision-making problems. In parallel, I apply
+      machine learning in industrial settings, particularly for automating manufacturing processes. I aim to balance
+      theoretical progress with applied impact so that systems are not only well-designed but also effective in deployment.
+
+  - label: "Background"
+    value: >
+      I hold a Master’s in Mathematical Sciences (Machine Learning) from the African Masters in Machine Intelligence program
+      and a Bachelor’s in Electrical and Electronics Engineering from the University of Khartoum. Earlier experiences include
+      research at MILA in Montreal and a robotics internship at Brown University, which strengthened my foundations and
+      broadened my view of real-world AI challenges.
+
+  - label: "Professional Experience"
+    value: >
+      At NTWIST, I work full-time as an Applied AI Scientist, designing and implementing machine learning solutions to
+      optimize industrial workflows. My focus includes reinforcement learning, semi-supervised learning, and self-supervised
+      learning, with an emphasis on systems that adapt to practical environments. This industry work complements my academic
+      research and helps connect theory to application.
+
+image1: "assets/img/me/me.png"
+button: "Learn More"
+link: "/about/"
+

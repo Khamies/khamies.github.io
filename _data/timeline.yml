@@ -1,0 +1,118 @@
+title: "Career Timeline"
+subtitle: "Selected roles and education."
+
+items:
+  # ——— Work ———
+  - type: work
+    title: Applied Research Scientist
+    org: NTWIST
+    location: Edmonton, Canada (hybrid)
+    start: 2025-09
+    end: present
+    description: >
+      Work spans reinforcement learning, self-/semi-supervised
+      learning, and constraint optimization to improve throughput and operational efficiency.
+    link: https://ntwist.com/
+    
+    
+  - type: work
+    title: Machine Learning Developer
+    org: NTWIST
+    location: Edmonton, Canada (hybrid)
+    start: 2024-05
+    end: 2024-08
+    description: >
+      Building AI-powered scheduling and automation for process & discrete
+      manufacturing.
+    link: https://ntwist.com/    
+
+  - type: work
+    title: Consultant
+    org: WesTower Communications Ltd. (Division 7B)
+    location: Canada
+    start: 2024-01
+    end: present
+    description: >
+      Advising on data and ML initiatives for network operations and planning.
+
+  - type: work
+    title: Applied Data Scientist – Machine Learning
+    org: UpTech
+    location: Remote
+    start: 2021-10
+    end: 2023-06
+    description: >
+      Developed and deployed machine learning and NLP solutions, taking projects
+      from experimentation to production. Focused on building scalable pipelines
+      and delivering models using SQL (BigQuery), PyTorch, Kubeflow, and Vertex AI.
+
+  - type: work
+    title: ML Research Engineer
+    org: Mila – Quebec AI Institute
+    location: Montreal, Canada
+    start: 2019-11
+    end: 2021-06
+    description: >
+      Conducted deep learning research on noisy labels, vision, and robotics.
+      Built baselines, trained models on HPC clusters, and published at the ICML
+      Workshop on Uncertainty & Robustness in Deep Learning.
+
+  - type: work
+    title: ML Research Associate (Robotics)
+    org: Brown University
+    location: Providence, USA
+    start: 2019-07
+    end: 2019-10
+    description: >
+      Worked on interpretable reinforcement learning by recovering latent reward
+      functions. Published results at the NeurIPS BAI Workshop.
+
+  - type: work
+    title: Software Developer
+    org: Echonine
+    location: Khartoum, Sudan
+    start: 2015-08
+    end: 2018-09
+    description: >
+      Built production web and mobile applications; owned features end to end
+      from design to deployment.
+
+  - type: work
+    title: Software Engineer Intern
+    org: Zamphyr
+    location: Remote
+    start: 2018-01
+    end: 2018-06
+    description: >
+      Internship focused on platform features and developer tooling.
+
+  # ——— Education ———
+  - type: education
+    title: Graduate Studies (AI)
+    org: University of Alberta
+    location: Edmonton, Canada
+    start: 2024-09
+    end: present
+    description: >
+      Graduate researcher focusing on decision-making systems, reinforcement
+      learning, and modern representation learning.
+
+  - type: education
+    title: MSc, Mathematical Sciences (Machine Intelligence)
+    org: AMMI – African Masters in Machine Intelligence (AIMS / Next Einstein Initiative)
+    location: Kigali, Rwanda
+    start: 2018-09
+    end: 2019-06
+    description: >
+      One-year intensive ML program combining theory and practice.
+      Recipient of the 2018 Google AI Scholarship.
+
+  - type: education
+    title: BSc, Electrical & Electronics Engineering
+    org: University of Khartoum
+    location: Khartoum, Sudan
+    start: 2013-09
+    end: 2018-08
+    description: >
+      Major in Electronics & Computer Engineering.
+
