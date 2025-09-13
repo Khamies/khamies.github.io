@@ -16,7 +16,7 @@ items:
     link: "https://leanpub.com/how-to-solve-algorithm-problems-book"
     button: "View on Leanpub"
 
-  - title: "Book Available on My Bookstore"
+  - title: "Book Available on My Bookstore :)"
     date: "2023-06-01"
     description: "How to Solve Algorithm Problems is now available through my personal online bookstore, offering readers free access to the updated edition with 80 curated problems and a preparation framework."
     image: "/assets/img/news/book.png"
@@ -39,7 +39,7 @@ items:
 
   - title: "GradCorner AI Reaches 3,185 Reads"
     date: "2025-09-01"
-    description: "GradCorner, my independent publication on advanced AI concepts, has now been read 3,185 times across all articles."
+    description: "GradCorner has now been read 3,185 times across all articles."
     image: "/assets/img/news/gradcorner.png"
     link: "https://publication.gradcorner.ca/"
     button: "Visit GradCorner"
