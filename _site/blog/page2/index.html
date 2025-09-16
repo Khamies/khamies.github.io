@@ -305,53 +305,142 @@
 
 
 <section id="about" style="padding:64px 0;">
-  <style>
-    #about .wrap{
-      display:flex; align-items:flex-start; gap:48px;
-      max-width:1180px; margin:0 auto; padding:0 16px;
-    }
-    #about .portrait{flex:0 0 320px; text-align:center;}
-    #about .portrait img{
-      width:320px; height:320px; object-fit:cover; display:block;
-      border-radius:50%;
-      filter: drop-shadow(0 12px 28px rgba(0,0,0,.12));
-      margin:0 auto 18px auto;
-    }
+<style>
+  /* ====== layout ====== */
+  #about .wrap{
+    display:flex;align-items:flex-start;gap:48px;
+    max-width:1180px;margin:0 auto;padding:0 16px;
+  }
+  #about .portrait{flex:0 0 auto;text-align:center;}
+  #about .portrait img{
+    width:clamp(140px, 26vw, 320px);
+    height:clamp(140px, 26vw, 320px);
+    object-fit:cover;display:block;border-radius:50%;
+    filter:drop-shadow(0 12px 28px rgba(0,0,0,.12));
+    margin:0 auto 18px auto;background:transparent;
+  }
+  #about .portrait .social-links{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;}
+  #about .portrait .social-links a{color:var(--ink,#0f0f10);font-size:1.35rem;transition:color .2s;}
+  #about .portrait .social-links a:hover{color:var(--accent,#2b6df3);}
 
-    /* Social icons under portrait */
-    #about .portrait .social-links{
-      display:flex; justify-content:center; gap:16px; flex-wrap:wrap;
-    }
-    #about .portrait .social-links a{
-      color:var(--ink,#0f0f10); font-size:1.35rem; transition:color .2s;
-    }
-    #about .portrait .social-links a:hover{ color:var(--accent,#2b6df3); }
+  #about .text{flex:1 1 0;min-width:0;}
+  #about .text p{line-height:1.7;max-width:900px;margin:0 0 .9rem 0;}
+  #about .actions{display:flex;gap:10px;flex-wrap:wrap;}
 
-    #about .text{flex:1 1 0; min-width:0;}
-    #about .text p{ line-height:1.7; max-width:900px; margin:0 0 .9rem 0; }
+  /* ====== responsive breakpoints ====== */
+  @media (max-width: 1200px){
+    #about .wrap{gap:36px;}
+  }
+  @media (max-width: 992px){
+    #about{padding:40px 0;}
+    #about .wrap{flex-direction:column;gap:24px;align-items:center;}
+    #about .text{text-align:center;}
+    #about .actions{justify-content:center;}
+  }
+  @media (max-width: 768px){
+    #about .text p{max-width:unset;}
+  }
+  @media (max-width: 520px){
+    #about .wrap{gap:20px;}
+    #about .actions a{width:100%;text-align:center;}
+  }
 
-    /* Tablet & below */
-    @media (max-width: 992px){
-      #about{padding:32px 0;}
-      #about .wrap{ flex-direction:column; gap:24px; align-items:center; }
-      #about .portrait img{ width:240px; height:240px; }
-      #about .portrait .social-links{ justify-content:center; }
-      #about .text{ text-align:center; }
-    }
+  /* ====== modal ====== */
+  #cv-modal{
+    position:fixed;inset:0;display:none;align-items:center;justify-content:center;
+    background:rgba(0,0,0,.42);z-index:9999;
+    min-height:100dvh;
+    padding:env(safe-area-inset-top,12px) clamp(8px, 3vw, 16px) env(safe-area-inset-bottom,12px);
+  }
+  #cv-modal .sheet{
+    background:var(--card,#fff);color:var(--ink,#0f0f10);
+    border-radius:14px;
+    width:min(560px, 100%);
+    max-width:min(92vw, 560px);
+    padding:clamp(14px, 2.5vw, 20px);
+    border:1px solid var(--line,#e8eaee);box-shadow:0 18px 60px rgba(0,0,0,.2);
+    max-height:min(86dvh, 680px);overflow:auto;
+    overscroll-behavior:contain;
+  }
+  #cv-modal .hdr{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px;}
+  #cv-modal .close{background:none;border:0;font-size:1.2rem;cursor:pointer;line-height:1;padding:6px;}
+  #cv-modal p.sub{margin:.25rem 0 1rem 0;opacity:.85}
 
-    /* Very small screens */
-    @media (max-width: 520px){
-      #about .portrait img{ width:200px; height:200px; }
-    }
-  </style>
+  /* ====== form elements ====== */
+  #cv-form .field{margin-bottom:.75rem;}
+  #cv-form label{display:block;font-weight:600;margin:0 0 .25rem 0;}
+  #cv-form input, #cv-form select{
+    width:100%;
+    padding:clamp(.55rem, 1.2vw, .7rem) clamp(.65rem, 1.6vw, .85rem);
+    border-radius:10px;border:1px solid #e1e4e8;
+    background:transparent;color:inherit;outline:none;min-height:44px;
+    font-size:clamp(.95rem, 1vw, 1rem);
+  }
+  #cv-form input:focus, #cv-form select:focus{border-color:#2b6df3;box-shadow:0 0 0 3px rgba(43,109,243,.15);}
+  #cv-form small.help{display:block;color:#6b6f76;margin-top:.25rem;font-size:.85rem;}
+  #cv-form small.err{display:block;color:#c62828;margin-top:.25rem;font-size:.9rem;}
+
+  /* Responsive row: 2 columns on wide, auto-stack under ~520px */
+  #cv-form .row{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: clamp(10px, 2vw, 14px);
+    align-items:start;
+  }
+  #cv-form .row .field{min-width:0;} /* allow shrinking on small screens */
+
+  #cv-msg{min-height:20px;font-size:.95rem;margin:.25rem 0 .75rem 0;}
+
+  #cv-legal{
+    font-size:clamp(.85rem, .9vw, .95rem);
+    color:#6b6f76;margin:.5rem 0 .25rem 0;
+  }
+  #cv-legal label{display:flex;gap:12px;align-items:flex-start;cursor:pointer;}
+  #cv-legal label span{line-height:1.5;}
+  #cv-legal input[type="checkbox"]{
+    width:clamp(20px, 2.6vw, 32px);
+    height:clamp(20px, 2.6vw, 32px);
+    margin-top:.2rem;accent-color:#2b6df3;cursor:pointer;flex:0 0 auto;
+    outline:none;
+  }
+  #cv-legal input[type="checkbox"]:focus{
+    outline:none;box-shadow:0 0 0 2px rgba(43,109,243,.4);border-radius:4px;
+  }
+
+  #cv-form .actions{
+    display:flex;align-items:center;gap:10px;margin-top:.5rem;flex-wrap:wrap;
+  }
+  #cv-form .actions .themebtu{
+    min-height:44px;
+    padding:clamp(.55rem, 1.2vw, .7rem) clamp(.9rem, 2vw, 1.1rem);
+  }
+  @media (max-width: 520px){
+    #cv-form .actions .themebtu{width:100%;}
+  }
+
+  /* Smallest phones: a touch more breathing room */
+  @media (max-width: 380px){
+    #cv-modal .sheet{max-width:94vw;padding:14px;}
+  }
+
+  /* dark mode */
+  @media (prefers-color-scheme:dark){
+    #cv-modal .sheet{background:#121418;color:#f2f4f7;border-color:#1f242b;}
+    #cv-form input, #cv-form select{border-color:#2a3038;}
+    #cv-form small.help{color:#98a2b3;}
+  }
+
+  /* reduce motion preference */
+  @media (prefers-reduced-motion: reduce){
+    *{scroll-behavior:auto;transition:none !important;}
+  }
+</style>
+
 
   <div class="wrap">
     <!-- Portrait -->
     <div class="portrait">
-      <img alt="Portrait of Waleed Khamies"
-           src="http://localhost:4000/assets/img/me/me.png">
-
-      <!-- Social links -->
+      <img alt="Portrait of Waleed Khamies" src="http://localhost:4000/assets/img/me/me.png">
       <div class="social-links" aria-label="Social profiles">
         <a href="mailto:waleed@khamies.ca" title="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
         <a href="https://scholar.google.com/citations?user=YZgQGQ0AAAAJ&hl=en" target="_blank" rel="noopener" title="Google Scholar"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></a>
@@ -363,45 +452,273 @@
 
     <!-- Text -->
     <div class="text">
-      <h6 style="letter-spacing:.3px;opacity:.85;margin:0 0 .25rem 0;">
-        Welcome. Salut. مرحباً.
-      </h6>
-      <h2 style="margin:0 0 12px 0;">
-        About Waleed Khamies
-      </h2>
+      <h6 style="letter-spacing:.3px;opacity:.85;margin:0 0 .25rem 0;">Welcome. Salut. مرحباً.</h6>
+      <h2 style="margin:0 0 12px 0;">About Waleed Khamies</h2>
       <img alt="decorative line" src="/assets/images/headingline.png" style="margin:0 0 20px 0;">
-
       
-        
-          <h5 style="margin:.5rem 0 .25rem 0;">Overview</h5>
-        
+        <h5 style="margin:.5rem 0 .25rem 0;">Overview</h5>
         <p>I am an Applied AI Scientist at NTWIST, where I design AI-powered solutions for scheduling and automation in the manufacturing industry.  Alongside my professional work, I pursue graduate research at the University of Alberta to advance my expertise in reinforcement learning and decision-making systems.  My focus is on creating practical, trustworthy AI that bridges cutting-edge research with real-world applications.
 </p>
       
-        
-          <h5 style="margin:.5rem 0 .25rem 0;">Focus Areas</h5>
-        
+        <h5 style="margin:.5rem 0 .25rem 0;">Focus Areas</h5>
         <p>I study reinforcement learning and self-supervised methods for complex decision-making problems. In parallel, I apply machine learning in industrial settings, particularly for automating manufacturing processes. I aim to balance theoretical progress with applied impact so that systems are not only well-designed but also effective in deployment.
 </p>
       
-        
-          <h5 style="margin:.5rem 0 .25rem 0;">Background</h5>
-        
+        <h5 style="margin:.5rem 0 .25rem 0;">Background</h5>
         <p>I hold a Master’s in Mathematical Sciences (Machine Learning) from the African Masters in Machine Intelligence program and a Bachelor’s in Electrical and Electronics Engineering from the University of Khartoum. Earlier experiences include research at MILA in Montreal and a robotics internship at Brown University, which strengthened my foundations and broadened my view of real-world AI challenges.
 </p>
       
-        
-          <h5 style="margin:.5rem 0 .25rem 0;">Professional Experience</h5>
-        
+        <h5 style="margin:.5rem 0 .25rem 0;">Professional Experience</h5>
         <p>At NTWIST, I work full-time as an Applied AI Scientist, designing and implementing machine learning solutions to optimize industrial workflows. My focus includes reinforcement learning, semi-supervised learning, and self-supervised learning, with an emphasis on systems that adapt to practical environments. This industry work complements my academic research and helps connect theory to application.
 </p>
       
-
-      <a href="/about/" class="themebtu">Learn More</a>
+      <div class="actions">
+        <a href="/about/" class="themebtu">Learn More</a>
+        <!-- Get CV button (black bg, white text) -->
+        <a href="#" id="cv-open" class="themebtu" style="background:#121418;border-color:#121418;color:#fff;">Get CV</a>
+      </div>
     </div>
   </div>
-</section>
 
+  <!-- Modal -->
+  <div id="cv-modal" role="dialog" aria-modal="true" aria-labelledby="cv-title">
+    <div class="sheet">
+      <div class="hdr">
+        <h3 id="cv-title" style="margin:0;font-size:1.1rem;">Get Waleed's CV</h3>
+        <button type="button" class="close" id="cv-close" aria-label="Close">×</button>
+      </div>
+      <p class="sub">Enter your details to receive a 30-minute, single-use download link.</p>
+
+      <form id="cv-form" novalidate>
+        <!-- Honeypot (spam guard) -->
+        <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0;">
+        <div class="row">
+          <div class="field">
+            <label for="cv-name">Name</label>
+            <input id="cv-name" name="name" required autocomplete="name" minlength="2" inputmode="text" aria-describedby="cv-name-help">
+            <small id="cv-name-help" class="help">Your full name</small>
+            <small class="err" id="cv-name-err" aria-live="polite"></small>
+          </div>
+          <div class="field">
+            <label for="cv-role">Role / Organization</label>
+            <input id="cv-role" name="role" required autocomplete="organization-title" minlength="2" aria-describedby="cv-role-help">
+            <small id="cv-role-help" class="help">e.g., Recruiter at Company X</small>
+            <small class="err" id="cv-role-err" aria-live="polite"></small>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="cv-email">Work Email</label>
+          <input id="cv-email" name="email" type="email" required autocomplete="email" aria-describedby="cv-email-help">
+          <small id="cv-email-help" class="help">e.g., yourname@organization.com</small>
+          <small class="err" id="cv-email-err" aria-live="polite"></small>
+        </div>
+
+      <div id="cv-legal">
+        <label style="display:flex;gap:12px;align-items:flex-start;cursor:pointer;">
+          <input id="cv-consent" name="consent" type="checkbox" required style="margin-top:.25rem;">
+          <span style="font-size:12px">
+            I agree that my name and email may be collected for the purpose of sharing this CV. 
+            Your information will be kept private and never shared with third parties.
+          </span>
+        </label>
+      </div>
+
+
+        <div id="cv-msg" role="status" aria-live="polite"></div>
+
+        <div class="actions">
+          <button class="themebtu" id="cv-submit" type="submit">Download CV</button>
+          <button type="button" class="themebtu" id="cv-cancel" style="background:#eee;color:#0f0f10;border-color:#eee;">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+<script>
+  (function () {
+    const openBtn = document.getElementById('cv-open');
+    const modal   = document.getElementById('cv-modal');
+    const closeBtn= document.getElementById('cv-close');
+    const cancel  = document.getElementById('cv-cancel');
+    const form    = document.getElementById('cv-form');
+    const submit  = document.getElementById('cv-submit');
+    const msg     = document.getElementById('cv-msg');
+    const nameI   = document.getElementById('cv-name');
+    const roleI   = document.getElementById('cv-role');
+    const emailI  = document.getElementById('cv-email');
+    const consent = document.getElementById('cv-consent');
+    const nameErr = document.getElementById('cv-name-err');
+    const roleErr = document.getElementById('cv-role-err');
+    const emailErr= document.getElementById('cv-email-err');
+
+    // Use Worker host when running locally; otherwise stay relative to current host
+    function apiBase() {
+      const h = location.hostname;
+      return (h === 'localhost' || h === '127.0.0.1') ? 'https://waleed.khamies.ca' : '';
+    }
+
+    let lastFocus = null;
+
+    function show(){
+      lastFocus = document.activeElement;
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+      setTimeout(() => nameI.focus(), 50);
+    }
+    function hide(){
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
+      msg.textContent = '';
+      form.reset();
+      clearErrors();
+      lastFocus && lastFocus.focus();
+    }
+
+    function setError(el, errEl, text){
+      el.setAttribute('aria-invalid', 'true');
+      errEl.textContent = text || '';
+    }
+    function clearErrors(){
+      [nameI, roleI, emailI].forEach(el => el.removeAttribute('aria-invalid'));
+      [nameErr, roleErr, emailErr].forEach(e => e.textContent = '');
+    }
+    function validEmail(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v || ''); }
+
+    // --- Work email validation ---
+    const PERSONAL_DOMAINS = [
+      'gmail.com','googlemail.com','outlook.com','hotmail.com','live.com','msn.com',
+      'yahoo.com','ymail.com','icloud.com','me.com','mac.com','aol.com','mail.com',
+      'proton.me','protonmail.com','pm.me','zoho.com','tutanota.com','tuta.com',
+      'yandex.com','gmx.com','fastmail.com','hey.com','mail.ru'
+    ];
+    function isWorkEmail(email) {
+      const m = /^[^\s@]+@([^\s@]+)$/.exec(email || '');
+      if (!m) return false;
+      const domain = m[1].toLowerCase().trim();
+      return !PERSONAL_DOMAINS.includes(domain);
+    }
+    // -----------------------------
+
+    openBtn && openBtn.addEventListener('click', e => { e.preventDefault(); show(); });
+    closeBtn && closeBtn.addEventListener('click', hide);
+    cancel && cancel.addEventListener('click', hide);
+    modal && modal.addEventListener('click', e => { if (e.target === modal) hide(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && modal.style.display === 'flex') hide(); });
+
+    form && form.addEventListener('submit', async (e) => {
+      e.preventDefault(); clearErrors(); msg.style.color='inherit';
+
+      // Basic client checks
+      let ok = true;
+      if ((nameI.value || '').trim().length < 2) { setError(nameI, nameErr, 'Please enter your name.'); ok = false; }
+      if ((roleI.value || '').trim().length < 2) { setError(roleI, roleErr, 'Please add your role/organization.'); ok = false; }
+
+      const rawEmail = (emailI.value || '').trim();
+      if (!validEmail(rawEmail)) {
+        setError(emailI, emailErr,'Enter a valid work email address.');
+        ok = false;
+      } else if (!isWorkEmail(rawEmail)) {
+        setError(emailI, emailErr,'Please use your work email (no Gmail/Outlook/Yahoo/etc).');
+        ok = false;
+      }
+
+      if (!consent.checked) { msg.style.color = 'crimson'; msg.textContent = 'Please accept the consent box.'; ok = false; }
+
+      // Honeypot
+      const hp = (new FormData(form).get('website') || '').trim();
+      if (hp) { msg.style.color = 'crimson'; msg.textContent = 'Submission rejected.'; return; }
+      if (!ok) return;
+
+      submit.disabled = true;
+      submit.dataset.original = submit.textContent;
+      submit.textContent = 'Sending…';
+      msg.textContent = '';
+
+      const payload = {
+        name:  nameI.value.trim(),
+        role:  roleI.value.trim(),
+        email: rawEmail
+      };
+
+      try {
+        const res = await fetch(`${apiBase()}/api/cv/request`, {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+
+        let data = {};
+        try { data = await res.json(); } catch (_) {}
+
+        if (!res.ok || !data.ok) {
+          const msgText =
+            data.error ||
+            (res.status === 429 ? 'Rate limit reached, please try again soon.' :
+            res.status === 400 ? 'Please double-check your inputs.' :
+            'Request failed. Please try again.');
+          throw new Error(msgText);
+        }
+
+        if (data.link) {
+        msg.innerHTML = `
+          <div style="
+              padding:16px 18px;
+              background:#f0fdf4;
+              border:1px solid #34d399;
+              border-radius:10px;
+              font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+              color:#064e3b;
+              font-size:.95rem;
+              line-height:1.6;
+              box-shadow:0 2px 6px rgba(0,0,0,0.05);
+            ">
+            <div style="font-weight:600;
+                        font-size:1rem;
+                        border-bottom:1px solid rgba(0,0,0,.05);
+                        padding-bottom:4px;
+                        margin-bottom:8px;">
+              Link Created
+            </div>
+
+            <div>
+              <a href="${data.link}" 
+                 rel="noopener" target="_blank"
+                 style="color:#2563eb;
+                        font-weight:600;
+                        text-decoration:none;
+                        border-bottom:1px solid rgba(37,99,235,.4);
+                        transition:all .2s;">
+                 Download now
+              </a>
+            </div>
+
+            <div style="margin-top:6px;
+                        font-size:.83rem;
+                        color:#047857;
+                        opacity:.9;">
+              Expires in 30 minutes
+            </div>
+          </div>
+        `;
+
+        } else {
+          msg.textContent = 'Thanks! Check your email for the download link.';
+        }
+      } catch (err) {
+        console.error(err);
+        msg.style.color = 'crimson';
+        msg.textContent  = err.message || 'Sorry, something went wrong. Please email me at waleed@khamies.ca';
+      } finally {
+        submit.disabled = false;
+        submit.textContent = submit.dataset.original || 'Request link';
+      }
+    });
+  })();
+</script>
+
+
+</section>
 
 
 	
@@ -457,7 +774,7 @@
             
           </h3>
           <div style="color:var(--muted);line-height:1.6">
-            GradCorner, my independent publication on advanced AI concepts, has now been read 3,185 times across all articles.
+            GradCorner has now been read 3,185 times across all articles.
           </div>
           
           <a href="https://publication.gradcorner.ca/" style="display:inline-block;margin-top:6px;">Visit GradCorner</a>
@@ -516,11 +833,11 @@
           </div>
           <h3>
             
-              <a href="https://shop.waleed.khamies.ca/b/hsap" target="_blank" rel="noopener noreferrer">Book Available on My Bookstore</a>
+              <a href="https://shop.waleed.khamies.ca/b/hsap" target="_blank" rel="noopener noreferrer">Book Available on My Bookstore :)</a>
             
           </h3>
           <div style="color:var(--muted);line-height:1.6">
-            *How to Solve Algorithm Problems* is now available through my personal online bookstore, offering readers free access to the updated edition with 80 curated ...
+            How to Solve Algorithm Problems is now available through my personal online bookstore, offering readers free access to the updated edition with 80 curated pr...
           </div>
           
           <a href="https://shop.waleed.khamies.ca/b/hsap" style="display:inline-block;margin-top:6px;">Visit Bookstore</a>
@@ -541,7 +858,7 @@
             
           </h3>
           <div style="color:var(--muted);line-height:1.6">
-            *How to Solve Algorithm Problems* became available on Leanpub, giving readers access in digital formats.
+            How to Solve Algorithm Problems became available on Leanpub, giving readers access in digital formats.
           </div>
           
           <a href="https://leanpub.com/how-to-solve-algorithm-problems-book" style="display:inline-block;margin-top:6px;">View on Leanpub</a>
@@ -562,7 +879,7 @@
             
           </h3>
           <div style="color:var(--muted);line-height:1.6">
-            My book *How to Solve Algorithm Problems: Make Coding Interview Preparation Less Painful* was first published in paperback on Amazon.
+            My book How to Solve Algorithm Problems: Make Coding Interview Preparation Less Painful was first published in paperback on Amazon.
           </div>
           
           <a href="https://www.amazon.ca/How-Solve-Algorithm-Problems-Preparation/dp/1739010531" style="display:inline-block;margin-top:6px;">View on Amazon</a>
